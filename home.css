@@ -3129,3 +3129,55 @@ input:focus {
         display: none;
     }
 }
+
+#chatbot {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 500px;
+    height: 400px;
+    background: linear-gradient(to bottom, #cdcfd0, #2e3137);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#close-btn {
+    position: absolute;
+    top: none;
+    right: none;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#conversation {
+    height: 345px;
+    overflow-y: scroll;
+    margin-bottom: 8px;
+    padding: 5px;
+}
+
+#user-input {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid rgba(0, 4, 11, 1);
+    border-radius: 20px;
+}
+
+#send-btn {
+    width: 18%;
+    padding: 5px;
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#send-btn:hover {
+    background-color: #555;
+}
