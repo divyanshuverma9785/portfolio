@@ -1,0 +1,3131 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Syne:800|Inter:700,400");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+
+@import url("https://px.animaapp.com/67efa5962b83103efcd60df0.67efa5962b83103efcd60df3.F7MYQaO.hch.png");
+.screen textarea:focus,
+.screen input:focus {
+    outline: none;
+}
+
+#chatbot {
+    width: 100%;
+    /* border: 2px solid #f06d06; */
+}
+
+.screen * {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+.screen div {
+    -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+    display: contents;
+    pointer-events: auto;
+    text-decoration: none;
+}
+
+.component-wrapper * {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+    pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+    visibility: hidden !important;
+}
+
+.screen a {
+    display: contents;
+    text-decoration: none;
+}
+
+.full-width-a {
+    width: 100%;
+}
+
+.full-height-a {
+    height: 100%;
+}
+
+.container-center-vertical {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    pointer-events: none;
+}
+
+.container-center-vertical>* {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.container-center-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    pointer-events: none;
+    width: 100%;
+}
+
+.container-center-horizontal>* {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.auto-animated div {
+    --z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+
+.auto-animated input {
+    --z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+    opacity: 1;
+}
+
+.overlay-base {
+    display: none;
+    height: 100%;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.overlay-base.animate-appear {
+    align-items: center;
+    animation: reveal 0.3s ease-in-out 1 normal forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+    animation: reveal 0.3s ease-in-out 1 reverse forwards;
+    display: block;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+    pointer-events: none;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.animate-nodelay {
+    animation-delay: 0s;
+}
+
+.align-self-flex-start {
+    align-self: flex-start;
+}
+
+.align-self-flex-end {
+    align-self: flex-end;
+}
+
+.align-self-flex-center {
+    align-self: flex-center;
+}
+
+.valign-text-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.valign-text-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+input:focus {
+    outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+    pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ :root {
+    --bunker: #121416;
+    --eerie-black: #191919;
+    --punch: #db4025;
+    --white: #ffffff33;
+    --wwwjonathanpattersoncomblack: #000000;
+    --wwwjonathanpattersoncomblack-20: #000000;
+    --wwwjonathanpattersoncomporcelain: #e6e9eb;
+    --wwwjonathanpattersoncomwhite: #ffffff;
+    --wwwjonathanpattersoncomwhite-20: #000000;
+    --font-size-l: 18.2px;
+    --font-size-m: 17.4px;
+    --font-size-s: 16px;
+    --font-size-xl: 18.4px;
+    --font-size-xs: 14.1px;
+    --font-size-xxl: 21.2px;
+    --font-size-xxs: 10.6px;
+    --font-family-inter: "Inter", Helvetica;
+    --font-family-saira_semicondensed-regular: "Saira SemiCondensed-Regular", Helvetica;
+    --font-family-syne: "Syne", Helvetica;
+}
+
+.inter-normal-black-17-4px {
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.inter-bold-white-18-4px {
+    color: var(--wwwjonathanpattersoncomwhite);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.inter-bold-white-10-6px {
+    color: var(--wwwjonathanpattersoncomwhite);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-xxs);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.inter-bold-punch-11px {
+    color: var(--punch);
+    font-family: var(--font-family-inter);
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.inter-normal-black-16px {
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-s);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.inter-bold-punch-19-2px {
+    color: var(--punch);
+    font-family: var(--font-family-inter);
+    font-size: 19.2px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.inter-normal-black-21-2px {
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.sairasemicondensed-regular-normal-white-9-9px {
+    color: var(--wwwjonathanpattersoncomwhite);
+    font-family: var(--font-family-saira_semicondensed-regular);
+    font-size: 9.9px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.syne-extra-bold-black-20px {
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-syne);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.sairasemicondensed-regular-normal-white-9-2px {
+    color: var(--wwwjonathanpattersoncomwhite);
+    font-family: var(--font-family-saira_semicondensed-regular);
+    font-size: 9.2px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.inter-normal-black-19-6px {
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-inter);
+    font-size: 19.6px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.syne-extra-bold-white-10-6px {
+    color: var(--wwwjonathanpattersoncomwhite);
+    font-family: var(--font-family-syne);
+    font-size: var(--font-size-xxs);
+    font-style: normal;
+    font-weight: 800;
+}
+
+.inter-normal-black-15-6px {
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-inter);
+    font-size: 15.6px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.inter-normal-black-18-2px {
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.syne-extra-bold-white-11-4px {
+    color: var(--wwwjonathanpattersoncomwhite);
+    font-family: var(--font-family-syne);
+    font-size: 11.4px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.sairasemicondensed-regular-normal-white-9-9px-2 {
+    color: var(--wwwjonathanpattersoncomwhite);
+    font-family: var(--font-family-saira_semicondensed-regular);
+    font-size: 9.9px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.component-1 {
+    background-color: transparent;
+    position: relative;
+}
+
+.group-28 {
+    background-color: transparent;
+    cursor: pointer;
+    pointer-events: auto;
+    position: absolute;
+    transition: all 0.2s ease;
+}
+
+.horizontal-divider {
+    background-color: var(--white);
+    height: 1px;
+    position: absolute;
+}
+
+.x664dfcbd77a643f1f9fb {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.x664dfcbd77e6fb473e0e {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.x664dfcbdb7a5fe391fe9 {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+/* screen - iphone-14-u38-15-pro-max-1 */
+
+.iphone-14-u38-15-pro-max-1 {
+    background-color: var(--wwwjonathanpattersoncomwhite);
+    margin: 0px;
+    min-height: 2901px;
+    min-width: 430px;
+    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-70-Q862b3 {
+    background-color: transparent;
+    cursor: pointer;
+    height: 372px;
+    left: 13px;
+    pointer-events: auto;
+    position: absolute;
+    top: 2003px;
+    transition: all 0.2s ease;
+    width: 404px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-70-Q862b3:hover {
+    transform: scale(0.95);
+}
+
+.iphone-14-u38-15-pro-max-1 .group-62-4mtHss {
+    background-color: transparent;
+    height: 372px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 406px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-45-kUKhHF {
+    background-color: transparent;
+    height: 372px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 404px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-42-xjA6R0 {
+    cursor: pointer;
+    pointer-events: auto;
+    position: absolute;
+    transition: all 0.2s ease;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-42-xjA6R0:hover {
+    transform: scale(1.1);
+}
+
+.iphone-14-u38-15-pro-max-1 .group-46-kUKhHF {
+    background-color: transparent;
+    height: 187px;
+    left: 51px;
+    position: absolute;
+    top: 76px;
+    width: 330px;
+}
+
+.iphone-14-u38-15-pro-max-1 .mac-book-pro-16-inch-space-black-front-1ghOGm {
+    left: 0px;
+    top: 0px;
+}
+
+.iphone-14-u38-15-pro-max-1 .main-pv3ctg {
+    left: 0px;
+    top: 0px;
+}
+
+.iphone-14-u38-15-pro-max-1 .copy-of-qhaart-ibm-2-pv3ctg {
+    background-color: var(--wwwjonathanpattersoncomwhite);
+    border-radius: 5.017265319824219px 6.898738861083984px 0px 0px;
+    left: 31px;
+    top: 7px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-9-1ghOGm {
+    background-color: transparent;
+    height: 124px;
+    left: 0px;
+    position: absolute;
+    top: 23px;
+    width: 330px;
+}
+
+.iphone-14-u38-15-pro-max-1 .nothing-phone-8-1-xxq0sm {
+    background-color: transparent;
+    height: 122px;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 174px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-8-xxq0sm {
+    background-color: transparent;
+    height: 123px;
+    left: 81px;
+    position: absolute;
+    top: 1px;
+    width: 249px;
+}
+
+.iphone-14-u38-15-pro-max-1 .nothing-phone-5-2-NL2zhW {
+    background-color: transparent;
+    height: 123px;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 171px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-7-NL2zhW {
+    background-color: transparent;
+    height: 123px;
+    left: 78px;
+    position: absolute;
+    top: 1px;
+    width: 171px;
+}
+
+.iphone-14-u38-15-pro-max-1 .nothing-phone-5-1-YPjzL6 {
+    background-color: transparent;
+    height: 123px;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 171px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x23-1-YPjzL6 {
+    background-color: transparent;
+    height: 119px;
+    left: 47px;
+    object-fit: cover;
+    position: absolute;
+    top: 1px;
+    width: 54px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x05-kUKhHF {
+    background-color: transparent;
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-syne);
+    font-size: 9.3px;
+    font-style: normal;
+    font-weight: 800;
+    height: 12px;
+    left: 18px;
+    letter-spacing: 0.00px;
+    line-height: 11.6px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 14px;
+    white-space: nowrap;
+    width: auto;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-72-Q862b3 {
+    background-color: transparent;
+    cursor: pointer;
+    height: calc(100.00% - 2529px);
+    left: 9px;
+    pointer-events: auto;
+    position: absolute;
+    top: 38px;
+    transition: all 0.2s ease;
+    width: calc(100.00% - 26px);
+}
+
+.iphone-14-u38-15-pro-max-1 .group-72-Q862b3:hover {
+    transform: scale(0.95);
+}
+
+.iphone-14-u38-15-pro-max-1 .background-ND62Lv {
+    background-color: transparent;
+    cursor: pointer;
+    height: calc(100.00% + 1px);
+    object-fit: cover;
+    top: 0px;
+    width: calc(100.00% + 1px);
+}
+
+.iphone-14-u38-15-pro-max-1 .group-73-Q862b3 {
+    background-color: transparent;
+    cursor: pointer;
+    height: 372px;
+    left: 9px;
+    pointer-events: auto;
+    position: absolute;
+    top: 431px;
+    transition: all 0.2s ease;
+    width: 404px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-73-Q862b3:hover {
+    transform: scale(0.95);
+}
+
+.iphone-14-u38-15-pro-max-1 .group-67-aMThdH {
+    background-color: transparent;
+    cursor: pointer;
+    height: 100%;
+    left: 0px;
+    pointer-events: auto;
+    position: relative;
+    top: 0px;
+    transition: all 0.2s ease;
+    width: calc(100.00% + 4px);
+}
+
+.iphone-14-u38-15-pro-max-1 .group-67-aMThdH:hover {
+    transform: scale(0.9);
+}
+
+.iphone-14-u38-15-pro-max-1 .component-41false-vlkC1d::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+
+.iphone-14-u38-15-pro-max-1 .component-41false-vlkC1d {
+    border-radius: 11.19px;
+    position: absolute;
+    width: calc(100.00% - 4px);
+}
+
+.iphone-14-u38-15-pro-max-1 .link-fMlKx0 {
+    max-width: 404.24786376953125px;
+    width: 404.24786376953125px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbdb7a5fe391fe9-Gqp1U2 {
+    align-items: flex-start;
+    height: 3.04%;
+    max-width: 1275.8797607421875px;
+    position: absolute;
+    right: -1px;
+    top: 0px;
+    width: 11px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbdb7a5fe391fe9-rWQZZi {
+    align-items: center;
+    height: 11.29685115814209px;
+    justify-content: center;
+    position: relative;
+    width: 11.29685115814209px;
+}
+
+.iphone-14-u38-15-pro-max-1 .component-1-OznJeV {
+    height: 11.29685115814209px;
+    width: 10.63214111328125px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbd77a643f1f9fb-Gqp1U2 {
+    align-items: flex-start;
+    bottom: -1px;
+    height: 11px;
+    left: 0px;
+    max-width: 1275.8797607421875px;
+    position: absolute;
+    width: 11px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbd77a643f1f9fb-yAK1aE {
+    align-items: center;
+    height: 11.29685115814209px;
+    justify-content: center;
+    position: relative;
+    width: 11.29685115814209px;
+}
+
+.iphone-14-u38-15-pro-max-1 .component-1-xBrFFx {
+    height: 10.63232421875px;
+    width: 11.29685115814209px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbd77e6fb473e0e-Gqp1U2 {
+    align-items: flex-start;
+    bottom: -1px;
+    height: 11px;
+    max-width: 1275.8797607421875px;
+    position: absolute;
+    right: -1px;
+    width: 11px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbd77e6fb473e0e-PhjVUr {
+    align-items: center;
+    height: 11.29685115814209px;
+    justify-content: center;
+    position: relative;
+    width: 11.29685115814209px;
+}
+
+.iphone-14-u38-15-pro-max-1 .horizontal-divider-Gqp1U2 {
+    left: 20px;
+    top: 328px;
+    width: calc(100.00% - 40px);
+}
+
+.iphone-14-u38-15-pro-max-1 .qr-food-ordering-application-vlkC1d {
+    background-color: transparent;
+    height: 16px;
+    left: 21px;
+    letter-spacing: 0.00px;
+    line-height: 15.9px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 337px;
+    white-space: nowrap;
+    width: 140px;
+}
+
+.iphone-14-u38-15-pro-max-1 .mac-book-pro-16-inch-space-black-front-vlkC1d {
+    left: 49px;
+    top: 78px;
+}
+
+.iphone-14-u38-15-pro-max-1 .main-Q7Ay1u {
+    left: 0px;
+    top: 0px;
+}
+
+.iphone-14-u38-15-pro-max-1 .copy-of-qhaart-ibm-1-vlkC1d {
+    background-color: transparent;
+    height: 159px;
+    left: 81px;
+    object-fit: cover;
+    position: absolute;
+    top: 86px;
+    width: 244px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x01-vlkC1d {
+    background-color: transparent;
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-syne);
+    font-size: var(--font-size-xxs);
+    font-style: normal;
+    font-weight: 800;
+    height: 14px;
+    left: 17px;
+    letter-spacing: 0.00px;
+    line-height: 13.3px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 9px;
+    white-space: nowrap;
+    width: auto;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-71-Q862b3 {
+    background-color: transparent;
+    cursor: pointer;
+    height: 372px;
+    left: 9px;
+    pointer-events: auto;
+    position: absolute;
+    top: 824px;
+    transition: all 0.2s ease;
+    width: 404px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-71-Q862b3:hover {
+    transform: scale(0.95);
+}
+
+.iphone-14-u38-15-pro-max-1 .group-64-7w7TLK {
+    background-color: transparent;
+    height: 372px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 404px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-56-ztzetX {
+    background-color: transparent;
+    cursor: pointer;
+    height: 372px;
+    left: 0px;
+    pointer-events: auto;
+    position: relative;
+    top: 0px;
+    transition: all 0.2s ease;
+    width: 404px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-56-ztzetX:hover {
+    transform: scale(0.95);
+}
+
+.iphone-14-u38-15-pro-max-1 .group-55-4WGMxW {
+    background-color: transparent;
+    height: 372px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 404px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-53-COjgQ7 {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.iphone-14-u38-15-pro-max-1 .component-41false-QV5Qz9::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+
+.iphone-14-u38-15-pro-max-1 .component-41false-QV5Qz9 {
+    border-radius: 11.19px;
+    position: absolute;
+    width: 100%;
+}
+
+.iphone-14-u38-15-pro-max-1 .link-oRmJn3 {
+    max-width: 404.24786376953125px;
+    width: 404.24786376953125px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbdb7a5fe391fe9-q6Y5PJ {
+    align-items: flex-start;
+    height: 3.04%;
+    max-width: 1275.8797607421875px;
+    position: absolute;
+    right: -1px;
+    top: 0px;
+    width: 11px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbdb7a5fe391fe9-IJvphx {
+    align-items: center;
+    height: 11.29685115814209px;
+    justify-content: center;
+    position: relative;
+    width: 11.29685115814209px;
+}
+
+.iphone-14-u38-15-pro-max-1 .component-1-y1JYW1 {
+    height: 11.29685115814209px;
+    width: 10.63214111328125px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbd77a643f1f9fb-q6Y5PJ {
+    align-items: flex-start;
+    bottom: -1px;
+    height: 11px;
+    left: 0px;
+    max-width: 1275.8797607421875px;
+    position: absolute;
+    width: 11px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbd77a643f1f9fb-mU2DTZ {
+    align-items: center;
+    height: 11.29685115814209px;
+    justify-content: center;
+    position: relative;
+    width: 11.29685115814209px;
+}
+
+.iphone-14-u38-15-pro-max-1 .component-1-sksNdq {
+    height: 10.63232421875px;
+    width: 11.29685115814209px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbd77e6fb473e0e-q6Y5PJ {
+    align-items: flex-start;
+    bottom: -1px;
+    height: 11px;
+    max-width: 1275.8797607421875px;
+    position: absolute;
+    right: -1px;
+    width: 11px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbd77e6fb473e0e-jQH5lK {
+    align-items: center;
+    height: 11.29685115814209px;
+    justify-content: center;
+    position: relative;
+    width: 11.29685115814209px;
+}
+
+.iphone-14-u38-15-pro-max-1 .mac-book-pro-16-inch-space-black-front-QV5Qz9 {
+    left: 49px;
+    top: 78px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-63-9WcxPp {
+    background-color: transparent;
+    height: 187px;
+    left: 1px;
+    position: relative;
+    top: -1px;
+    width: 308px;
+}
+
+.iphone-14-u38-15-pro-max-1 .main-TJie0k {
+    left: 0px;
+    top: 0px;
+}
+
+.iphone-14-u38-15-pro-max-1 .copy-of-qhaart-ibm-2-TJie0k {
+    background-color: transparent;
+    left: 32px;
+    object-fit: cover;
+    top: 9px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-54-COjgQ7 {
+    background-color: transparent;
+    height: 344px;
+    left: 16px;
+    position: absolute;
+    top: 11px;
+    width: 377px;
+}
+
+.iphone-14-u38-15-pro-max-1 .iit-roorkee-conference-management-portal-bbgN3R {
+    background-color: transparent;
+    height: 16px;
+    left: 5px;
+    letter-spacing: 0.00px;
+    line-height: 15.9px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 328px;
+    white-space: nowrap;
+    width: 173px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x02-bbgN3R {
+    background-color: transparent;
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-syne);
+    font-size: var(--font-size-xxs);
+    font-style: normal;
+    font-weight: 800;
+    height: 14px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 13.3px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 0px;
+    white-space: nowrap;
+    width: auto;
+}
+
+.iphone-14-u38-15-pro-max-1 .horizontal-divider-bbgN3R {
+    left: 7px;
+    top: 319px;
+    width: calc(100.00% - 13px);
+}
+
+.iphone-14-u38-15-pro-max-1 .emt-bbgN3R {
+    background-color: transparent;
+    height: 14px;
+    left: 7px;
+    letter-spacing: 0.00px;
+    line-height: 13.3px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 295px;
+    white-space: nowrap;
+    width: auto;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-68-Q862b3 {
+    background-color: transparent;
+    cursor: pointer;
+    height: 372px;
+    left: 9px;
+    pointer-events: auto;
+    position: absolute;
+    top: 1217px;
+    transition: all 0.2s ease;
+    width: 406px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-68-Q862b3:hover {
+    transform: scale(0.95);
+}
+
+.iphone-14-u38-15-pro-max-1 .group-3-CE9pjw {
+    background-color: transparent;
+    cursor: pointer;
+    height: 100%;
+    left: 0px;
+    pointer-events: auto;
+    position: absolute;
+    top: 0px;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-3-CE9pjw:hover {
+    transform: scale(0.95);
+}
+
+.iphone-14-u38-15-pro-max-1 .component-41false-uQpCA7::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+
+.iphone-14-u38-15-pro-max-1 .component-41false-uQpCA7 {
+    border-radius: 11.19px;
+    position: absolute;
+    width: calc(100.00% - 2px);
+}
+
+.iphone-14-u38-15-pro-max-1 .link-xZzFWj {
+    max-width: 404.24786376953125px;
+    width: 404.24786376953125px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbd77a643f1f9fb-WPiB13 {
+    align-items: flex-start;
+    bottom: -1px;
+    height: 11px;
+    left: 0px;
+    max-width: 1275.8797607421875px;
+    position: absolute;
+    width: 11px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbd77a643f1f9fb-Tjr6ew {
+    align-items: center;
+    height: 11.29685115814209px;
+    justify-content: center;
+    position: relative;
+    width: 11.29685115814209px;
+}
+
+.iphone-14-u38-15-pro-max-1 .horizontal-divider-WPiB13 {
+    left: 20px;
+    top: 328px;
+    width: calc(100.00% - 40px);
+}
+
+.iphone-14-u38-15-pro-max-1 .mac-book-pro-16-inch-space-black-front-uQpCA7 {
+    cursor: pointer;
+    left: 49px;
+    pointer-events: auto;
+    top: 78px;
+    transition: all 0.2s ease;
+}
+
+.iphone-14-u38-15-pro-max-1 .mac-book-pro-16-inch-space-black-front-uQpCA7:hover {
+    transform: scale(0.95);
+}
+
+.iphone-14-u38-15-pro-max-1 .main-lAoq72 {
+    left: 0px;
+    top: 0px;
+}
+
+.iphone-14-u38-15-pro-max-1 .rectangle-1-lAoq72 {
+    background-color: transparent;
+    height: 163px;
+    left: 31px;
+    object-fit: cover;
+    position: absolute;
+    top: 8px;
+    width: 245px;
+}
+
+.iphone-14-u38-15-pro-max-1 .ai-portfolio-management-website-uQpCA7 {
+    background-color: transparent;
+    height: 16px;
+    left: 21px;
+    letter-spacing: 0.00px;
+    line-height: 15.9px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 337px;
+    white-space: nowrap;
+    width: 140px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x03-CE9pjw {
+    background-color: transparent;
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-syne);
+    font-size: 8.5px;
+    font-style: normal;
+    font-weight: 800;
+    height: 11px;
+    left: 15px;
+    letter-spacing: 0.00px;
+    line-height: 10.6px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 14px;
+    white-space: nowrap;
+    width: auto;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-69-Q862b3 {
+    background-color: transparent;
+    cursor: pointer;
+    height: 372px;
+    left: 9px;
+    pointer-events: auto;
+    position: absolute;
+    top: 1610px;
+    transition: all 0.2s ease;
+    width: 404px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-69-Q862b3:hover {
+    transform: scale(0.95);
+}
+
+.iphone-14-u38-15-pro-max-1 .group-41-cmoiB2 {
+    background-color: transparent;
+    cursor: pointer;
+    height: 372px;
+    left: 0px;
+    pointer-events: auto;
+    position: absolute;
+    top: 0px;
+    transition: all 0.2s ease;
+    width: 404px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-41-cmoiB2:hover {
+    transform: scale(0.95);
+}
+
+.iphone-14-u38-15-pro-max-1 .group-44-7xxvsA {
+    background-color: transparent;
+    height: 372px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 404px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-43-nxfWXr {
+    background-color: transparent;
+    height: 372px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 404px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-42-EUbjgL {
+    position: relative;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-6-QmE7Va {
+    background-color: transparent;
+    cursor: pointer;
+    height: 372px;
+    left: 0px;
+    pointer-events: auto;
+    position: absolute;
+    top: 0px;
+    transition: all 0.2s ease;
+    width: 404px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-6-QmE7Va:hover {
+    transform: scale(1.1);
+}
+
+.iphone-14-u38-15-pro-max-1 .main-QmE7Va {
+    left: 48px;
+    top: 79px;
+}
+
+.iphone-14-u38-15-pro-max-1 .copy-of-qhaart-ibm-2-nxfWXr {
+    background-color: transparent;
+    left: 80px;
+    object-fit: cover;
+    top: 87px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-58-cmoiB2 {
+    background-color: transparent;
+    height: 12px;
+    left: 18px;
+    position: absolute;
+    top: 14px;
+    width: 22px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x04-x6YENm {
+    background-color: transparent;
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-syne);
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 800;
+    height: 12px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 11.3px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 0px;
+    white-space: nowrap;
+    width: auto;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-35-Q862b3 {
+    height: 455px;
+    left: 0px;
+    top: 2446px;
+    width: 432px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-34-KHAEKx {
+    background-color: transparent;
+    height: 455px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 432px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-33-fGRKY3 {
+    height: 455px;
+    width: calc(100.00% + 2px);
+}
+
+.iphone-14-u38-15-pro-max-1 .group-26-rtPW0V {
+    background-color: transparent;
+    cursor: pointer;
+    height: calc(100.00% - 10px);
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: calc(100.00% - 4px);
+}
+
+.iphone-14-u38-15-pro-max-1 .component-41false-BRN3OZ::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+
+.iphone-14-u38-15-pro-max-1 .component-41false-BRN3OZ {
+    border-radius: 23.730684280395508px 23.730684280395508px 0px 0px;
+    position: relative;
+    width: 100%;
+}
+
+.iphone-14-u38-15-pro-max-1 .link-tczxxJ {
+    max-width: 411.5912780761719px;
+    width: 411.5912780761719px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbdb7a5fe391fe9-0eRjdn {
+    align-items: flex-start;
+    height: 3.04%;
+    max-width: 1299.056884765625px;
+    position: absolute;
+    right: -1px;
+    top: 0px;
+    width: 12px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbdb7a5fe391fe9-juP8x0 {
+    align-items: center;
+    height: 11.502065658569336px;
+    justify-content: center;
+    position: relative;
+    width: 11.502065658569336px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbd77a643f1f9fb-0eRjdn {
+    align-items: flex-start;
+    bottom: 0px;
+    height: 12px;
+    left: 0px;
+    max-width: 1299.056884765625px;
+    position: absolute;
+    width: 12px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbd77a643f1f9fb-xWMZsJ {
+    align-items: center;
+    height: 11.502065658569336px;
+    justify-content: center;
+    position: relative;
+    width: 11.502065658569336px;
+}
+
+.iphone-14-u38-15-pro-max-1 .component-1-0Jo9kN {
+    height: 11.121551513671875px;
+    width: 11.502065658569336px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbd77e6fb473e0e-0eRjdn {
+    align-items: flex-start;
+    bottom: 0px;
+    height: 12px;
+    max-width: 1299.056884765625px;
+    position: absolute;
+    right: -1px;
+    width: 12px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x664dfcbd77e6fb473e0e-5Gw3vw {
+    align-items: center;
+    height: 11.502065658569336px;
+    justify-content: center;
+    position: relative;
+    width: 11.502065658569336px;
+}
+
+.iphone-14-u38-15-pro-max-1 .component-1-4pyc8v {
+    height: 11.121551513671875px;
+    width: 10.825164794921875px;
+}
+
+.iphone-14-u38-15-pro-max-1 .background-rtPW0V {
+    background-color: var(--bunker);
+    height: 22px;
+    top: 433px;
+    width: calc(100.00% - 4px);
+}
+
+.iphone-14-u38-15-pro-max-1 .list-bwkQxx {
+    background-color: transparent;
+    height: 11px;
+    left: 0px;
+    overflow: hidden;
+    position: relative;
+    top: 7px;
+    width: 100%;
+}
+
+.iphone-14-u38-15-pro-max-1 .item-available-now-hfJbYh {
+    height: 11px;
+    left: calc(50.00% - 435px);
+    letter-spacing: -0.33px;
+    line-height: 11.0px;
+    top: 0px;
+    white-space: nowrap;
+    width: 84px;
+}
+
+.iphone-14-u38-15-pro-max-1 .item-hfJbYh {
+    left: calc(50.00% - 343px);
+}
+
+.iphone-14-u38-15-pro-max-1 .item-available-now-I1C394 {
+    height: 11px;
+    left: calc(50.00% - 329px);
+    letter-spacing: -0.33px;
+    line-height: 11.0px;
+    top: 0px;
+    white-space: nowrap;
+    width: 84px;
+}
+
+.iphone-14-u38-15-pro-max-1 .item-I1C394 {
+    left: calc(50.00% - 236px);
+}
+
+.iphone-14-u38-15-pro-max-1 .item-available-now-6Zv43N {
+    height: 11px;
+    left: calc(50.00% - 223px);
+    letter-spacing: -0.33px;
+    line-height: 11.0px;
+    top: 0px;
+    white-space: nowrap;
+    width: 84px;
+}
+
+.iphone-14-u38-15-pro-max-1 .item-6Zv43N {
+    left: calc(50.00% - 130px);
+}
+
+.iphone-14-u38-15-pro-max-1 .item-available-now-2TIJuf {
+    height: 11px;
+    left: calc(50.00% - 117px);
+    letter-spacing: -0.33px;
+    line-height: 11.0px;
+    top: 0px;
+    white-space: nowrap;
+    width: 84px;
+}
+
+.iphone-14-u38-15-pro-max-1 .item-2TIJuf {
+    left: calc(50.00% - 24px);
+}
+
+.iphone-14-u38-15-pro-max-1 .item-available-now-t1Oi8B {
+    height: 11px;
+    left: calc(50.00% - 10px);
+    letter-spacing: -0.33px;
+    line-height: 11.0px;
+    top: 0px;
+    white-space: nowrap;
+    width: 84px;
+}
+
+.iphone-14-u38-15-pro-max-1 .item-t1Oi8B {
+    left: calc(50.00% + 82px);
+}
+
+.iphone-14-u38-15-pro-max-1 .item-available-now-XWC2Lz {
+    height: 11px;
+    left: calc(50.00% + 96px);
+    letter-spacing: -0.33px;
+    line-height: 11.0px;
+    top: 0px;
+    white-space: nowrap;
+    width: 84px;
+}
+
+.iphone-14-u38-15-pro-max-1 .item-XWC2Lz {
+    left: calc(50.00% + 189px);
+}
+
+.iphone-14-u38-15-pro-max-1 .item-available-now-KE5Y8G {
+    height: 11px;
+    left: calc(50.00% + 202px);
+    letter-spacing: -0.33px;
+    line-height: 11.0px;
+    top: 0px;
+    white-space: nowrap;
+    width: 84px;
+}
+
+.iphone-14-u38-15-pro-max-1 .item-KE5Y8G {
+    left: calc(50.00% + 295px);
+}
+
+.iphone-14-u38-15-pro-max-1 .item-available-now-N3ia74 {
+    height: 11px;
+    left: calc(50.00% + 309px);
+    letter-spacing: -0.33px;
+    line-height: 11.0px;
+    top: 0px;
+    white-space: nowrap;
+    width: 84px;
+}
+
+.iphone-14-u38-15-pro-max-1 .item-N3ia74 {
+    left: calc(50.00% + 401px);
+}
+
+.iphone-14-u38-15-pro-max-1 .item-available-now-Fpo4xO {
+    height: 11px;
+    left: calc(50.00% + 415px);
+    letter-spacing: -0.33px;
+    line-height: 11.0px;
+    top: 0px;
+    white-space: nowrap;
+    width: 84px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-32-rtPW0V {
+    background-color: transparent;
+    height: 288px;
+    left: 110px;
+    position: absolute;
+    top: 31px;
+    width: 210px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-29-6uzxqL {
+    background-color: transparent;
+    height: 288px;
+    left: calc(50.00% - 105px);
+    position: absolute;
+    top: 0px;
+    width: 189px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-28-AdNFP8 {
+    height: 43px;
+    left: 0px;
+    top: 0px;
+    width: 43px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-28-AdNFP8:hover {
+    transform: scale(0.95);
+}
+
+.iphone-14-u38-15-pro-max-1 .page-1-fO9DdD {
+    background-color: transparent;
+    height: 43px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 43px;
+}
+
+.iphone-14-u38-15-pro-max-1 .dribbble-light-preview-72QBrM {
+    background-color: transparent;
+    height: 43px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 43px;
+}
+
+.iphone-14-u38-15-pro-max-1 .icons-edfhmf {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-28-KOrwDJ {
+    height: 13.95%;
+    left: 44.61%;
+    top: 0.99%;
+    width: 21.22%;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-28-KOrwDJ:hover {
+    transform: scale(0.95);
+}
+
+.iphone-14-u38-15-pro-max-1 .group-AdNFP8 {
+    background-color: transparent;
+    height: 21.90%;
+    left: 37.23%;
+    position: absolute;
+    top: 57.64%;
+    width: 33.33%;
+}
+
+.iphone-14-u38-15-pro-max-1 .item-available-now-AdNFP8 {
+    color: var(--wwwjonathanpattersoncomwhite);
+    font-family: var(--font-family-inter);
+    font-size: 21.1px;
+    font-style: normal;
+    font-weight: 700;
+    height: 36px;
+    left: calc(50.00% - 75px);
+    letter-spacing: -0.66px;
+    line-height: 22.0px;
+    top: 252px;
+    width: 167px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-28-6uzxqL {
+    height: 34px;
+    left: 167px;
+    top: 6px;
+    width: 43px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-28-6uzxqL:hover {
+    transform: scale(0.95);
+}
+
+.iphone-14-u38-15-pro-max-1 .group-27-6Sx1CA {
+    background-color: transparent;
+    height: 113.92%;
+    left: -5.56%;
+    position: absolute;
+    top: -6.96%;
+    width: 111.11%;
+}
+
+.iphone-14-u38-15-pro-max-1 .ouve-reached-the-bot-rtPW0V {
+    background-color: transparent;
+    color: var(--bunker);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-xs);
+    font-style: normal;
+    font-weight: 700;
+    height: 39px;
+    left: 7px;
+    letter-spacing: -0.45px;
+    line-height: 19.9px;
+    position: absolute;
+    text-align: center;
+    top: 106px;
+    width: 425px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-35-AclxKv {
+    height: 30px;
+    left: 19px;
+    top: 2819px;
+    width: 384px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-33-iWx4sR {
+    height: 30px;
+    width: 386px;
+}
+
+.iphone-14-u38-15-pro-max-1 .x2025-resume-OrVzGK {
+    background-color: transparent;
+    color: var(--wwwjonathanpattersoncomwhite);
+    font-family: var(--font-family-inter);
+    font-size: 48.9px;
+    font-style: normal;
+    font-weight: 700;
+    height: 30px;
+    left: 0px;
+    letter-spacing: -1.01px;
+    line-height: 50.3px;
+    opacity: 0.43;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    white-space: nowrap;
+    width: 384px;
+}
+
+.iphone-14-u38-15-pro-max-1 .about {
+    background-color: transparent;
+    letter-spacing: 0.00px;
+    line-height: 13.3px;
+    margin-top: -0.66px;
+    position: relative;
+    text-align: left;
+    text-decoration: underline;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.iphone-14-u38-15-pro-max-1 .background {
+    left: 0px;
+    position: absolute;
+}
+
+.iphone-14-u38-15-pro-max-1 .component-41false {
+    align-items: center;
+    background: radial-gradient(50% 50% at 76% 50%, rgba(255, 255, 255, 1) 0%, rgba(172, 174, 176, 1) 41%, rgba(0, 4, 11, 1) 100%);
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: center;
+    left: 0px;
+    overflow-y: scroll;
+    top: 0px;
+}
+
+.iphone-14-u38-15-pro-max-1 .copy-of-qhaart-ibm-2 {
+    height: 159px;
+    position: absolute;
+    width: 244px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-33 {
+    background-color: transparent;
+    left: 0px;
+    position: relative;
+    top: 0px;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-35 {
+    background-color: transparent;
+    position: absolute;
+}
+
+.iphone-14-u38-15-pro-max-1 .group-42 {
+    background-color: transparent;
+    height: 372px;
+    left: 0px;
+    top: 0px;
+    width: 404px;
+}
+
+.iphone-14-u38-15-pro-max-1 .heading-1 {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    left: 20px;
+    position: absolute;
+    top: 304px;
+    width: calc(100.00% - 40px);
+}
+
+.iphone-14-u38-15-pro-max-1 .item {
+    background-color: transparent;
+    height: 11px;
+    letter-spacing: -0.33px;
+    line-height: 11.0px;
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    white-space: nowrap;
+    width: 5px;
+}
+
+.iphone-14-u38-15-pro-max-1 .item-available-now {
+    background-color: transparent;
+    position: absolute;
+    text-align: center;
+}
+
+.iphone-14-u38-15-pro-max-1 .link {
+    background-color: transparent;
+    flex: 1;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.iphone-14-u38-15-pro-max-1 .mac-book-pro-16-inch-space-black-front {
+    background-color: transparent;
+    border-radius: 11.19px;
+    height: 187px;
+    position: absolute;
+    width: 308px;
+}
+
+.iphone-14-u38-15-pro-max-1 .main {
+    background-color: transparent;
+    height: 187px;
+    object-fit: cover;
+    position: absolute;
+    width: 308px;
+}
+
+.iphone-14-u38-15-pro-max-1 .shattering-the-status-quo {
+    background-color: transparent;
+    height: 16px;
+    left: 20px;
+    letter-spacing: 0.00px;
+    line-height: 15.9px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 336px;
+    white-space: nowrap;
+    width: 98px;
+}
+
+.iphone-14-u38-15-pro-max-1 .top-left-cornersvg {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    height: 11px;
+    left: 0px;
+    max-width: 1275.8797607421875px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    width: 11px;
+}
+
+.iphone-14-u38-15-pro-max-1 .top-left-cornersvg-fill {
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    height: 11.29685115814209px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 11.29685115814209px;
+}
+
+
+/* screen - main-frame */
+
+.main-frame {
+    background-color: var(--wwwjonathanpattersoncomporcelain);
+    margin: 0px;
+    min-height: 1490px;
+    min-width: 1535px;
+    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.main-frame .text-xubqhQ {
+    left: 594px;
+    top: 859px;
+}
+
+.main-frame .text-2Kngee {
+    left: 1022px;
+    top: 855px;
+}
+
+.main-frame .text-L7iV5Y {
+    left: 1043px;
+    top: 854px;
+}
+
+.main-frame .ar-food-tracker-app-xubqhQ {
+    background-color: transparent;
+    height: 17px;
+    left: 1021px;
+    letter-spacing: 0.00px;
+    line-height: 17.1px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 855px;
+    white-space: nowrap;
+    width: 150px;
+}
+
+.main-frame .group-50-xubqhQ {
+    background-color: transparent;
+    height: 556px;
+    left: -2px;
+    position: absolute;
+    top: 935px;
+    width: 1538px;
+}
+
+.main-frame .group-42-6JdIF0 {
+    background-color: transparent;
+    cursor: pointer;
+    height: 361px;
+    left: 2px;
+    position: absolute;
+    top: 158px;
+    width: 1535px;
+}
+
+.main-frame .group-30-6JdIF0 {
+    background-color: transparent;
+    height: 556px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1536px;
+}
+
+.main-frame .group-29-Kjjtxk {
+    height: 147px;
+    left: calc(50.00% + 581px);
+    top: 321px;
+    transition: all 0.2s ease;
+    width: 148px;
+}
+
+.main-frame .group-1CqYY1 {
+    background-color: transparent;
+    cursor: pointer;
+    height: 69.22%;
+    left: 14.57%;
+    pointer-events: auto;
+    position: absolute;
+    top: 0px;
+    transition: all 0.2s ease;
+    width: 69.97%;
+}
+
+.main-frame .group-1CqYY1:hover {
+    transform: scale(1.1);
+}
+
+.main-frame .vector-6Wg3YQ {
+    background-color: transparent;
+    cursor: pointer;
+    height: 100.00%;
+    left: 0px;
+    pointer-events: auto;
+    position: absolute;
+    top: 0px;
+    transition: all 0.3s ease-in-out;
+    width: 100.00%;
+}
+
+.main-frame .vector-6Wg3YQ:hover {
+    transform: rotate(90deg);
+}
+
+.main-frame .item-available-now-1CqYY1 {
+    cursor: pointer;
+    left: calc(50.00% - 74px);
+    pointer-events: auto;
+    top: 128px;
+    transition: all 0.2s ease;
+}
+
+.main-frame .item-available-now-1CqYY1:hover {
+    transform: scale(1.1);
+}
+
+.main-frame .group-29-BkRHSZ {
+    height: 556px;
+    left: 0px;
+    top: 0px;
+    width: 1536px;
+}
+
+.main-frame .group-26-MmS1U0 {
+    background-color: transparent;
+    height: 556px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: calc(100.00% + 2px);
+}
+
+.main-frame .background-IcyzrU {
+    background-color: var(--bunker);
+    height: 39px;
+    left: 0px;
+    position: absolute;
+    top: 517px;
+    width: calc(100.00% - 2px);
+}
+
+.main-frame .list-nFReXf {
+    background-color: transparent;
+    height: 19px;
+    left: 0px;
+    overflow: hidden;
+    position: relative;
+    top: 12px;
+    width: 100%;
+}
+
+.main-frame .item-available-now-mdfhzm {
+    left: calc(50.00% - 760px);
+    top: 0px;
+}
+
+.main-frame .item-mdfhzm {
+    left: calc(50.00% - 598px);
+}
+
+.main-frame .item-available-now-P5BKfN {
+    left: calc(50.00% - 575px);
+    top: 0px;
+}
+
+.main-frame .item-P5BKfN {
+    left: calc(50.00% - 413px);
+}
+
+.main-frame .item-available-now-BALJoj {
+    left: calc(50.00% - 389px);
+    top: 0px;
+}
+
+.main-frame .item-BALJoj {
+    left: calc(50.00% - 227px);
+}
+
+.main-frame .item-available-now-ffI5D2 {
+    left: calc(50.00% - 204px);
+    top: 0px;
+}
+
+.main-frame .item-ffI5D2 {
+    left: calc(50.00% - 42px);
+}
+
+.main-frame .item-available-now-2bqhzV {
+    left: calc(50.00% - 18px);
+    top: 0px;
+}
+
+.main-frame .item-2bqhzV {
+    left: calc(50.00% + 143px);
+}
+
+.main-frame .item-available-now-6YasXw {
+    left: calc(50.00% + 167px);
+    top: 0px;
+}
+
+.main-frame .item-6YasXw {
+    left: calc(50.00% + 329px);
+}
+
+.main-frame .item-available-now-KTEeGm {
+    left: calc(50.00% + 353px);
+    top: 0px;
+}
+
+.main-frame .item-KTEeGm {
+    left: calc(50.00% + 514px);
+}
+
+.main-frame .item-available-now-CoqCxf {
+    left: calc(50.00% + 538px);
+    top: 0px;
+}
+
+.main-frame .item-CoqCxf {
+    left: calc(50.00% + 700px);
+}
+
+.main-frame .item-available-now-nkZCg5 {
+    left: calc(50.00% + 723px);
+    top: 0px;
+}
+
+.main-frame .frame-IcyzrU {
+    background-color: transparent;
+    height: 47px;
+    left: 201px;
+    position: absolute;
+    top: 214px;
+    width: 537px;
+}
+
+.main-frame .ouve-reached-the-bot-Qxv3iu {
+    background-color: transparent;
+    color: var(--bunker);
+    font-family: var(--font-family-inter);
+    font-size: 18.1px;
+    font-style: normal;
+    font-weight: 700;
+    height: 50px;
+    left: 0px;
+    letter-spacing: -0.58px;
+    line-height: 25.6px;
+    position: absolute;
+    text-align: left;
+    top: 1px;
+    width: 521px;
+}
+
+.main-frame .x2025-resume-IcyzrU {
+    background-color: transparent;
+    color: var(--wwwjonathanpattersoncomwhite);
+    cursor: pointer;
+    font-family: var(--font-family-inter);
+    font-size: 99.4px;
+    font-style: normal;
+    font-weight: 700;
+    height: 94px;
+    left: 201px;
+    letter-spacing: -2.05px;
+    line-height: 102.3px;
+    pointer-events: auto;
+    position: absolute;
+    text-align: left;
+    top: 355px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    width: 885px;
+}
+
+.main-frame .x2025-resume-IcyzrU:hover {
+    transform: scale(1.1);
+}
+
+.main-frame .svg-IcyzrU {
+    background-color: transparent;
+    height: 23px;
+    left: calc(50.00% + 489px);
+    position: absolute;
+    top: 427px;
+    width: 26px;
+}
+
+.main-frame .clip-path-group-Cpm7SO {
+    background-color: transparent;
+    height: 23px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 26px;
+}
+
+.main-frame .group-51-IcyzrU {
+    background-color: transparent;
+    height: 32px;
+    left: 1341px;
+    position: absolute;
+    top: 200px;
+    width: 151px;
+}
+
+.main-frame .dribbble-light-preview-ygNaeG {
+    background-color: transparent;
+    cursor: pointer;
+    height: 30px;
+    left: 0px;
+    pointer-events: auto;
+    position: absolute;
+    top: 0px;
+    transition: all 0.2s ease;
+    width: 30px;
+}
+
+.main-frame .dribbble-light-preview-ygNaeG:hover {
+    transform: scale(0.9);
+}
+
+.main-frame .icons-ZdxtQB {
+    background-color: transparent;
+    height: 100.00%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.main-frame .group-28-ygNaeG {
+    height: 89.25%;
+    left: 39.74%;
+    top: 10.75%;
+    width: 18.59%;
+}
+
+.main-frame .group-28-ygNaeG:hover {
+    transform: scale(0.9);
+}
+
+.main-frame .group-28-iB17ki {
+    height: 27px;
+    left: 117px;
+    top: 3px;
+    width: 34px;
+}
+
+.main-frame .group-28-iB17ki:hover {
+    transform: scale(0.9);
+}
+
+.main-frame .group-27-vBJ5Ji {
+    background-color: transparent;
+    height: 113.90%;
+    left: -5.56%;
+    position: absolute;
+    top: -6.95%;
+    width: 111.11%;
+}
+
+.main-frame .background-xubqhQ {
+    background-color: transparent;
+    cursor: pointer;
+    height: calc(100.00% - 1070px);
+    left: 100px;
+    object-fit: cover;
+    pointer-events: auto;
+    position: absolute;
+    top: 118px;
+    transition: all 0.2s ease;
+    width: calc(100.00% - 1101px);
+}
+
+.main-frame .background-xubqhQ:hover {
+    transform: scale(0.95);
+}
+
+.main-frame .group-52-xubqhQ {
+    background-color: transparent;
+    cursor: pointer;
+    height: calc(100.00% - 1091px);
+    left: 547px;
+    pointer-events: auto;
+    position: absolute;
+    top: 138px;
+    transition: all 0.2s ease;
+    width: calc(100.00% - 1097px);
+}
+
+.main-frame .group-52-xubqhQ:hover {
+    transform: scale(0.95);
+}
+
+.main-frame .component-41false-wq7Bvh::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+
+.main-frame .component-41false-wq7Bvh {
+    width: calc(100.00% - 4px);
+}
+
+.main-frame .x664dfcbdb7a5fe391fe9-nMcfpx {
+    align-items: flex-start;
+    height: 3.04%;
+    max-width: 1368.541259765625px;
+    position: absolute;
+    right: -1px;
+    top: 0px;
+    width: 12px;
+}
+
+.main-frame .x664dfcbdb7a5fe391fe9-eMZyEm {
+    align-items: center;
+    height: 12.117292404174805px;
+    justify-content: center;
+    position: relative;
+    width: 12.117292404174805px;
+}
+
+.main-frame .component-1-S3a7Et {
+    height: 12.117292404174805px;
+    width: 11.40447998046875px;
+}
+
+.main-frame .x664dfcbd77a643f1f9fb-nMcfpx {
+    align-items: flex-start;
+    bottom: -1px;
+    height: 12px;
+    left: 0px;
+    max-width: 1368.541259765625px;
+    position: absolute;
+    width: 12px;
+}
+
+.main-frame .x664dfcbd77a643f1f9fb-MiFyIw {
+    align-items: center;
+    height: 12.117292404174805px;
+    justify-content: center;
+    position: relative;
+    width: 12.117292404174805px;
+}
+
+.main-frame .component-1-Zb7KlD {
+    height: 11.404510498046875px;
+    width: 12.117292404174805px;
+}
+
+.main-frame .x664dfcbd77e6fb473e0e-nMcfpx {
+    align-items: flex-start;
+    bottom: -1px;
+    height: 12px;
+    max-width: 1368.541259765625px;
+    position: absolute;
+    right: -1px;
+    width: 12px;
+}
+
+.main-frame .x664dfcbd77e6fb473e0e-YxsSbA {
+    align-items: center;
+    height: 12.117292404174805px;
+    justify-content: center;
+    position: relative;
+    width: 12.117292404174805px;
+}
+
+.main-frame .horizontal-divider-nMcfpx {
+    left: 21px;
+    top: 351px;
+    width: calc(100.00% - 43px);
+}
+
+.main-frame .qr-food-ordering-application-wq7Bvh {
+    background-color: transparent;
+    height: 17px;
+    left: 22px;
+    letter-spacing: 0.00px;
+    line-height: 17.1px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 362px;
+    white-space: nowrap;
+    width: 150px;
+}
+
+.main-frame .mac-book-pro-16-inch-space-black-front-wq7Bvh {
+    left: 52px;
+    top: 83px;
+}
+
+.main-frame .main-baSIXd {
+    left: 0px;
+    top: 0px;
+}
+
+.main-frame .copy-of-qhaart-ibm-1-wq7Bvh {
+    background-color: transparent;
+    height: 170px;
+    left: 87px;
+    object-fit: cover;
+    position: absolute;
+    top: 92px;
+    width: 262px;
+}
+
+.main-frame .x01-wq7Bvh {
+    background-color: transparent;
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-syne);
+    font-size: 11.4px;
+    font-style: normal;
+    font-weight: 800;
+    height: 15px;
+    left: 18px;
+    letter-spacing: 0.00px;
+    line-height: 14.3px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 10px;
+    white-space: nowrap;
+    width: auto;
+}
+
+.main-frame .group-57-xubqhQ {
+    background-color: transparent;
+    cursor: pointer;
+    height: 399px;
+    left: 100px;
+    pointer-events: auto;
+    position: absolute;
+    top: 556px;
+    transition: all 0.2s ease;
+    width: 436px;
+}
+
+.main-frame .group-57-xubqhQ:hover {
+    transform: scale(0.95);
+}
+
+.main-frame .group-3-RxBvkY {
+    background-color: transparent;
+    cursor: pointer;
+    height: 100%;
+    left: 0px;
+    pointer-events: auto;
+    position: absolute;
+    top: 0px;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.main-frame .group-3-RxBvkY:hover {
+    transform: scale(0.95);
+}
+
+.main-frame .component-41false-p7986Z::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+
+.main-frame .component-41false-p7986Z {
+    width: calc(100.00% - 2px);
+}
+
+.main-frame .x664dfcbd77a643f1f9fb-fTxtfT {
+    align-items: flex-start;
+    bottom: -1px;
+    height: 12px;
+    left: 0px;
+    max-width: 1368.541259765625px;
+    position: absolute;
+    width: 12px;
+}
+
+.main-frame .x664dfcbd77a643f1f9fb-kLsxoA {
+    align-items: center;
+    height: 12.117292404174805px;
+    justify-content: center;
+    position: relative;
+    width: 12.117292404174805px;
+}
+
+.main-frame .horizontal-divider-fTxtfT {
+    left: 21px;
+    top: 351px;
+    width: calc(100.00% - 43px);
+}
+
+.main-frame .mac-book-pro-16-inch-space-black-front-p7986Z {
+    cursor: pointer;
+    left: 52px;
+    pointer-events: auto;
+    top: 83px;
+    transition: all 0.2s ease;
+}
+
+.main-frame .mac-book-pro-16-inch-space-black-front-p7986Z:hover {
+    transform: scale(0.95);
+}
+
+.main-frame .main-7lXf87 {
+    left: 0px;
+    top: 0px;
+}
+
+.main-frame .rectangle-1-7lXf87 {
+    background-color: transparent;
+    height: 175px;
+    left: 34px;
+    object-fit: cover;
+    position: absolute;
+    top: 9px;
+    width: 263px;
+}
+
+.main-frame .ai-portfolio-management-website-p7986Z {
+    background-color: transparent;
+    height: 17px;
+    left: 22px;
+    letter-spacing: 0.00px;
+    line-height: 17.1px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 362px;
+    white-space: nowrap;
+    width: 150px;
+}
+
+.main-frame .x03-RxBvkY {
+    background-color: transparent;
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-syne);
+    font-size: 9.1px;
+    font-style: normal;
+    font-weight: 800;
+    height: 12px;
+    left: 16px;
+    letter-spacing: 0.00px;
+    line-height: 11.4px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 16px;
+    white-space: nowrap;
+    width: auto;
+}
+
+.main-frame .group-66-xubqhQ {
+    background-color: transparent;
+    cursor: pointer;
+    height: 399px;
+    left: 548px;
+    pointer-events: auto;
+    position: absolute;
+    top: 556px;
+    transition: all 0.2s ease;
+    width: 434px;
+}
+
+.main-frame .group-66-xubqhQ:hover {
+    transform: scale(0.95);
+}
+
+.main-frame .group-41-6ReXu2 {
+    background-color: transparent;
+    cursor: pointer;
+    height: 399px;
+    left: 0px;
+    pointer-events: auto;
+    position: absolute;
+    top: 0px;
+    transition: all 0.2s ease;
+    width: 434px;
+}
+
+.main-frame .group-41-6ReXu2:hover {
+    transform: scale(0.95);
+}
+
+.main-frame .group-44-QQGu4m {
+    background-color: transparent;
+    height: 399px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 434px;
+}
+
+.main-frame .group-43-oYHxmZ {
+    background-color: transparent;
+    height: 399px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 434px;
+}
+
+.main-frame .group-42-jWa53x {
+    background-color: transparent;
+    height: 399px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 434px;
+}
+
+.main-frame .group-6-mti1Yz {
+    background-color: transparent;
+    cursor: pointer;
+    height: 399px;
+    left: 0px;
+    pointer-events: auto;
+    position: absolute;
+    top: 0px;
+    transition: all 0.2s ease;
+    width: 434px;
+}
+
+.main-frame .group-6-mti1Yz:hover {
+    transform: scale(1.0);
+}
+
+.main-frame .main-mti1Yz {
+    left: 52px;
+    top: 85px;
+}
+
+.main-frame .copy-of-qhaart-ibm-2-oYHxmZ {
+    background-color: transparent;
+    left: 86px;
+    object-fit: cover;
+    top: 94px;
+}
+
+.main-frame .group-58-6ReXu2 {
+    background-color: transparent;
+    height: 13px;
+    left: 19px;
+    position: absolute;
+    top: 16px;
+    width: 23px;
+}
+
+.main-frame .x04-xgkCZc {
+    background-color: transparent;
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-syne);
+    font-size: 9.7px;
+    font-style: normal;
+    font-weight: 800;
+    height: 13px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 12.1px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 0px;
+    white-space: nowrap;
+    width: auto;
+}
+
+.main-frame .group-61-xubqhQ {
+    background-color: transparent;
+    cursor: pointer;
+    height: 399px;
+    left: 995px;
+    pointer-events: auto;
+    position: absolute;
+    top: 556px;
+    transition: all 0.2s ease;
+    width: 434px;
+}
+
+.main-frame .group-61-xubqhQ:hover {
+    transform: scale(0.95);
+}
+
+.main-frame .group-62-0hIwrI {
+    background-color: transparent;
+    height: 399px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 436px;
+}
+
+.main-frame .group-45-VJp8Aw {
+    background-color: transparent;
+    height: 399px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 434px;
+}
+
+.main-frame .group-42-zDuaiM {
+    background-color: transparent;
+    cursor: pointer;
+    height: 399px;
+    left: 0px;
+    pointer-events: auto;
+    position: absolute;
+    top: 0px;
+    transition: all 0.2s ease;
+    width: 434px;
+}
+
+.main-frame .group-42-zDuaiM:hover {
+    transform: scale(1);
+}
+
+.main-frame .group-46-VJp8Aw {
+    background-color: transparent;
+    height: 201px;
+    left: 55px;
+    position: absolute;
+    top: 81px;
+    width: 354px;
+}
+
+.main-frame .mac-book-pro-16-inch-space-black-front-zlZg99 {
+    left: 0px;
+    top: 0px;
+}
+
+.main-frame .main-78E1Yp {
+    left: 0px;
+    top: 0px;
+}
+
+.main-frame .copy-of-qhaart-ibm-2-78E1Yp {
+    background-color: var(--wwwjonathanpattersoncomwhite);
+    border-radius: 5.381647109985352px 7.399764060974121px 0px 0px;
+    left: 34px;
+    top: 8px;
+}
+
+.main-frame .group-9-zlZg99 {
+    background-color: transparent;
+    height: 133px;
+    left: 0px;
+    position: absolute;
+    top: 25px;
+    width: 354px;
+}
+
+.main-frame .nothing-phone-8-1-cPxTr0 {
+    background-color: transparent;
+    height: 131px;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 186px;
+}
+
+.main-frame .group-8-cPxTr0 {
+    background-color: transparent;
+    height: 132px;
+    left: 87px;
+    position: absolute;
+    top: 1px;
+    width: 268px;
+}
+
+.main-frame .nothing-phone-5-2-lABxZI {
+    background-color: transparent;
+    height: 132px;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 184px;
+}
+
+.main-frame .group-7-lABxZI {
+    background-color: transparent;
+    height: 132px;
+    left: 84px;
+    position: absolute;
+    top: 1px;
+    width: 184px;
+}
+
+.main-frame .nothing-phone-5-1-3Sb1pw {
+    background-color: transparent;
+    height: 132px;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 184px;
+}
+
+.main-frame .x23-1-3Sb1pw {
+    background-color: transparent;
+    height: 127px;
+    left: 50px;
+    object-fit: cover;
+    position: absolute;
+    top: 1px;
+    width: 57px;
+}
+
+.main-frame .x05-VJp8Aw {
+    background-color: transparent;
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-syne);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 800;
+    height: 13px;
+    left: 19px;
+    letter-spacing: 0.00px;
+    line-height: 12.5px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 15px;
+    white-space: nowrap;
+    width: auto;
+}
+
+.main-frame .group-65-xubqhQ {
+    background-color: transparent;
+    cursor: pointer;
+    height: 399px;
+    left: 995px;
+    pointer-events: auto;
+    position: absolute;
+    top: 138px;
+    transition: all 0.2s ease;
+    width: 434px;
+}
+
+.main-frame .group-65-xubqhQ:hover {
+    transform: scale(0.95);
+}
+
+.main-frame .group-64-xcoTAR {
+    background-color: transparent;
+    height: 399px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 434px;
+}
+
+.main-frame .group-56-UtlaoV {
+    background-color: transparent;
+    cursor: pointer;
+    height: 399px;
+    left: 0px;
+    pointer-events: auto;
+    position: relative;
+    top: 0px;
+    transition: all 0.2s ease;
+    width: 434px;
+}
+
+.main-frame .group-56-UtlaoV:hover {
+    transform: scale(0.95);
+}
+
+.main-frame .group-55-tdkfop {
+    background-color: transparent;
+    height: 399px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 434px;
+}
+
+.main-frame .group-53-0AvuAm {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.main-frame .component-41false-YmARmC::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+
+.main-frame .component-41false-YmARmC {
+    width: 100%;
+}
+
+.main-frame .x664dfcbdb7a5fe391fe9-BA6d78 {
+    align-items: flex-start;
+    height: 3.04%;
+    max-width: 1368.541259765625px;
+    position: absolute;
+    right: -1px;
+    top: 0px;
+    width: 12px;
+}
+
+.main-frame .x664dfcbdb7a5fe391fe9-dqjGSK {
+    align-items: center;
+    height: 12.117292404174805px;
+    justify-content: center;
+    position: relative;
+    width: 12.117292404174805px;
+}
+
+.main-frame .component-1-XdVyO7 {
+    height: 12.117292404174805px;
+    width: 11.40447998046875px;
+}
+
+.main-frame .x664dfcbd77a643f1f9fb-BA6d78 {
+    align-items: flex-start;
+    bottom: -1px;
+    height: 12px;
+    left: 0px;
+    max-width: 1368.541259765625px;
+    position: absolute;
+    width: 12px;
+}
+
+.main-frame .x664dfcbd77a643f1f9fb-Drjl21 {
+    align-items: center;
+    height: 12.117292404174805px;
+    justify-content: center;
+    position: relative;
+    width: 12.117292404174805px;
+}
+
+.main-frame .component-1-VOKJTV {
+    height: 11.404510498046875px;
+    width: 12.117292404174805px;
+}
+
+.main-frame .x664dfcbd77e6fb473e0e-BA6d78 {
+    align-items: flex-start;
+    bottom: -1px;
+    height: 12px;
+    max-width: 1368.541259765625px;
+    position: absolute;
+    right: -1px;
+    width: 12px;
+}
+
+.main-frame .x664dfcbd77e6fb473e0e-iSDdF4 {
+    align-items: center;
+    height: 12.117292404174805px;
+    justify-content: center;
+    position: relative;
+    width: 12.117292404174805px;
+}
+
+.main-frame .mac-book-pro-16-inch-space-black-front-YmARmC {
+    left: 52px;
+    top: 83px;
+}
+
+.main-frame .group-63-N5Ec7e {
+    background-color: transparent;
+    height: 201px;
+    left: 1px;
+    position: relative;
+    top: -1px;
+    width: 330px;
+}
+
+.main-frame .main-AvnSkZ {
+    left: 0px;
+    top: 0px;
+}
+
+.main-frame .copy-of-qhaart-ibm-2-AvnSkZ {
+    background-color: transparent;
+    left: 34px;
+    object-fit: cover;
+    top: 9px;
+}
+
+.main-frame .group-54-0AvuAm {
+    background-color: transparent;
+    height: 368px;
+    left: 18px;
+    position: absolute;
+    top: 12px;
+    width: 404px;
+}
+
+.main-frame .iit-roorkee-conference-management-portal-k1BRQk {
+    background-color: transparent;
+    height: 17px;
+    left: 6px;
+    letter-spacing: 0.00px;
+    line-height: 17.1px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 351px;
+    white-space: nowrap;
+    width: 186px;
+}
+
+.main-frame .x02-k1BRQk {
+    background-color: transparent;
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-syne);
+    font-size: 11.4px;
+    font-style: normal;
+    font-weight: 800;
+    height: 15px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 14.3px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 0px;
+    white-space: nowrap;
+    width: auto;
+}
+
+.main-frame .horizontal-divider-k1BRQk {
+    left: 8px;
+    top: 342px;
+    width: calc(100.00% - 14px);
+}
+
+.main-frame .emt-k1BRQk {
+    background-color: transparent;
+    height: 15px;
+    left: 8px;
+    letter-spacing: 0.00px;
+    line-height: 14.3px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 316px;
+    white-space: nowrap;
+    width: auto;
+}
+
+.main-frame .frame-9-xubqhQ {
+    background-color: #acadaf;
+    border-radius: 21px;
+    height: 4px;
+    left: 47px;
+    overflow: hidden;
+    position: absolute;
+    top: 1023px;
+    width: 1421px;
+}
+
+.main-frame .my-portfolio-xubqhQ {
+    background-color: transparent;
+    color: var(--wwwjonathanpattersoncomblack);
+    font-family: var(--font-family-syne);
+    font-size: 41.3px;
+    font-style: normal;
+    font-weight: 800;
+    height: 57px;
+    left: calc(50.00% - 544px);
+    letter-spacing: 0.00px;
+    line-height: 56.8px;
+    position: absolute;
+    text-align: center;
+    top: 37px;
+    width: 1083px;
+}
+
+.main-frame .about {
+    background-color: transparent;
+    letter-spacing: 0.00px;
+    line-height: 14.3px;
+    margin-top: -0.71px;
+    position: relative;
+    text-align: left;
+    text-decoration: underline;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.main-frame .component-41false {
+    align-items: center;
+    background: radial-gradient(50% 50% at 76% 50%, rgba(255, 255, 255, 1) 0%, rgba(172, 174, 176, 1) 41%, rgba(0, 4, 11, 1) 100%);
+    background-color: transparent;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: center;
+    left: 0px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0px;
+}
+
+.main-frame .copy-of-qhaart-ibm-2 {
+    height: 170px;
+    position: absolute;
+    width: 262px;
+}
+
+.main-frame .group-29 {
+    background-color: transparent;
+    position: absolute;
+}
+
+.main-frame .heading-1 {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    left: 21px;
+    position: absolute;
+    top: 326px;
+    width: calc(100.00% - 43px);
+}
+
+.main-frame .item {
+    background-color: transparent;
+    height: 19px;
+    letter-spacing: -0.58px;
+    line-height: 19.2px;
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    white-space: nowrap;
+    width: 8px;
+}
+
+.main-frame .item-available-now {
+    background-color: transparent;
+    height: 19px;
+    letter-spacing: -0.58px;
+    line-height: 19.2px;
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+    width: 146px;
+}
+
+.main-frame .link {
+    background-color: transparent;
+    flex: 1;
+    flex-grow: 1;
+    max-width: 433.60662841796875px;
+    overflow: hidden;
+    position: relative;
+    width: 433.60662841796875px;
+}
+
+.main-frame .mac-book-pro-16-inch-space-black-front {
+    background-color: transparent;
+    border-radius: 12px;
+    height: 201px;
+    position: absolute;
+    width: 330px;
+}
+
+.main-frame .main {
+    background-color: transparent;
+    height: 201px;
+    object-fit: cover;
+    position: absolute;
+    width: 330px;
+}
+
+.main-frame .shattering-the-status-quo {
+    background-color: transparent;
+    height: 17px;
+    left: 21px;
+    letter-spacing: 0.00px;
+    line-height: 17.1px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    top: 361px;
+    white-space: nowrap;
+    width: 106px;
+}
+
+.main-frame .text {
+    background-color: transparent;
+    height: 17px;
+    letter-spacing: 0.00px;
+    line-height: 17.1px;
+    position: absolute;
+    text-align: left;
+    text-decoration: underline;
+    white-space: nowrap;
+    width: 106px;
+}
+
+.main-frame .top-left-cornersvg {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    height: 12px;
+    left: 0px;
+    max-width: 1368.541259765625px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    width: 12px;
+}
+
+.main-frame .top-left-cornersvg-fill {
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    height: 12.117292404174805px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 12.117292404174805px;
+}
+
+@media screen and (max-width: 1200px) {
+    .screen.main-frame {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .screen.iphone-14-u38-15-pro-max-1 {
+        display: none;
+    }
+}

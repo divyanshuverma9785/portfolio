@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+04/04/2025 12:44:46 -->
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1535, maximum-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png">
+    <meta name="og:type" content="website">
+    <meta name="twitter:card" content="photo">
+    <script id="anima-load-script" src="load.js"></script>
+    <script id="anima-hotspots-script" src="hotspots.js"></script>
+    <script id="anima-overrides-script" src="overrides.js"></script>
+    <script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script>
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+        @import url("https://fonts.googleapis.com/css?family=Syne:800|Inter:400,700");
+        /* The following line is used to measure usage of this code. You can remove it if you want. */
+        
+        @import url("https://px.animaapp.com/670ffe77517f95d03ea74e23.670ffe78517f95d03ea74e26.GB7IaK7.hch.png");
+        .screen textarea:focus,
+        .screen input:focus {
+            outline: none;
+        }
+        
+        .screen * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+        }
+        
+        .screen div {
+            -webkit-text-size-adjust: none;
+        }
+        
+        .component-wrapper a {
+            display: contents;
+            pointer-events: auto;
+            text-decoration: none;
+        }
+        
+        .component-wrapper * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+            pointer-events: none;
+        }
+        
+        .component-wrapper a *,
+        .component-wrapper input,
+        .component-wrapper video,
+        .component-wrapper iframe {
+            pointer-events: auto;
+        }
+        
+        .component-wrapper.not-ready,
+        .component-wrapper.not-ready * {
+            visibility: hidden !important;
+        }
+        
+        .screen a {
+            display: contents;
+            text-decoration: none;
+        }
+        
+        .full-width-a {
+            width: 100%;
+        }
+        
+        .full-height-a {
+            height: 100%;
+        }
+        
+        .container-center-vertical {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .container-center-vertical>* {
+            flex-shrink: 0;
+            pointer-events: auto;
+        }
+        
+        .container-center-horizontal {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            pointer-events: none;
+            width: 100%;
+        }
+        
+        .container-center-horizontal>* {
+            flex-shrink: 0;
+            pointer-events: auto;
+        }
+        
+        .auto-animated div {
+            --z-index: -1;
+            opacity: 0;
+            position: absolute;
+        }
+        
+        .auto-animated input {
+            --z-index: -1;
+            opacity: 0;
+            position: absolute;
+        }
+        
+        .auto-animated .container-center-vertical,
+        .auto-animated .container-center-horizontal {
+            opacity: 1;
+        }
+        
+        .overlay-base {
+            display: none;
+            height: 100%;
+            opacity: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        .overlay-base.animate-appear {
+            align-items: center;
+            animation: reveal 0.3s ease-in-out 1 normal forwards;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+        }
+        
+        .overlay-base.animate-disappear {
+            animation: reveal 0.3s ease-in-out 1 reverse forwards;
+            display: block;
+            opacity: 1;
+            pointer-events: none;
+        }
+        
+        .overlay-base.animate-disappear * {
+            pointer-events: none;
+        }
+        
+        @keyframes reveal {
+            from {
+                opacity: 0
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        .animate-nodelay {
+            animation-delay: 0s;
+        }
+        
+        .align-self-flex-start {
+            align-self: flex-start;
+        }
+        
+        .align-self-flex-end {
+            align-self: flex-end;
+        }
+        
+        .align-self-flex-center {
+            align-self: flex-center;
+        }
+        
+        .valign-text-middle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .valign-text-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        
+        input:focus {
+            outline: none;
+        }
+        
+        .listeners-active,
+        .listeners-active * {
+            pointer-events: auto;
+        }
+        
+        .hidden,
+        .hidden * {
+            pointer-events: none;
+            visibility: hidden;
+        }
+        
+        .smart-layers-pointers,
+        .smart-layers-pointers * {
+            pointer-events: auto;
+            visibility: visible;
+        }
+        
+        .listeners-active-click,
+        .listeners-active-click * {
+            cursor: pointer;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+         :root {
+            --eerie-black: #191919;
+            --punch: #db4025;
+            --white: #ffffff33;
+            --wwwjonathanpattersoncomblack: #000000;
+            --wwwjonathanpattersoncomblack-20: #000000;
+            --wwwjonathanpattersoncomporcelain: #e6e9eb;
+            --wwwjonathanpattersoncomwhite: #ffffff;
+            --wwwjonathanpattersoncomwhite-20: #000000;
+            --font-size-l: 18.1px;
+            --font-size-m: 17.4px;
+            --font-size-s: 16px;
+            --font-size-xl: 18.2px;
+            --font-size-xxl: 18.4px;
+            --font-size-xxxl: 20px;
+            --font-size-xxxxl: 21.2px;
+            --font-family-inter: "Inter", Helvetica;
+            --font-family-saira_semicondensed-regular: "Saira SemiCondensed-Regular", Helvetica;
+            --font-family-syne: "Syne", Helvetica;
+        }
+        
+        .inter-normal-black-17-4px {
+            color: var(--wwwjonathanpattersoncomblack);
+            font-family: var(--font-family-inter);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 400;
+        }
+        
+        .inter-bold-white-18-4px {
+            color: var(--wwwjonathanpattersoncomwhite);
+            font-family: var(--font-family-inter);
+            font-size: var(--font-size-xxl);
+            font-style: normal;
+            font-weight: 700;
+        }
+        
+        .inter-normal-black-16px {
+            color: var(--wwwjonathanpattersoncomblack);
+            font-family: var(--font-family-inter);
+            font-size: var(--font-size-s);
+            font-style: normal;
+            font-weight: 400;
+        }
+        
+        .inter-bold-punch-19-2px {
+            color: var(--punch);
+            font-family: var(--font-family-inter);
+            font-size: 19.2px;
+            font-style: normal;
+            font-weight: 700;
+        }
+        
+        .inter-normal-black-21-2px {
+            color: var(--wwwjonathanpattersoncomblack);
+            font-family: var(--font-family-inter);
+            font-size: var(--font-size-xxxxl);
+            font-style: normal;
+            font-weight: 400;
+        }
+        
+        .sairasemicondensed-regular-normal-white-9-9px {
+            color: var(--wwwjonathanpattersoncomwhite);
+            font-family: var(--font-family-saira_semicondensed-regular);
+            font-size: 9.9px;
+            font-style: normal;
+            font-weight: 400;
+        }
+        
+        .syne-extra-bold-black-20px {
+            color: var(--wwwjonathanpattersoncomblack);
+            font-family: var(--font-family-syne);
+            font-size: var(--font-size-xxxl);
+            font-style: normal;
+            font-weight: 800;
+        }
+        
+        .inter-normal-black-19-6px {
+            color: var(--wwwjonathanpattersoncomblack);
+            font-family: var(--font-family-inter);
+            font-size: 19.6px;
+            font-style: normal;
+            font-weight: 400;
+        }
+        
+        .syne-extra-bold-black-11-4px {
+            color: var(--wwwjonathanpattersoncomblack);
+            font-family: var(--font-family-syne);
+            font-size: 11.4px;
+            font-style: normal;
+            font-weight: 800;
+        }
+        
+        .inter-normal-black-15-6px {
+            color: var(--wwwjonathanpattersoncomblack);
+            font-family: var(--font-family-inter);
+            font-size: 15.6px;
+            font-style: normal;
+            font-weight: 400;
+        }
+        
+        .inter-normal-black-18-2px {
+            color: var(--wwwjonathanpattersoncomblack);
+            font-family: var(--font-family-inter);
+            font-size: var(--font-size-xl);
+            font-style: normal;
+            font-weight: 400;
+        }
+        
+        .syne-extra-bold-white-11-4px {
+            color: var(--wwwjonathanpattersoncomwhite);
+            font-family: var(--font-family-syne);
+            font-size: 11.4px;
+            font-style: normal;
+            font-weight: 800;
+        }
+        /* screen - contact */
+        
+        .contact {
+            background-color: var(--eerie-black);
+            cursor: pointer;
+            height: 2882px;
+            overflow: hidden;
+            overflow-x: hidden;
+            position: relative;
+            width: 1535px;
+        }
+        
+        .contact .image-2-DhmS6L {
+            background-color: transparent;
+            height: 74px;
+            left: 46px;
+            object-fit: cover;
+            position: absolute;
+            top: 47px;
+            width: 74px;
+        }
+        
+        .contact .click-to-go-back-DhmS6L {
+            background-color: transparent;
+            color: var(--wwwjonathanpattersoncomwhite);
+            font-family: var(--font-family-syne);
+            font-size: 13.2px;
+            font-style: normal;
+            font-weight: 800;
+            height: 17px;
+            left: 66px;
+            letter-spacing: 0.00px;
+            line-height: 16.5px;
+            position: absolute;
+            text-align: left;
+            text-decoration: underline;
+            top: 138px;
+            white-space: nowrap;
+            width: auto;
+        }
+        
+        .contact .page-1-DhmS6L {
+            background-color: var(--wwwjonathanpattersoncomwhite);
+            border-radius: 37px;
+            height: 1702px;
+            left: 166px;
+            overflow: hidden;
+            position: absolute;
+            top: 1041px;
+            width: 1203px;
+        }
+        
+        .contact .frame-TlYiCR {
+            background-color: transparent;
+            height: 1701px;
+            left: 0px;
+            mix-blend-mode: normal;
+            overflow: hidden;
+            position: absolute;
+            top: 0px;
+            width: 1203px;
+        }
+        
+        .contact .clip-path-group-WyT5Ch {
+            height: 1px;
+            left: 49px;
+            top: 354px;
+            width: 112px;
+        }
+        
+        .contact .clip-path-group-w0Jqix {
+            height: 1px;
+            left: 159px;
+            top: 354px;
+            width: 277px;
+        }
+        
+        .contact .clip-path-group-kliKS1 {
+            height: 1px;
+            left: 435px;
+            top: 354px;
+            width: 554px;
+        }
+        
+        .contact .clip-path-group-WYRIdw {
+            height: 1px;
+            left: 987px;
+            top: 354px;
+            width: 167px;
+        }
+        
+        .contact .clip-path-group-UCeWyJ {
+            height: 53px;
+            left: 49px;
+            top: 354px;
+            width: 2px;
+        }
+        
+        .contact .clip-path-group-W6vex5 {
+            height: 53px;
+            left: 159px;
+            top: 354px;
+            width: 1px;
+        }
+        
+        .contact .clip-path-group-C72xsE {
+            height: 1px;
+            left: 49px;
+            top: 405px;
+            width: 112px;
+        }
+        
+        .contact .clip-path-group-oRrigQ {
+            height: 53px;
+            left: 435px;
+            top: 354px;
+            width: 1px;
+        }
+        
+        .contact .clip-path-group-DobxFc {
+            height: 1px;
+            left: 159px;
+            top: 405px;
+            width: 277px;
+        }
+        
+        .contact .clip-path-group-CzAPL1 {
+            height: 53px;
+            left: 987px;
+            top: 354px;
+            width: 2px;
+        }
+        
+        .contact .clip-path-group-xOKSME {
+            height: 1px;
+            left: 435px;
+            top: 405px;
+            width: 554px;
+        }
+        
+        .contact .clip-path-group-cYDUgO {
+            height: 53px;
+            left: 1153px;
+            top: 354px;
+            width: 2px;
+        }
+        
+        .contact .clip-path-group-ax323J {
+            height: 1px;
+            left: 987px;
+            top: 405px;
+            width: 167px;
+        }
+        
+        .contact .clip-path-group-yYog0B {
+            height: 34px;
+            left: 49px;
+            top: 405px;
+            width: 2px;
+        }
+        
+        .contact .clip-path-group-EhvDGK {
+            height: 34px;
+            left: 159px;
+            top: 405px;
+            width: 1px;
+        }
+        
+        .contact .clip-path-group-1TKIhw {
+            height: 1px;
+            left: 49px;
+            top: 437px;
+            width: 112px;
+        }
+        
+        .contact .clip-path-group-UD952r {
+            height: 34px;
+            left: 435px;
+            top: 405px;
+            width: 1px;
+        }
+        
+        .contact .clip-path-group-vZC9ZV {
+            height: 1px;
+            left: 159px;
+            top: 437px;
+            width: 277px;
+        }
+        
+        .contact .clip-path-group-asWYZd {
+            height: 34px;
+            left: 987px;
+            top: 405px;
+            width: 2px;
+        }
+        
+        .contact .clip-path-group-vsVnNw {
+            height: 1px;
+            left: 435px;
+            top: 437px;
+            width: 554px;
+        }
+        
+        .contact .clip-path-group-TBNvV1 {
+            height: 34px;
+            left: 1153px;
+            top: 405px;
+            width: 2px;
+        }
+        
+        .contact .clip-path-group-0GfIDh {
+            height: 1px;
+            left: 987px;
+            top: 437px;
+            width: 167px;
+        }
+        
+        .contact .clip-path-group-NW2d6N {
+            height: 34px;
+            left: 49px;
+            top: 437px;
+            width: 2px;
+        }
+        
+        .contact .clip-path-group-pRcF5X {
+            height: 34px;
+            left: 159px;
+            top: 437px;
+            width: 1px;
+        }
+        
+        .contact .clip-path-group-iWnEmU {
+            height: 1px;
+            left: 49px;
+            top: 469px;
+            width: 112px;
+        }
+        
+        .contact .clip-path-group-xeoKPP {
+            height: 34px;
+            left: 435px;
+            top: 437px;
+            width: 1px;
+        }
+        
+        .contact .clip-path-group-tz5tar {
+            height: 1px;
+            left: 159px;
+            top: 469px;
+            width: 277px;
+        }
+        
+        .contact .clip-path-group-BJ05AX {
+            height: 34px;
+            left: 987px;
+            top: 437px;
+            width: 2px;
+        }
+        
+        .contact .clip-path-group-FjROyb {
+            height: 1px;
+            left: 435px;
+            top: 469px;
+            width: 554px;
+        }
+        
+        .contact .clip-path-group-Rqlafc {
+            height: 34px;
+            left: 1153px;
+            top: 437px;
+            width: 2px;
+        }
+        
+        .contact .clip-path-group-IlMexv {
+            height: 1px;
+            left: 987px;
+            top: 469px;
+            width: 167px;
+        }
+        
+        .contact .clip-path-group-gwH0BI {
+            height: 34px;
+            left: 49px;
+            top: 469px;
+            width: 2px;
+        }
+        
+        .contact .clip-path-group-IYtxXl {
+            height: 34px;
+            left: 159px;
+            top: 469px;
+            width: 1px;
+        }
+        
+        .contact .clip-path-group-Zs1BJk {
+            height: 1px;
+            left: 49px;
+            top: 501px;
+            width: 112px;
+        }
+        
+        .contact .clip-path-group-LZltR2 {
+            height: 34px;
+            left: 435px;
+            top: 469px;
+            width: 1px;
+        }
+        
+        .contact .clip-path-group-Cjvt83 {
+            height: 1px;
+            left: 159px;
+            top: 501px;
+            width: 277px;
+        }
+        
+        .contact .clip-path-group-lyluGm {
+            height: 34px;
+            left: 987px;
+            top: 469px;
+            width: 2px;
+        }
+        
+        .contact .clip-path-group-ecMKyJ {
+            height: 1px;
+            left: 435px;
+            top: 501px;
+            width: 554px;
+        }
+        
+        .contact .clip-path-group-QYRCPH {
+            height: 34px;
+            left: 1153px;
+            top: 469px;
+            width: 2px;
+        }
+        
+        .contact .clip-path-group-0xls2T {
+            height: 1px;
+            left: 987px;
+            top: 501px;
+            width: 167px;
+        }
+        
+        .contact .clip-path-frame-WyT5Ch {
+            height: 3px;
+            left: 52px;
+            top: 268px;
+            width: 227px;
+        }
+        
+        .contact .area-of-interest-WyT5Ch {
+            background-color: transparent;
+            height: 21px;
+            left: 297px;
+            letter-spacing: 0.00px;
+            line-height: 21.2px;
+            position: absolute;
+            text-align: left;
+            top: 250px;
+            white-space: nowrap;
+            width: 165px;
+        }
+        
+        .contact .clip-path-frame-w0Jqix {
+            height: 3px;
+            left: 52px;
+            top: 334px;
+            width: 227px;
+        }
+        
+        .contact .data-analytics-machi-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 52px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 288px;
+            white-space: nowrap;
+            width: 495px;
+        }
+        
+        .contact .education-WyT5Ch {
+            background-color: transparent;
+            height: 21px;
+            left: 297px;
+            letter-spacing: 0.00px;
+            line-height: 21.2px;
+            position: absolute;
+            text-align: left;
+            top: 316px;
+            white-space: nowrap;
+            width: 106px;
+        }
+        
+        .contact .year-WyT5Ch {
+            background-color: transparent;
+            height: 20px;
+            left: 84px;
+            letter-spacing: 0.00px;
+            line-height: 19.6px;
+            position: absolute;
+            text-align: left;
+            top: 367px;
+            white-space: nowrap;
+            width: 80px;
+        }
+        
+        .contact .degree-examination-WyT5Ch {
+            background-color: transparent;
+            height: 20px;
+            left: 197px;
+            letter-spacing: 0.00px;
+            line-height: 19.6px;
+            position: absolute;
+            text-align: left;
+            top: 367px;
+            white-space: nowrap;
+            width: 202px;
+        }
+        
+        .contact .institution-board-WyT5Ch {
+            background-color: transparent;
+            height: 20px;
+            left: 630px;
+            letter-spacing: 0.00px;
+            line-height: 19.6px;
+            position: absolute;
+            text-align: left;
+            top: 367px;
+            white-space: nowrap;
+            width: 164px;
+        }
+        
+        .contact .cgpa-WyT5Ch {
+            background-color: transparent;
+            height: 20px;
+            left: 1041px;
+            letter-spacing: 0.00px;
+            line-height: 19.6px;
+            position: absolute;
+            text-align: left;
+            top: 355px;
+            white-space: nowrap;
+            width: 60px;
+        }
+        
+        .contact .percentage-WyT5Ch {
+            background-color: transparent;
+            height: 20px;
+            left: 1015px;
+            letter-spacing: 0.00px;
+            line-height: 19.6px;
+            position: absolute;
+            text-align: left;
+            top: 378px;
+            white-space: nowrap;
+            width: 111px;
+        }
+        
+        .contact .x2024-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 82px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 410px;
+            white-space: nowrap;
+            width: 76px;
+        }
+        
+        .contact .bs-4th-year-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 165px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 410px;
+            white-space: nowrap;
+            width: 100px;
+        }
+        
+        .contact .indian-institute-of-technology-roorkee-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 441px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 410px;
+            white-space: nowrap;
+            width: 339px;
+        }
+        
+        .contact .x7000-WyT5Ch {
+            background-color: transparent;
+            height: 16px;
+            left: 1048px;
+            letter-spacing: 0.00px;
+            line-height: 15.6px;
+            position: absolute;
+            text-align: left;
+            top: 411px;
+            white-space: nowrap;
+            width: 45px;
+        }
+        
+        .contact .x2020-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 82px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 442px;
+            white-space: nowrap;
+            width: 76px;
+        }
+        
+        .contact .intermediate-class-xii-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 165px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 442px;
+            white-space: nowrap;
+            width: 240px;
+        }
+        
+        .contact .matrix-high-school-sikar-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 441px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 442px;
+            white-space: nowrap;
+            width: 219px;
+        }
+        
+        .contact .x8920-WyT5Ch {
+            background-color: transparent;
+            height: 16px;
+            left: 1038px;
+            letter-spacing: 0.00px;
+            line-height: 15.6px;
+            position: absolute;
+            text-align: left;
+            top: 443px;
+            white-space: nowrap;
+            width: 65px;
+        }
+        
+        .contact .x2018-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 82px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 474px;
+            white-space: nowrap;
+            width: 76px;
+        }
+        
+        .contact .matriculate-class-x-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 165px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 474px;
+            white-space: nowrap;
+            width: 181px;
+        }
+        
+        .contact .jhunjhunu-academy-wisdom-city-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 441px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 474px;
+            white-space: nowrap;
+            width: 289px;
+        }
+        
+        .contact .clip-path-frame-kliKS1 {
+            height: 3px;
+            left: 52px;
+            top: 523px;
+            width: 227px;
+        }
+        
+        .contact .x8260-WyT5Ch {
+            background-color: transparent;
+            height: 16px;
+            left: 1038px;
+            letter-spacing: 0.00px;
+            line-height: 15.6px;
+            position: absolute;
+            text-align: left;
+            top: 475px;
+            white-space: nowrap;
+            width: 65px;
+        }
+        
+        .contact .internships-WyT5Ch {
+            background-color: transparent;
+            height: 21px;
+            left: 297px;
+            letter-spacing: 0.00px;
+            line-height: 21.2px;
+            position: absolute;
+            text-align: left;
+            top: 505px;
+            white-space: nowrap;
+            width: 118px;
+        }
+        
+        .contact .business-analyst-int-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 52px;
+            letter-spacing: 0.00px;
+            line-height: 16.0px;
+            position: absolute;
+            text-align: left;
+            top: 533px;
+            white-space: nowrap;
+            width: 460px;
+        }
+        
+        .contact .led-market-research-WyT5Ch {
+            background-color: transparent;
+            height: 80px;
+            left: 82px;
+            letter-spacing: 0.00px;
+            line-height: 20.9px;
+            position: absolute;
+            text-align: left;
+            top: 560px;
+            width: 1040px;
+        }
+        
+        .contact .research-internship-university-of-london-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 52px;
+            letter-spacing: 0.00px;
+            line-height: 16.0px;
+            position: absolute;
+            text-align: left;
+            top: 650px;
+            white-space: nowrap;
+            width: 421px;
+        }
+        
+        .contact .got-first-author-tit-WyT5Ch {
+            background-color: transparent;
+            height: 59px;
+            left: 82px;
+            letter-spacing: 0.00px;
+            line-height: 20.9px;
+            position: absolute;
+            text-align: left;
+            top: 677px;
+            width: 926px;
+        }
+        
+        .contact .clip-path-frame-WYRIdw {
+            height: 3px;
+            left: 52px;
+            top: 765px;
+            width: 227px;
+        }
+        
+        .contact .projects-WyT5Ch {
+            background-color: transparent;
+            height: 21px;
+            left: 297px;
+            letter-spacing: 0.00px;
+            line-height: 21.2px;
+            position: absolute;
+            text-align: left;
+            top: 747px;
+            white-space: nowrap;
+            width: 84px;
+        }
+        
+        .contact .stock-sentiment-anal-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 52px;
+            letter-spacing: 0.00px;
+            line-height: 16.0px;
+            position: absolute;
+            text-align: left;
+            top: 775px;
+            white-space: nowrap;
+            width: 724px;
+        }
+        
+        .contact .built-ml-model-for-s-WyT5Ch {
+            background-color: transparent;
+            height: 38px;
+            left: 82px;
+            letter-spacing: 0.00px;
+            line-height: 20.9px;
+            position: absolute;
+            text-align: left;
+            top: 802px;
+            width: 916px;
+        }
+        
+        .contact .data-driven-conferen-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 52px;
+            letter-spacing: 0.00px;
+            line-height: 16.0px;
+            position: absolute;
+            text-align: left;
+            top: 850px;
+            white-space: nowrap;
+            width: 883px;
+        }
+        
+        .contact .conceptualized-and-l-WyT5Ch {
+            background-color: transparent;
+            height: 38px;
+            left: 82px;
+            letter-spacing: 0.00px;
+            line-height: 20.9px;
+            position: absolute;
+            text-align: left;
+            top: 877px;
+            width: 1039px;
+        }
+        
+        .contact .toi-analysis-india-m-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 52px;
+            letter-spacing: 0.00px;
+            line-height: 16.0px;
+            position: absolute;
+            text-align: left;
+            top: 925px;
+            white-space: nowrap;
+            width: 694px;
+        }
+        
+        .contact .conducted-in-depth-c-WyT5Ch {
+            background-color: transparent;
+            height: 38px;
+            left: 82px;
+            letter-spacing: 0.00px;
+            line-height: 20.9px;
+            position: absolute;
+            text-align: left;
+            top: 952px;
+            width: 1002px;
+        }
+        
+        .contact .inventory-management-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 52px;
+            letter-spacing: 0.00px;
+            line-height: 16.0px;
+            position: absolute;
+            text-align: left;
+            top: 1000px;
+            white-space: nowrap;
+            width: 680px;
+        }
+        
+        .contact .architected-and-impl-WyT5Ch {
+            background-color: transparent;
+            height: 38px;
+            left: 82px;
+            letter-spacing: 0.00px;
+            line-height: 20.9px;
+            position: absolute;
+            text-align: left;
+            top: 1027px;
+            width: 1044px;
+        }
+        
+        .contact .clip-path-frame-UCeWyJ {
+            height: 3px;
+            left: 52px;
+            top: 1094px;
+            width: 227px;
+        }
+        
+        .contact .awards-scholarships-WyT5Ch {
+            background-color: transparent;
+            height: 21px;
+            left: 297px;
+            letter-spacing: 0.00px;
+            line-height: 21.2px;
+            position: absolute;
+            text-align: left;
+            top: 1076px;
+            white-space: nowrap;
+            width: 513px;
+        }
+        
+        .contact .iit-roorkee-encore-a-WyT5Ch {
+            background-color: transparent;
+            height: 80px;
+            left: 82px;
+            letter-spacing: 0.00px;
+            line-height: 20.9px;
+            position: absolute;
+            text-align: left;
+            top: 1114px;
+            width: 590px;
+        }
+        
+        .contact .clip-path-frame-W6vex5 {
+            height: 3px;
+            left: 52px;
+            top: 1223px;
+            width: 227px;
+        }
+        
+        .contact .skills-WyT5Ch {
+            background-color: transparent;
+            height: 21px;
+            left: 297px;
+            letter-spacing: 0.00px;
+            line-height: 21.2px;
+            position: absolute;
+            text-align: left;
+            top: 1205px;
+            white-space: nowrap;
+            width: 55px;
+        }
+        
+        .contact .computer-languages-python-r-c-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 97px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 1244px;
+            white-space: nowrap;
+            width: 364px;
+        }
+        
+        .contact .software-packages-so-WyT5Ch {
+            background-color: transparent;
+            height: 41px;
+            left: 115px;
+            letter-spacing: 0.00px;
+            line-height: 23.9px;
+            position: absolute;
+            text-align: left;
+            top: 1268px;
+            width: 711px;
+        }
+        
+        .contact .clip-path-frame-C72xsE {
+            height: 3px;
+            left: 52px;
+            top: 1338px;
+            width: 227px;
+        }
+        
+        .contact .positions-of-respons-WyT5Ch {
+            background-color: transparent;
+            height: 21px;
+            left: 297px;
+            letter-spacing: 0.00px;
+            line-height: 21.2px;
+            position: absolute;
+            text-align: left;
+            top: 1320px;
+            white-space: nowrap;
+            width: 482px;
+        }
+        
+        .contact .head-of-organizing-t-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 52px;
+            letter-spacing: 0.00px;
+            line-height: 16.0px;
+            position: absolute;
+            text-align: left;
+            top: 1348px;
+            white-space: nowrap;
+            width: 546px;
+        }
+        
+        .contact .led-a-20-member-team-WyT5Ch {
+            background-color: transparent;
+            height: 59px;
+            left: 82px;
+            letter-spacing: 0.00px;
+            line-height: 20.9px;
+            position: absolute;
+            text-align: left;
+            top: 1375px;
+            width: 1000px;
+        }
+        
+        .contact .additional-secretary-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 52px;
+            letter-spacing: 0.00px;
+            line-height: 16.0px;
+            position: absolute;
+            text-align: left;
+            top: 1444px;
+            white-space: nowrap;
+            width: 466px;
+        }
+        
+        .contact .led-tinker-quest24-a-WyT5Ch {
+            background-color: transparent;
+            height: 101px;
+            left: 82px;
+            letter-spacing: 0.00px;
+            line-height: 20.9px;
+            position: absolute;
+            text-align: left;
+            top: 1471px;
+            width: 982px;
+        }
+        
+        .contact .clip-path-frame-oRrigQ {
+            height: 130px;
+            left: 59px;
+            overflow: hidden;
+            top: 84px;
+            width: 130px;
+        }
+        
+        .contact .rectangle-UXxGtx {
+            height: 130px;
+            width: 130px;
+        }
+        
+        .contact .clip-path-frame-DobxFc {
+            height: 207px;
+            left: 26px;
+            overflow: hidden;
+            top: 45px;
+            width: 1151px;
+        }
+        
+        .contact .title-9lJnf2 {
+            background-color: transparent;
+            color: var(--wwwjonathanpattersoncomblack);
+            font-family: var(--font-family-inter);
+            font-size: 25.7px;
+            font-style: normal;
+            font-weight: 400;
+            height: 26px;
+            left: 176px;
+            letter-spacing: 0.00px;
+            line-height: 25.7px;
+            position: absolute;
+            text-align: left;
+            top: 34px;
+            white-space: nowrap;
+            width: 227px;
+        }
+        
+        .contact .ug-iv-year-ii-semest-9lJnf2 {
+            background-color: transparent;
+            color: #222222;
+            font-family: var(--font-family-inter);
+            font-size: var(--font-size-xl);
+            font-style: normal;
+            font-weight: 400;
+            height: 103px;
+            left: 176px;
+            letter-spacing: 0.00px;
+            line-height: 21.2px;
+            position: absolute;
+            text-align: left;
+            top: 64px;
+            width: 325px;
+        }
+        
+        .contact .roorkee-9lJnf2 {
+            background-color: transparent;
+            height: 18px;
+            left: 917px;
+            letter-spacing: 0.00px;
+            line-height: 18.2px;
+            position: absolute;
+            text-align: left;
+            top: 101px;
+            width: 74px;
+        }
+        
+        .contact .group-9lJnf2 {
+            background-color: transparent;
+            height: 30px;
+            left: 892px;
+            position: absolute;
+            top: 144px;
+            width: 136px;
+        }
+        
+        .contact .vector-ewTxy8 {
+            background-color: transparent;
+            height: 30px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 125px;
+        }
+        
+        .contact .verified-ewTxy8 {
+            background-color: transparent;
+            color: #008000;
+            font-family: var(--font-family-inter);
+            font-size: 24.3px;
+            font-style: normal;
+            font-weight: 400;
+            height: 24px;
+            left: 8px;
+            letter-spacing: 0.00px;
+            line-height: 24.3px;
+            position: absolute;
+            text-align: left;
+            top: 3px;
+            width: 126px;
+        }
+        
+        .contact .indian-institute-of-9lJnf2 {
+            background-color: transparent;
+            height: 18px;
+            left: 830px;
+            letter-spacing: 0.00px;
+            line-height: 18.2px;
+            position: absolute;
+            text-align: left;
+            top: 53px;
+            width: 161px;
+        }
+        
+        .contact .clip-path-frame-CzAPL1 {
+            height: 106px;
+            left: 1020px;
+            overflow: hidden;
+            top: 82px;
+            width: 106px;
+        }
+        
+        .contact .rectangle-kuYxbf {
+            height: 106px;
+            width: 106px;
+        }
+        
+        .contact .june-2023-august-2023-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 935px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 533px;
+            white-space: nowrap;
+            width: 216px;
+        }
+        
+        .contact .text_label-WyT5Ch {
+            height: 80px;
+            top: 560px;
+        }
+        
+        .contact .november-2023-may-2024-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 908px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 650px;
+            white-space: nowrap;
+            width: 244px;
+        }
+        
+        .contact .text_label-w0Jqix {
+            height: 59px;
+            top: 677px;
+        }
+        
+        .contact .may-2024-june-2024-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 960px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 775px;
+            white-space: nowrap;
+            width: 191px;
+        }
+        
+        .contact .text_label-kliKS1 {
+            height: 38px;
+            top: 802px;
+        }
+        
+        .contact .december-2023-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 1011px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 850px;
+            white-space: nowrap;
+            width: 141px;
+        }
+        
+        .contact .text_label-WYRIdw {
+            height: 38px;
+            top: 877px;
+        }
+        
+        .contact .august-2023-december-2023-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 883px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 925px;
+            white-space: nowrap;
+            width: 269px;
+        }
+        
+        .contact .text_label-UCeWyJ {
+            height: 38px;
+            top: 952px;
+        }
+        
+        .contact .december-2022-february-2023-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 867px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 1000px;
+            white-space: nowrap;
+            width: 285px;
+        }
+        
+        .contact .text_label-W6vex5 {
+            height: 38px;
+            top: 1027px;
+        }
+        
+        .contact .text_label-C72xsE {
+            height: 80px;
+            top: 1114px;
+        }
+        
+        .contact .december-2024-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 1011px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 1348px;
+            white-space: nowrap;
+            width: 141px;
+        }
+        
+        .contact .text_label-oRrigQ {
+            height: 59px;
+            top: 1375px;
+        }
+        
+        .contact .april-2024-present-WyT5Ch {
+            background-color: transparent;
+            height: 17px;
+            left: 979px;
+            letter-spacing: 0.00px;
+            line-height: 17.4px;
+            position: absolute;
+            text-align: left;
+            top: 1444px;
+            white-space: nowrap;
+            width: 173px;
+        }
+        
+        .contact .text_label-DobxFc {
+            height: 101px;
+            top: 1471px;
+        }
+        
+        .contact .technology-TlYiCR {
+            background-color: transparent;
+            height: 18px;
+            left: 915px;
+            letter-spacing: 0.00px;
+            line-height: 18.2px;
+            position: absolute;
+            text-align: left;
+            top: 122px;
+            width: 102px;
+        }
+        
+        .contact .httpsdrivegooglecomf-DhmS6L {
+            background-color: transparent;
+            height: 83px;
+            left: 515px;
+            position: absolute;
+            top: 911px;
+            width: 505px;
+        }
+        
+        .contact .click-to-d-ownload-c-DhmS6L {
+            background-color: transparent;
+            height: 45px;
+            left: 554px;
+            line-height: 20px;
+            position: absolute;
+            text-align: center;
+            top: 929px;
+            width: 428px;
+        }
+        
+        .contact .span0-rumvam {
+            letter-spacing: 0.08px;
+        }
+        
+        .contact .span1-rumvam {
+            color: var(--wwwjonathanpattersoncomblack);
+            font-family: var(--font-family-syne);
+            font-size: 16.4px;
+            font-style: normal;
+            font-weight: 800;
+            letter-spacing: 0.00px;
+            line-height: 22.5px;
+        }
+        
+        .contact .black-white-and-blue {
+            background-color: transparent;
+            height: 863px;
+            left: 0px;
+            object-fit: cover;
+            position: absolute;
+            top: 0px;
+            width: 1535px;
+        }
+        
+        .contact .clip-path-frame {
+            background-color: transparent;
+            position: absolute;
+        }
+        
+        .contact .clip-path-group {
+            background-color: transparent;
+            position: absolute;
+        }
+        
+        .contact .rectangle {
+            background-color: transparent;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+        }
+        
+        .contact .text_label {
+            background-color: transparent;
+            left: 66px;
+            letter-spacing: 0.00px;
+            line-height: 20.9px;
+            position: absolute;
+            text-align: left;
+            width: 37px;
+        }
+    </style>
+</head>
+
+<body style="margin: 0;background: #191919;"><input type="hidden" id="anPageName" name="page" value="contact">
+    <div class="container-center-horizontal">
+        <div class="contact screen " data-id="12:180"><img class="black-white-and-blue" data-id="2003:1178" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/black-white-and-blue-bold-brutalism-web-design-creative-portfoli.png"
+                alt="Black White and Blue Bold Brutalism Web Design Creative Portfolio Presentation 2"><img class="image-2-DhmS6L" data-id="12:429" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/image-2@2x.png"
+                alt="image 2">
+            <div class="click-to-go-back-DhmS6L valign-text-middle" data-id="12:469" onclick="location.href='Home.html';">
+                Click to go Back
+            </div>
+            <div class="page-1-DhmS6L" data-id="2002:661">
+                <div class="frame-TlYiCR" data-id="2002:662"><img class="clip-path-group-WyT5Ch clip-path-group" data-id="2002:668" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-1@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-w0Jqix clip-path-group" data-id="2002:674" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-2@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-kliKS1 clip-path-group" data-id="2002:680" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-3.png"
+                        alt="Clip path group"><img class="clip-path-group-WYRIdw clip-path-group" data-id="2002:686" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-group-5@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-UCeWyJ clip-path-group" data-id="2002:692" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-5@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-W6vex5 clip-path-group" data-id="2002:698" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-6@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-C72xsE clip-path-group" data-id="2002:704" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-7@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-oRrigQ clip-path-group" data-id="2002:710" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-8@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-DobxFc clip-path-group" data-id="2002:716" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-9@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-CzAPL1 clip-path-group" data-id="2002:722" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-group-11@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-xOKSME clip-path-group" data-id="2002:728" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-11.png"
+                        alt="Clip path group"><img class="clip-path-group-cYDUgO clip-path-group" data-id="2002:734" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-12@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-ax323J clip-path-group" data-id="2002:740" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-group-14@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-yYog0B clip-path-group" data-id="2002:746" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-14@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-EhvDGK clip-path-group" data-id="2002:752" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-15@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-1TKIhw clip-path-group" data-id="2002:758" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-16@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-UD952r clip-path-group" data-id="2002:764" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-17@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-vZC9ZV clip-path-group" data-id="2002:770" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-18@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-asWYZd clip-path-group" data-id="2002:776" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-group-20@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-vsVnNw clip-path-group" data-id="2002:782" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-20.png"
+                        alt="Clip path group"><img class="clip-path-group-TBNvV1 clip-path-group" data-id="2002:788" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-21@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-0GfIDh clip-path-group" data-id="2002:794" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-group-23@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-NW2d6N clip-path-group" data-id="2002:800" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-23@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-pRcF5X clip-path-group" data-id="2002:806" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-24@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-iWnEmU clip-path-group" data-id="2002:812" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-25@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-xeoKPP clip-path-group" data-id="2002:818" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-26@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-tz5tar clip-path-group" data-id="2002:824" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-27@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-BJ05AX clip-path-group" data-id="2002:830" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-group-29@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-FjROyb clip-path-group" data-id="2002:836" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-29.png"
+                        alt="Clip path group"><img class="clip-path-group-Rqlafc clip-path-group" data-id="2002:842" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-30@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-IlMexv clip-path-group" data-id="2002:848" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-group-32@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-gwH0BI clip-path-group" data-id="2002:854" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-32@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-IYtxXl clip-path-group" data-id="2002:860" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-33@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-Zs1BJk clip-path-group" data-id="2002:866" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-34@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-LZltR2 clip-path-group" data-id="2002:872" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-35@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-Cjvt83 clip-path-group" data-id="2002:878" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-36@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-lyluGm clip-path-group" data-id="2002:884" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-group-38@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-ecMKyJ clip-path-group" data-id="2002:890" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-38.png"
+                        alt="Clip path group"><img class="clip-path-group-QYRCPH clip-path-group" data-id="2002:896" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/clip-path-group-39@2x.png"
+                        alt="Clip path group"><img class="clip-path-group-0xls2T clip-path-group" data-id="2002:902" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-group-41@2x.png"
+                        alt="Clip path group"><img class="clip-path-frame-WyT5Ch clip-path-frame" data-id="2002:1096" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-frame.svg"
+                        alt="Clip path frame">
+                    <div class="area-of-interest-WyT5Ch valign-text-bottom inter-normal-black-21-2px" data-id="2002:909">Area of Interest</div><img class="clip-path-frame-w0Jqix clip-path-frame" data-id="2002:1097" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-frame-1.svg"
+                        alt="Clip path frame">
+                    <p class="data-analytics-machi-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:916">Data Analytics, Machine Learning, Statistics, Leadership,</p>
+                    <div class="education-WyT5Ch valign-text-bottom inter-normal-black-21-2px" data-id="2002:917">Education</div>
+                    <div class="year-WyT5Ch valign-text-bottom inter-normal-black-19-6px" data-id="2002:918">Year</div>
+                    <div class="degree-examination-WyT5Ch valign-text-bottom inter-normal-black-19-6px" data-id="2002:919">Degree/Examination</div>
+                    <div class="institution-board-WyT5Ch valign-text-bottom inter-normal-black-19-6px" data-id="2002:920">Institution/Board</div>
+                    <div class="cgpa-WyT5Ch valign-text-bottom inter-normal-black-19-6px" data-id="2002:921">CGPA/</div>
+                    <div class="percentage-WyT5Ch valign-text-bottom inter-normal-black-19-6px" data-id="2002:922">Percentage</div>
+                    <div class="x2024-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:923">2024</div>
+                    <div class="bs-4th-year-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:924">BS 4th Year</div>
+                    <p class="indian-institute-of-technology-roorkee-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:925">Indian Institute of Technology, Roorkee</p>
+                    <div class="x7000-WyT5Ch valign-text-bottom inter-normal-black-15-6px" data-id="2002:926">7.000</div>
+                    <div class="x2020-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:927">2020</div>
+                    <div class="intermediate-class-xii-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:928">Intermediate (Class XII)</div>
+                    <div class="matrix-high-school-sikar-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:929">Matrix High School, Sikar</div>
+                    <div class="x8920-WyT5Ch valign-text-bottom inter-normal-black-15-6px" data-id="2002:930">89.20 %</div>
+                    <div class="x2018-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:931">2018</div>
+                    <div class="matriculate-class-x-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:932">Matriculate (Class X)</div>
+                    <div class="jhunjhunu-academy-wisdom-city-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:933">Jhunjhunu Academy Wisdom City</div><img class="clip-path-frame-kliKS1 clip-path-frame" data-id="2002:1098" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-frame-2.svg"
+                        alt="Clip path frame">
+                    <div class="x8260-WyT5Ch valign-text-bottom inter-normal-black-15-6px" data-id="2002:940">82.60 %</div>
+                    <div class="internships-WyT5Ch valign-text-bottom inter-normal-black-21-2px" data-id="2002:941">Internships</div>
+                    <p class="business-analyst-int-WyT5Ch valign-text-bottom inter-normal-black-16px" data-id="2002:942">Business Analyst Internship | Worthy Advisors</p>
+                    <p class="led-market-research-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:943">Led market research and statistical data analysis, resulting in the successful securing of over 20+ client engagements.<br>Extracted and scrutinized data on 350+ companies, their financials, and C-suite contacts to devise sales strategies.<br>Partnered
+                        with the company founders &amp; client CFOs to generate leads and establish credibility.<br>Elevated engagement by 150% with data-driven marketing and monthly website visitors by 1.5k.</p>
+                    <p class="research-internship-university-of-london-WyT5Ch valign-text-bottom inter-normal-black-16px" data-id="2002:944">Research Internship | University of London</p>
+                    <p class="got-first-author-tit-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:945">Got First-author title of a Meta-analysis Paper, accepted at the International Arsenic Congress, 2024.<br>Worked as Research Assistant under Prof. Vijaya Gupta and Prof. Louisa Campos at UCL.<br>Executed Web Scraping, Literature Review,
+                        Data Curation, and Bibliometric Analysis using R and Excel.</p><img class="clip-path-frame-WYRIdw clip-path-frame" data-id="2002:1099" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-frame-3.svg"
+                        alt="Clip path frame">
+                    <div class="projects-WyT5Ch valign-text-bottom inter-normal-black-21-2px" data-id="2002:952">Projects</div>
+                    <p class="stock-sentiment-anal-WyT5Ch valign-text-bottom inter-normal-black-16px" data-id="2002:953">Stock Sentiment Analysis via Machine Learning | Finance Club IIT Roorkee</p>
+                    <p class="built-ml-model-for-s-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:954">Built ML model for stock price prediction using news sentiment, achieving 97% accuracy on NVIDIA data.<br>Implemented a sentiment-based trading strategy that yielded a significant simulated portfolio return.</p>
+                    <p class="data-driven-conferen-WyT5Ch valign-text-bottom inter-normal-black-16px" data-id="2002:955">Data-Driven Conference Management Portal (CMP) | Indian Institute of Technology, Roorkee</p>
+                    <p class="conceptualized-and-l-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:956">Conceptualized and lead development of CMP for IIT Roorkee, streamlining administration and attendees engagement.<br>Strategically positioning the portal for a successful launch at the prestigious IAHS 2025 international conference.</p>
+                    <p class="toi-analysis-india-m-WyT5Ch valign-text-bottom inter-normal-black-16px" data-id="2002:957">TOI Analysis: India, Malaysia, Mauritius | HSS Department (IIT Roorkee)</p>
+                    <p class="conducted-in-depth-c-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:958">Conducted in-depth comparative analysis of Regional Trade Agreements using trends of Trade Overlap Index (TOI).<br>Quantified the impacts through rigorous Econometric Analysis and Panel Data Regression</p>
+                    <p class="inventory-management-WyT5Ch valign-text-bottom inter-normal-black-16px" data-id="2002:959">Inventory Management Portal | Rethink! The Tinkering Lab, IIT Roorkee</p>
+                    <p class="architected-and-impl-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:960">Architected and implemented a data-driven portal for IITR Labs, resulting in a 30% operational efficiency improvement.<br>Establish Inter- Departmental collaboration, convince three HOD for customized portal adoption across labs.</p>
+                    <img class="clip-path-frame-UCeWyJ clip-path-frame" data-id="2002:1100" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-frame-4.svg"
+                        alt="Clip path frame">
+                    <p class="awards-scholarships-WyT5Ch valign-text-bottom inter-normal-black-21-2px" data-id="2002:967">Awards / Scholarships / Academic Achievements</p>
+                    <p class="iit-roorkee-encore-a-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:968">IIT Roorkee ENCORE Award for all-round excellence<br>Gold medal in 100m Race in Departmental Sports Fista 24<br>1st Place - BRAND BLITZ Competition, Delhi University<br>All India 2nd Runner-up in BAJA SAE 2023 Cost Evaluation Event.
+                    </p><img class="clip-path-frame-W6vex5 clip-path-frame" data-id="2002:1101" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-frame-5.svg"
+                        alt="Clip path frame">
+                    <div class="skills-WyT5Ch valign-text-bottom inter-normal-black-21-2px" data-id="2002:975">Skills</div>
+                    <p class="computer-languages-python-r-c-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:976">Computer languages Python, R, C++</p>
+                    <p class="software-packages-so-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:977">Software Packages Solid Works, Microsoft Excel, Stata, RStudio, SQL, Tableau<br>Additional Courses IITG Winter Consulting 2023, Python-Basic to Advance</p><img class="clip-path-frame-C72xsE clip-path-frame" data-id="2002:1102" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/clip-path-frame-6.svg" alt="Clip path frame">
+                    <p class="positions-of-respons-WyT5Ch valign-text-bottom inter-normal-black-21-2px" data-id="2002:984">Positions of Responsibility &amp; Extra Curriculars</p>
+                    <p class="head-of-organizing-t-WyT5Ch valign-text-bottom inter-normal-black-16px" data-id="2002:985">Head of Organizing Team | Smart India Hackathon, 2024</p>
+                    <p class="led-a-20-member-team-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:986">Led a 20+ member team to organize the Smart India Hackathon 2024 Grand Finale under Education Ministry, GOI.<br>Managed logistics for 25 teams and 150+ participants, ensuring seamless execution.<br>Coordinated with NTRO scientists,
+                        executives, media, and Ministry officials.</p>
+                    <p class="additional-secretary-WyT5Ch valign-text-bottom inter-normal-black-16px" data-id="2002:987">Additional Secretary | Tinkering Lab IIT Roorkee</p>
+                    <p class="led-tinker-quest24-a-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:988">Led TinkerQuest24, a pan-India innovation hackathon, spearheaded a team of 25+ Members in execution.<br>Planned and mentored projects of 1000+ first-year students and fostered a supportive learning environment.<br>Engineered a custom
+                        Inventory Management Portal for IIT, reducing inventory processing time by 30%<br>Organized workshops on diverse topics (3D Printing, Metaverse, etc.) with 500+ participants.<br>Launched the &#34;Think-Thursday&#34; initiative,
+                        resulting 5x increase in social media reach.</p>
+                    <div class="clip-path-frame-oRrigQ clip-path-frame" data-id="2002:1103"><img class="rectangle-UXxGtx rectangle" data-id="2002:991" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/rectangle@2x.png"
+                            alt="Rectangle"></div>
+                    <div class="clip-path-frame-DobxFc clip-path-frame" data-id="2002:1104">
+                        <h1 class="title-9lJnf2 valign-text-bottom" data-id="2002:996">Divyanshu Verma</h1>
+                        <p class="ug-iv-year-ii-semest-9lJnf2 valign-text-bottom" data-id="2002:997">UG (IV Year II Semester)<br>BS-MS (Economics)<br>Contact No: 9772427180<br>Email: d_verma@hs.iitr.ac.in<br>Registration No: 21322012/2025</p>
+                        <div class="roorkee-9lJnf2 valign-text-bottom inter-normal-black-18-2px" data-id="2002:998">Roorkee</div>
+                        <div class="group-9lJnf2" data-id="2002:999"><img class="vector-ewTxy8" data-id="2002:1000" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/vector-6.svg"
+                                alt="Vector">
+                            <div class="verified-ewTxy8 valign-text-bottom" data-id="2002:1001">VERIFIED</div>
+                        </div>
+                        <div class="indian-institute-of-9lJnf2 valign-text-bottom inter-normal-black-18-2px" data-id="2002:1002">Indian Institute of</div>
+                    </div>
+                    <div class="clip-path-frame-CzAPL1 clip-path-frame" data-id="2002:1105"><img class="rectangle-kuYxbf rectangle" data-id="2002:1008" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/rectangle-3@2x.png"
+                            alt="Rectangle"></div>
+                    <p class="june-2023-august-2023-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:1012">June 2023 - August 2023</p>
+                    <div class="text_label-WyT5Ch valign-text-bottom text_label inter-normal-black-17-4px" data-id="2002:1013">•<br>•<br>•<br>•</div>
+                    <p class="november-2023-may-2024-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:1014">November 2023 - May 2024</p>
+                    <div class="text_label-w0Jqix valign-text-bottom text_label inter-normal-black-17-4px" data-id="2002:1015">•<br>•<br>•</div>
+                    <p class="may-2024-june-2024-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:1016">May 2024 - June 2024</p>
+                    <div class="text_label-kliKS1 valign-text-bottom text_label inter-normal-black-17-4px" data-id="2002:1017">•<br>•</div>
+                    <div class="december-2023-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:1018">December 2023</div>
+                    <div class="text_label-WYRIdw valign-text-bottom text_label inter-normal-black-17-4px" data-id="2002:1019">•<br>•</div>
+                    <p class="august-2023-december-2023-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:1020">August 2023 - December 2023</p>
+                    <div class="text_label-UCeWyJ valign-text-bottom text_label inter-normal-black-17-4px" data-id="2002:1021">•<br>•</div>
+                    <p class="december-2022-february-2023-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:1022">December 2022 - February 2023</p>
+                    <div class="text_label-W6vex5 valign-text-bottom text_label inter-normal-black-17-4px" data-id="2002:1023">•<br>•</div>
+                    <div class="text_label-C72xsE valign-text-bottom text_label inter-normal-black-17-4px" data-id="2002:1024">•<br>•<br>•<br>•</div>
+                    <div class="december-2024-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:1025">December 2024</div>
+                    <div class="text_label-oRrigQ valign-text-bottom text_label inter-normal-black-17-4px" data-id="2002:1026">•<br>•<br>•</div>
+                    <div class="april-2024-present-WyT5Ch valign-text-bottom inter-normal-black-17-4px" data-id="2002:1027">April 2024 - Present</div>
+                    <div class="text_label-DobxFc valign-text-bottom text_label inter-normal-black-17-4px" data-id="2002:1028">•<br>•<br>•<br>•<br>•</div>
+                </div>
+                <div class="technology-TlYiCR valign-text-bottom inter-normal-black-18-2px" data-id="2002:1047">Technology</div>
+                <a href="https://drive.google.com/file/d/1AO7NTSgNt4Nkja7R8PyZnTKW4muhFaHX/view?usp=sharing" target="_blank"></div><img class="httpsdrivegooglecomf-DhmS6L" data-id="2002:1118" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/rectangle-2.svg"
+                alt="https://drive.google.com/file/d/1AO7NTSgNt4Nkja7R8PyZnTKW4muhFaHX/view?usp=sharing">
+            <p class="click-to-d-ownload-c-DhmS6L valign-text-middle syne-extra-bold-black-20px" data-id="2002:1120"><span><span class="span0-rumvam syne-extra-bold-black-20px">Click to DOwnload <br></span><span class="span1-rumvam">COllege&nbsp;&nbsp;VerifieD Resume </span></span>
+            </p>
+        </div>
+    </div>
+    <script src="launchpad-js/launchpad-banner.js" async></script>
+    <script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script>
+</body>
+
+</html>
