@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 
-<!-- This code was generated using AnimaApp.com. 
-This code is a high-fidelity prototype.
-Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
-04/04/2025 12:51:32 -->
-
 <html>
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=1550, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png">
     <meta name="og:type" content="website">
     <meta name="twitter:card" content="photo">
@@ -17,513 +12,662 @@ Get developer-friendly React or HTML/CSS code for this project at: https://proje
     <script id="anima-hotspots-script" src="hotspots.js"></script>
     <script id="anima-overrides-script" src="overrides.js"></script>
     <script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script>
-    <style>
-        @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-        @import url("https://fonts.googleapis.com/css?family=Syne:800|Inter:700");
-        /* The following line is used to measure usage of this code. You can remove it if you want. */
-        
-        @import url("https://px.animaapp.com/670ffe77517f95d03ea74e23.670ffe78517f95d03ea74e26.GB7IaK7.hch.png");
-        .screen textarea:focus,
-        .screen input:focus {
-            outline: none;
-        }
-        
-        .screen * {
-            -webkit-font-smoothing: antialiased;
-            box-sizing: border-box;
-        }
-        
-        .screen div {
-            -webkit-text-size-adjust: none;
-        }
-        
-        .component-wrapper a {
-            display: contents;
-            pointer-events: auto;
-            text-decoration: none;
-        }
-        
-        .component-wrapper * {
-            -webkit-font-smoothing: antialiased;
-            box-sizing: border-box;
-            pointer-events: none;
-        }
-        
-        .component-wrapper a *,
-        .component-wrapper input,
-        .component-wrapper video,
-        .component-wrapper iframe {
-            pointer-events: auto;
-        }
-        
-        .component-wrapper.not-ready,
-        .component-wrapper.not-ready * {
-            visibility: hidden !important;
-        }
-        
-        .screen a {
-            display: contents;
-            text-decoration: none;
-        }
-        
-        .full-width-a {
-            width: 100%;
-        }
-        
-        .full-height-a {
-            height: 100%;
-        }
-        
-        .container-center-vertical {
-            align-items: center;
-            display: flex;
-            flex-direction: row;
-            height: 100%;
-            pointer-events: none;
-        }
-        
-        .container-center-vertical>* {
-            flex-shrink: 0;
-            pointer-events: auto;
-        }
-        
-        .container-center-horizontal {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            pointer-events: none;
-            width: 100%;
-        }
-        
-        .container-center-horizontal>* {
-            flex-shrink: 0;
-            pointer-events: auto;
-        }
-        
-        .auto-animated div {
-            --z-index: -1;
-            opacity: 0;
-            position: absolute;
-        }
-        
-        .auto-animated input {
-            --z-index: -1;
-            opacity: 0;
-            position: absolute;
-        }
-        
-        .auto-animated .container-center-vertical,
-        .auto-animated .container-center-horizontal {
-            opacity: 1;
-        }
-        
-        .overlay-base {
-            display: none;
-            height: 100%;
-            opacity: 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
-        
-        .overlay-base.animate-appear {
-            align-items: center;
-            animation: reveal 0.3s ease-in-out 1 normal forwards;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            opacity: 0;
-        }
-        
-        .overlay-base.animate-disappear {
-            animation: reveal 0.3s ease-in-out 1 reverse forwards;
-            display: block;
-            opacity: 1;
-            pointer-events: none;
-        }
-        
-        .overlay-base.animate-disappear * {
-            pointer-events: none;
-        }
-        
-        @keyframes reveal {
-            from {
-                opacity: 0
-            }
-            to {
-                opacity: 1
-            }
-        }
-        
-        .animate-nodelay {
-            animation-delay: 0s;
-        }
-        
-        .align-self-flex-start {
-            align-self: flex-start;
-        }
-        
-        .align-self-flex-end {
-            align-self: flex-end;
-        }
-        
-        .align-self-flex-center {
-            align-self: flex-center;
-        }
-        
-        .valign-text-middle {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        .valign-text-bottom {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-        }
-        
-        input:focus {
-            outline: none;
-        }
-        
-        .listeners-active,
-        .listeners-active * {
-            pointer-events: auto;
-        }
-        
-        .hidden,
-        .hidden * {
-            pointer-events: none;
-            visibility: hidden;
-        }
-        
-        .smart-layers-pointers,
-        .smart-layers-pointers * {
-            pointer-events: auto;
-            visibility: visible;
-        }
-        
-        .listeners-active-click,
-        .listeners-active-click * {
-            cursor: pointer;
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --eerie-black: #191919;
-            --punch: #db4025;
-            --white: #ffffff33;
-            --wwwjonathanpattersoncomblack: #000000;
-            --wwwjonathanpattersoncomblack-20: #000000;
-            --wwwjonathanpattersoncomporcelain: #e6e9eb;
-            --wwwjonathanpattersoncomwhite: #ffffff;
-            --wwwjonathanpattersoncomwhite-20: #000000;
-            --font-size-l: 19.2px;
-            --font-size-m: 18.4px;
-            --font-size-s: 18.1px;
-            --font-size-xl: 20px;
-            --font-size-xs: 11.4px;
-            --font-size-xxl: 99.4px;
-            --font-size-xxs: 9.9px;
-            --font-family-inter: "Inter", Helvetica;
-            --font-family-saira_semicondensed-regular: "Saira SemiCondensed-Regular", Helvetica;
-            --font-family-syne: "Syne", Helvetica;
-        }
-        
-        .inter-bold-white-18-4px {
-            color: var(--wwwjonathanpattersoncomwhite);
-            font-family: var(--font-family-inter);
-            font-size: var(--font-size-m);
-            font-style: normal;
-            font-weight: 700;
-        }
-        
-        .inter-bold-punch-19-2px {
-            color: var(--punch);
-            font-family: var(--font-family-inter);
-            font-size: var(--font-size-l);
-            font-style: normal;
-            font-weight: 700;
-        }
-        
-        .sairasemicondensed-regular-normal-white-9-9px {
-            color: var(--wwwjonathanpattersoncomwhite);
-            font-family: var(--font-family-saira_semicondensed-regular);
-            font-size: var(--font-size-xxs);
-            font-style: normal;
-            font-weight: 400;
-        }
-        
-        .syne-extra-bold-black-11-4px {
-            color: var(--wwwjonathanpattersoncomblack);
-            font-family: var(--font-family-syne);
-            font-size: var(--font-size-xs);
-            font-style: normal;
-            font-weight: 800;
-        }
-        
-        .syne-extra-bold-black-20px {
-            color: var(--wwwjonathanpattersoncomblack);
-            font-family: var(--font-family-syne);
-            font-size: var(--font-size-xl);
-            font-style: normal;
-            font-weight: 800;
-        }
-        
-        .syne-extra-bold-white-11-4px {
-            color: var(--wwwjonathanpattersoncomwhite);
-            font-family: var(--font-family-syne);
-            font-size: var(--font-size-xs);
-            font-style: normal;
-            font-weight: 800;
-        }
-        /* screen - x01 */
-        
-        .x01 {
-            background-color: var(--eerie-black);
-            height: 8232px;
-            overflow: hidden;
-            overflow-x: hidden;
-            position: relative;
-            width: 1550px;
-        }
-        
-        .x01 .group-18-UxIqrW {
-            background-color: transparent;
-            cursor: pointer;
-            display: block;
-            height: 7979px;
-            left: 109px;
-            opacity: 0;
-            position: absolute;
-            top: 126px;
-            transform: scale(1.1);
-            width: 1332px;
-        }
-        
-        .x01 .group-18-UxIqrW.animate-enter {
-            animation: animate-enter-frames 0.20s ease-out 0.00s 1 normal forwards;
-            display: block;
-            opacity: 0;
-            transform: scale(1.1);
-        }
-        
-        @keyframes animate-enter-frames {
-            from {
-                opacity: 0;
-                transform: scale(1.1);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        
-        .x01 .group-38-UxIqrW {
-            background-color: transparent;
-            cursor: pointer;
-            display: block;
-            height: 48px;
-            left: -61px;
-            opacity: 0;
-            position: absolute;
-            top: 45px;
-            transform: scale(1.1);
-            width: 430px;
-        }
-        
-        .x01 .group-38-UxIqrW.animate-enter1 {
-            animation: animate-enter1-frames 0.20s ease-out 0.00s 1 normal forwards;
-            display: block;
-            opacity: 0;
-            transform: scale(1.1);
-        }
-        
-        @keyframes animate-enter1-frames {
-            from {
-                opacity: 0;
-                transform: scale(1.1);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        
-        .x01 .httpsdrivegooglecomf-yWXNPO {
-            background-color: transparent;
-            height: 48px;
-            left: 110px;
-            position: absolute;
-            top: 0px;
-            width: 165px;
-        }
-        
-        .x01 .back-yWXNPO {
-            background-color: transparent;
-            height: 20px;
-            left: 0px;
-            letter-spacing: 0.40px;
-            line-height: 20px;
-            position: absolute;
-            text-align: center;
-            top: 13px;
-            width: 428px;
-        }
-        
-        .x01 .vector-yWXNPO {
-            background-color: transparent;
-            height: 19px;
-            left: 124px;
-            position: absolute;
-            top: 14px;
-            width: 32px;
-        }
-    </style>
+    <link rel="stylesheet" href="home.css">
+
+
 </head>
 
-<body style="margin: 0;background: #191919;"><input type="hidden" id="anPageName" name="page" value="x01">
-    <div class="container-center-horizontal">
-        <form class="x01 screen " data-id="51:251" name="Home.html" action="Home.html" method="post"><input type="text" name="trapit" value="" style="display:none;">
-            <a href="javascript:SubmitForm('Home.html')"><img class="group-18-UxIqrW animate-enter" data-id="51:252" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67eef6d42b83103efcd60b56/img/group-18.png"
-                    alt="Group 18"></a>
-            <a href="javascript:SubmitForm('Home.html')">
-                <div class="group-38-UxIqrW animate-enter1" data-id="2006:385"><img class="httpsdrivegooglecomf-yWXNPO" data-id="2006:386" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/https---drive-google-com-file-d-1ao7ntsgnt4nkja7r8pyzntkw4muhfah-4.svg"
-                        alt="https://drive.google.com/file/d/1AO7NTSgNt4Nkja7R8PyZnTKW4muhFaHX/view?usp=sharing">
-                    <div class="back-yWXNPO valign-text-middle syne-extra-bold-black-20px" data-id="2006:387">BACK</div><img class="vector-yWXNPO" data-id="2006:388" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670ffe7a517f95d03ea74e28/releases/67efa309fbf122146e8c85fb/img/vector-3.svg"
-                        alt="Vector"></div>
+<body style="margin: 0;background: #e6e9eb;"><input type="hidden" id="anPageName" name="page" value="main-frame">
+    <form class="iphone-14-u38-15-pro-max-1 screen " data-id="2003:2619" name="x05.html" action="x05.html" method="post"><input type="text" name="trapit" value="" style="display:none;">
+        <a href="x05.html">
+            <div class="group-70-Q862b3 smart-layers-pointers" data-id="4004:5869">
+                <div class="group-62-4mtHss" data-id="4004:5870">
+                    <div class="group-45-kUKhHF" data-id="4004:5871">
+                        <a href="x05.html" onclick="window.event.stopPropagation()"><img class="group-42-xjA6R0 smart-layers-pointers group-42" data-id="4004:5872" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/group-42.svg"
+                                alt="Group 42"></a>
+                    </div>
+                    <div class="group-46-kUKhHF" data-id="4004:5876">
+                        <div class="mac-book-pro-16-inch-space-black-front-1ghOGm mac-book-pro-16-inch-space-black-front" data-id="4004:5877"><img class="main-pv3ctg main" data-id="4004:5878" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/main@2x.png"
+                                alt="main">
+                            <div class="copy-of-qhaart-ibm-2-pv3ctg copy-of-qhaart-ibm-2" data-id="4004:5879"></div>
+                        </div>
+                        <div class="group-9-1ghOGm" data-id="4004:5880"><img class="nothing-phone-8-1-xxq0sm" data-id="4004:5881" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/nothing-phone-8-1@2x.png"
+                                alt="Nothing Phone 8 1">
+                            <div class="group-8-xxq0sm" data-id="4004:5882"><img class="nothing-phone-5-2-NL2zhW" data-id="4004:5883" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/nothing-phone-5-2@2x.png"
+                                    alt="Nothing Phone 5 2">
+                                <div class="group-7-NL2zhW" data-id="4004:5884"><img class="nothing-phone-5-1-YPjzL6" data-id="4004:5885" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/nothing-phone-5-1@2x.png"
+                                        alt="Nothing Phone 5 1"><img class="x23-1-YPjzL6" data-id="4004:5886" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/23-1@2x.png"
+                                        alt="23 1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="x05-kUKhHF valign-text-middle" data-id="4004:5887">05</div>
+                </div>
+            </div>
+        </a>
+        <a href="contact.html">
+            <div class="group-72-Q862b3 smart-layers-pointers" data-id="4004:6015">
+                <a href="contact.html" onclick="window.event.stopPropagation()"><img class="background-ND62Lv background" data-id="4004:5821" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/background.svg"
+                        alt="Background"></a>
+            </div>
+        </a>
+        <a href="x01.html">
+            <div class="group-73-Q862b3 smart-layers-pointers" data-id="4004:6039">
+                <div class="group-67-aMThdH smart-layers-pointers" data-id="4004:5841">
+                    <div class="component-41false-vlkC1d component-41false" data-id="4004:5842">
+                        <div class="link-fMlKx0 link" data-id="I4004:5842;1:115">
+                            <div class="top-left-cornersvg" data-id="I4004:5842;1:117">
+                                <div class="top-left-cornersvg-fill" data-id="I4004:5842;1:118"></div>
+                            </div>
+                            <div class="x664dfcbdb7a5fe391fe9-Gqp1U2 x664dfcbdb7a5fe391fe9" data-id="I4004:5842;1:121">
+                                <div class="x664dfcbdb7a5fe391fe9-rWQZZi x664dfcbdb7a5fe391fe9" data-id="I4004:5842;1:122"><img class="component-1-OznJeV component-1" data-id="I4004:5842;1:123" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/component-1@2x.png"
+                                        alt="Component 1"></div>
+                            </div>
+                            <div class="x664dfcbd77a643f1f9fb-Gqp1U2 x664dfcbd77a643f1f9fb" data-id="I4004:5842;1:125">
+                                <div class="x664dfcbd77a643f1f9fb-yAK1aE x664dfcbd77a643f1f9fb" data-id="I4004:5842;1:126"><img class="component-1-xBrFFx component-1" data-id="I4004:5842;1:127" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/component-1-1@2x.png"
+                                        alt="Component 1"></div>
+                            </div>
+                            <div class="x664dfcbd77e6fb473e0e-Gqp1U2 x664dfcbd77e6fb473e0e" data-id="I4004:5842;1:129">
+                                <div class="x664dfcbd77e6fb473e0e-PhjVUr x664dfcbd77e6fb473e0e" data-id="I4004:5842;1:130"></div>
+                            </div>
+                            <div class="heading-1" data-id="I4004:5842;1:133">
+                                <div class="about valign-text-middle syne-extra-bold-white-10-6px" data-id="I4004:5842;1:134">QHAAR</div>
+                            </div>
+                            <div class="horizontal-divider-Gqp1U2 horizontal-divider" data-id="I4004:5842;1:135"></div>
+                            <div class="shattering-the-status-quo valign-text-middle sairasemicondensed-regular-normal-white-9-2px" data-id="I4004:5842;1:136"></div>
+                        </div>
+                    </div>
+                    <div class="qr-food-ordering-application-vlkC1d valign-text-middle sairasemicondensed-regular-normal-white-9-2px" data-id="4004:5843">QR Food Ordering Application</div>
+                    <div class="mac-book-pro-16-inch-space-black-front-vlkC1d mac-book-pro-16-inch-space-black-front" data-id="4004:5844"><img class="main-Q7Ay1u main" data-id="4004:5845" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/main@2x.png"
+                            alt="main"></div><img class="copy-of-qhaart-ibm-1-vlkC1d" data-id="4004:5846" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/copy-of-qhaart-ibm--1@2x.png"
+                        alt="Copy of Qhaart IBM  1">
+                    <div class="x01-vlkC1d valign-text-middle" data-id="4004:5847">01</div>
+                </div>
+            </div>
+        </a>
+        <a href="x02.html">
+            <div class="group-71-Q862b3 smart-layers-pointers" data-id="4004:5888">
+                <div class="group-64-7w7TLK" data-id="4004:5889">
+                    <div class="group-56-ztzetX smart-layers-pointers" data-id="4004:5890">
+                        <div class="group-55-4WGMxW" data-id="4004:5891">
+                            <div class="group-53-COjgQ7" data-id="4004:5892">
+                                <div class="component-41false-QV5Qz9 component-41false" data-id="4004:5893">
+                                    <div class="link-oRmJn3 link" data-id="I4004:5893;1:115">
+                                        <div class="top-left-cornersvg" data-id="I4004:5893;1:117">
+                                            <div class="top-left-cornersvg-fill" data-id="I4004:5893;1:118"></div>
+                                        </div>
+                                        <div class="x664dfcbdb7a5fe391fe9-q6Y5PJ x664dfcbdb7a5fe391fe9" data-id="I4004:5893;1:121">
+                                            <div class="x664dfcbdb7a5fe391fe9-IJvphx x664dfcbdb7a5fe391fe9" data-id="I4004:5893;1:122"><img class="component-1-y1JYW1 component-1" data-id="I4004:5893;1:123" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/component-1@2x.png"
+                                                    alt="Component 1"></div>
+                                        </div>
+                                        <div class="x664dfcbd77a643f1f9fb-q6Y5PJ x664dfcbd77a643f1f9fb" data-id="I4004:5893;1:125">
+                                            <div class="x664dfcbd77a643f1f9fb-mU2DTZ x664dfcbd77a643f1f9fb" data-id="I4004:5893;1:126"><img class="component-1-sksNdq component-1" data-id="I4004:5893;1:127" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/component-1-1@2x.png"
+                                                    alt="Component 1"></div>
+                                        </div>
+                                        <div class="x664dfcbd77e6fb473e0e-q6Y5PJ x664dfcbd77e6fb473e0e" data-id="I4004:5893;1:129">
+                                            <div class="x664dfcbd77e6fb473e0e-jQH5lK x664dfcbd77e6fb473e0e" data-id="I4004:5893;1:130"></div>
+                                        </div>
+                                        <div class="shattering-the-status-quo valign-text-middle sairasemicondensed-regular-normal-white-9-2px" data-id="I4004:5893;1:136"></div>
+                                    </div>
+                                </div>
+                                <div class="mac-book-pro-16-inch-space-black-front-QV5Qz9 mac-book-pro-16-inch-space-black-front" data-id="4004:5894">
+                                    <div class="group-63-9WcxPp" data-id="4004:5895"><img class="main-TJie0k main" data-id="4004:5896" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/main@2x.png"
+                                            alt="main"><img class="copy-of-qhaart-ibm-2-TJie0k copy-of-qhaart-ibm-2" data-id="4004:5897" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/copy-of-qhaart-ibm--2@2x.png"
+                                            alt="Copy of Qhaart IBM  2"></div>
+                                </div>
+                            </div>
+                            <div class="group-54-COjgQ7" data-id="4004:5898">
+                                <p class="iit-roorkee-conference-management-portal-bbgN3R valign-text-middle sairasemicondensed-regular-normal-white-9-2px" data-id="4004:5899">IIT Roorkee Conference Management Portal</p>
+                                <div class="x02-bbgN3R valign-text-middle" data-id="4004:5900">02</div>
+                                <div class="horizontal-divider-bbgN3R horizontal-divider" data-id="4004:5901"></div>
+                                <div class="emt-bbgN3R valign-text-middle syne-extra-bold-white-10-6px" data-id="4004:5902">EMT</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="x03.html">
+            <div class="group-68-Q862b3 smart-layers-pointers" data-id="4004:5848">
+                <div class="group-3-CE9pjw smart-layers-pointers" data-id="4004:5849">
+                    <div class="component-41false-uQpCA7 component-41false" data-id="4004:5850">
+                        <div class="link-xZzFWj link" data-id="I4004:5850;1:115">
+                            <div class="x664dfcbd77a643f1f9fb-WPiB13 x664dfcbd77a643f1f9fb" data-id="I4004:5850;1:125">
+                                <div class="x664dfcbd77a643f1f9fb-Tjr6ew x664dfcbd77a643f1f9fb" data-id="I4004:5850;1:126"></div>
+                            </div>
+                            <div class="heading-1" data-id="I4004:5850;1:133">
+                                <div class="about valign-text-middle syne-extra-bold-white-10-6px" data-id="I4004:5850;1:134">CAMASSIA</div>
+                            </div>
+                            <div class="horizontal-divider-WPiB13 horizontal-divider" data-id="I4004:5850;1:135"></div>
+                            <div class="shattering-the-status-quo valign-text-middle sairasemicondensed-regular-normal-white-9-2px" data-id="I4004:5850;1:136"></div>
+                        </div>
+                    </div>
+                    <div class="mac-book-pro-16-inch-space-black-front-uQpCA7 smart-layers-pointers mac-book-pro-16-inch-space-black-front" data-id="4004:5851"><img class="main-lAoq72 main" data-id="4004:5852" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/main@2x.png"
+                            alt="main"><img class="rectangle-1-lAoq72" data-id="4004:5853" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/rectangle-1@2x.png"
+                            alt="Rectangle 1"></div>
+                    <div class="ai-portfolio-management-website-uQpCA7 valign-text-middle sairasemicondensed-regular-normal-white-9-2px" data-id="4004:5854">AI Portfolio Management Website</div>
+                </div>
+                <div class="x03-CE9pjw valign-text-middle" data-id="4004:5855">03</div>
+            </div>
+        </a>
+        <a href="x04.html">
+            <div class="group-69-Q862b3 smart-layers-pointers" data-id="4004:5856">
+                <div class="group-41-cmoiB2 smart-layers-pointers" data-id="4004:5857">
+                    <div class="group-44-7xxvsA" data-id="4004:5858">
+                        <div class="group-43-nxfWXr" data-id="4004:5859">
+                            <div class="group-42-EUbjgL group-42" data-id="4004:5860">
+                                <a href="x04.html" onclick="window.event.stopPropagation()"><img class="group-6-QmE7Va smart-layers-pointers" data-id="4004:5861" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/group-6.svg"
+                                        alt="Group 6"></a><img class="main-QmE7Va main" data-id="4004:5865" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/main@2x.png"
+                                    alt="main"></div>
+                        </div><img class="copy-of-qhaart-ibm-2-nxfWXr copy-of-qhaart-ibm-2" data-id="4004:5866" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/copy-of-qhaart-ibm--2-1@2x.png"
+                            alt="Copy of Qhaart IBM  2"></div>
+                </div>
+                <div class="group-58-cmoiB2" data-id="4004:5867">
+                    <div class="x04-x6YENm valign-text-middle" data-id="4004:5868">04</div>
+                </div>
+            </div>
+        </a>
+        <div class="group-35-Q862b3 group-35" data-id="2003:2634">
+            <div class="group-34-KHAEKx" data-id="2003:2632">
+                <div class="group-33-fGRKY3 group-33" data-id="2003:2630">
+                    <a href="javascript:SubmitForm('form13')">
+                        <div class="group-26-rtPW0V" data-id="2003:2420">
+                            <div class="component-41false-BRN3OZ component-41false" data-id="2003:2421">
+                                <div class="link-tczxxJ link" data-id="I2003:2421;1:115">
+                                    <div class="x664dfcbdb7a5fe391fe9-0eRjdn x664dfcbdb7a5fe391fe9" data-id="I2003:2421;1:121">
+                                        <div class="x664dfcbdb7a5fe391fe9-juP8x0 x664dfcbdb7a5fe391fe9" data-id="I2003:2421;1:122"></div>
+                                    </div>
+                                    <div class="x664dfcbd77a643f1f9fb-0eRjdn x664dfcbd77a643f1f9fb" data-id="I2003:2421;1:125">
+                                        <div class="x664dfcbd77a643f1f9fb-xWMZsJ x664dfcbd77a643f1f9fb" data-id="I2003:2421;1:126"><img class="component-1-0Jo9kN component-1" data-id="I2003:2421;1:127" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/component-1-4@2x.png"
+                                                alt="Component 1"></div>
+                                    </div>
+                                    <div class="x664dfcbd77e6fb473e0e-0eRjdn x664dfcbd77e6fb473e0e" data-id="I2003:2421;1:129">
+                                        <div class="x664dfcbd77e6fb473e0e-5Gw3vw x664dfcbd77e6fb473e0e" data-id="I2003:2421;1:130"><img class="component-1-4pyc8v component-1" data-id="I2003:2421;1:131" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/component-1-5@2x.png"
+                                                alt="Component 1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="background-rtPW0V background" data-id="2003:2434">
+                        <div class="list-bwkQxx" data-id="2003:2435">
+                            <div class="item-available-now-hfJbYh valign-text-middle item-available-now inter-bold-white-10-6px" data-id="2003:2436">READY TO WORK</div>
+                            <div class="item-hfJbYh valign-text-middle item inter-bold-punch-11px" data-id="2003:2437">•</div>
+                            <div class="item-available-now-I1C394 valign-text-middle item-available-now inter-bold-white-10-6px" data-id="2003:2438">READY TO WORK</div>
+                            <div class="item-I1C394 valign-text-middle item inter-bold-punch-11px" data-id="2003:2439">•</div>
+                            <div class="item-available-now-6Zv43N valign-text-middle item-available-now inter-bold-white-10-6px" data-id="2003:2440">READY TO WORK</div>
+                            <div class="item-6Zv43N valign-text-middle item inter-bold-punch-11px" data-id="2003:2441">•</div>
+                            <div class="item-available-now-2TIJuf valign-text-middle item-available-now inter-bold-white-10-6px" data-id="2003:2442">READY TO WORK</div>
+                            <div class="item-2TIJuf valign-text-middle item inter-bold-punch-11px" data-id="2003:2443">•</div>
+                            <div class="item-available-now-t1Oi8B valign-text-middle item-available-now inter-bold-white-10-6px" data-id="2003:2444">READY TO WORK</div>
+                            <div class="item-t1Oi8B valign-text-middle item inter-bold-punch-11px" data-id="2003:2445">•</div>
+                            <div class="item-available-now-XWC2Lz valign-text-middle item-available-now inter-bold-white-10-6px" data-id="2003:2446">READY TO WORK</div>
+                            <div class="item-XWC2Lz valign-text-middle item inter-bold-punch-11px" data-id="2003:2447">•</div>
+                            <div class="item-available-now-KE5Y8G valign-text-middle item-available-now inter-bold-white-10-6px" data-id="2003:2448">READY TO WORK</div>
+                            <div class="item-KE5Y8G valign-text-middle item inter-bold-punch-11px" data-id="2003:2449">•</div>
+                            <div class="item-available-now-N3ia74 valign-text-middle item-available-now inter-bold-white-10-6px" data-id="2003:2450">READY TO WORK</div>
+                            <div class="item-N3ia74 valign-text-middle item inter-bold-punch-11px" data-id="2003:2451">•</div>
+                            <div class="item-available-now-Fpo4xO valign-text-middle item-available-now inter-bold-white-10-6px" data-id="2003:2452">READY TO WORK</div>
+                        </div>
+                    </div>
+                    <div class="group-32-rtPW0V" data-id="2003:2629">
+                        <div class="group-29-6uzxqL" data-id="2003:2419">
+                            <a href="javascript:SubmitForm('form13')">
+                                <div class="group-28-AdNFP8 smart-layers-pointers group-28" data-id="2003:2422">
+                                    <div class="page-1-fO9DdD" data-id="2003:2423">
+                                        <div class="dribbble-light-preview-72QBrM" data-id="2003:2424"><img class="icons-edfhmf" data-id="2003:2425" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/icons@2x.png"
+                                                alt="icons"></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="javascript:SubmitForm('form13')"><img class="group-28-KOrwDJ smart-layers-pointers group-28" data-id="2003:2427" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/group-28@2x.png"
+                                    alt="Group 28"></a><img class="group-AdNFP8" data-id="2003:2429" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/group@2x.png"
+                                alt="Group">
+                            <div class="item-available-now-AdNFP8 valign-text-middle item-available-now" data-id="2003:2431">CLICK TO CHAT</div>
+                        </div>
+                        <a href="javascript:SubmitForm('form13')">
+                            <div class="group-28-6uzxqL smart-layers-pointers group-28" data-id="2003:2476"><img class="group-27-6Sx1CA" data-id="2003:2477" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/group-27@2x.png"
+                                    alt="Group 27"></div>
+                        </a>
+                    </div>
+                    <p class="ouve-reached-the-bot-rtPW0V valign-text-middle" data-id="2003:2469">ou&#39;ve reached the bottom, but our creativity has no limits. Let&#39;s<br>connect and create something amazing together!</p>
+                </div>
+            </div>
+        </div>
+        <div class="group-35-AclxKv group-35" data-id="2003:2633">
+            <div class="group-33-iWx4sR group-33" data-id="2003:2631">
+                <h1 class="x2025-resume-OrVzGK valign-text-middle" data-id="2003:2627">©2025 RESUME</h1>
+            </div>
+        </div>
+    </form>
+    <form class="main-frame screen " data-id="1:665" name="x01.html" action="x01.html" method="post"><input type="text" name="trapit" value="" style="display:none;">
+        <div class="text-xubqhQ valign-text-middle sairasemicondensed-regular-normal-white-9-9px" data-id="1:976"></div>
+        <div class="text-2Kngee valign-text-middle sairasemicondensed-regular-normal-white-9-9px" data-id="10:174"></div>
+        <div class="text-L7iV5Y valign-text-middle sairasemicondensed-regular-normal-white-9-9px" data-id="10:172"></div>
+        <p class="ar-food-tracker-app-xubqhQ valign-text-middle sairasemicondensed-regular-normal-white-9-9px" data-id="10:173">AR&nbsp;&nbsp;Food Tracker App</p>
+        <div class="group-50-xubqhQ" data-id="4003:4982">
+            <a href="contact.html"><img class="group-42-6JdIF0" data-id="4002:3682" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efb532eed42f0f4c9d93b7/img/group-42.svg"
+                    alt="Group 42"></a>
+            <div class="group-30-6JdIF0" data-id="2003:2334">
+                <div class="group-29-Kjjtxk group-29" data-id="2003:2333">
+                    <div class="group-1CqYY1 smart-layers-pointers" data-id="2003:2254"><img class="vector-6Wg3YQ smart-layers-pointers" data-id="2003:2255" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/vector-4@2x.png"
+                            alt="Vector"></div>
+                    <div class="item-available-now-1CqYY1 smart-layers-pointers valign-text-middle item-available-now inter-bold-white-18-4px" data-id="2003:2330"> TAP TO CHAT</div>
+                </div>
+                <!-- Chatbot container -->
+                <div id="chatbot">
+                    <div id="chatbot-header">
+                        <span>Resume Chatbot</span>
+                        <button id="close-btn" type="button">X</button>
+                    </div>
+                    <div id="conversation"></div>
+                    <div id="input-area">
+                        <input type="text" id="user-input" placeholder="Ask me about my work experience..." />
+                        <button id="send-btn" type="button">Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="background-IcyzrU" data-id="2003:2205">
+                <div class="list-nFReXf" data-id="2003:2206">
+                    <div class="item-available-now-mdfhzm valign-text-middle item-available-now inter-bold-white-18-4px" data-id="2003:2207">READY TO WORK</div>
+                    <div class="item-mdfhzm valign-text-middle item inter-bold-punch-19-2px" data-id="2003:2208">•</div>
+                    <div class="item-available-now-P5BKfN valign-text-middle item-available-now inter-bold-white-18-4px" data-id="2003:2209">READY TO WORK</div>
+                    <div class="item-P5BKfN valign-text-middle item inter-bold-punch-19-2px" data-id="2003:2210">•</div>
+                    <div class="item-available-now-BALJoj valign-text-middle item-available-now inter-bold-white-18-4px" data-id="2003:2211">READY TO WORK</div>
+                    <div class="item-BALJoj valign-text-middle item inter-bold-punch-19-2px" data-id="2003:2212">•</div>
+                    <div class="item-available-now-ffI5D2 valign-text-middle item-available-now inter-bold-white-18-4px" data-id="2003:2213">READY TO WORK</div>
+                    <div class="item-ffI5D2 valign-text-middle item inter-bold-punch-19-2px" data-id="2003:2214">•</div>
+                    <div class="item-available-now-2bqhzV valign-text-middle item-available-now inter-bold-white-18-4px" data-id="2003:2215">READY TO WORK</div>
+                    <div class="item-2bqhzV valign-text-middle item inter-bold-punch-19-2px" data-id="2003:2216">•</div>
+                    <div class="item-available-now-6YasXw valign-text-middle item-available-now inter-bold-white-18-4px" data-id="2003:2217">READY TO WORK</div>
+                    <div class="item-6YasXw valign-text-middle item inter-bold-punch-19-2px" data-id="2003:2218">•</div>
+                    <div class="item-available-now-KTEeGm valign-text-middle item-available-now inter-bold-white-18-4px" data-id="2003:2219">READY TO WORK</div>
+                    <div class="item-KTEeGm valign-text-middle item inter-bold-punch-19-2px" data-id="2003:2220">•</div>
+                    <div class="item-available-now-CoqCxf valign-text-middle item-available-now inter-bold-white-18-4px" data-id="2003:2221">READY TO WORK</div>
+                    <div class="item-CoqCxf valign-text-middle item inter-bold-punch-19-2px" data-id="2003:2222">•</div>
+                    <div class="item-available-now-nkZCg5 valign-text-middle item-available-now inter-bold-white-18-4px" data-id="2003:2223">READY TO WORK</div>
+                </div>
+            </div>
+            <div class="frame-IcyzrU" data-id="2003:2239">
+                <p class="ouve-reached-the-bot-Qxv3iu valign-text-middle" data-id="2003:2240">ou&#39;ve reached the bottom, but our creativity has no limits. Let&#39;s<br>connect and create something amazing together!</p>
+            </div>
+            <a href="Contact.html">
+                <h1 class="x2025-resume-IcyzrU smart-layers-pointers valign-text-middle" data-id="2003:2248">©2025 RESUME</h1>
             </a>
-        </form>
-    </div>
-    <script src="launchpad-js/launchpad-banner.js" async></script>
-    <script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script>
+            <div class="svg-IcyzrU" data-id="2003:2250"><img class="clip-path-group-Cpm7SO" data-id="2003:2251" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efb532eed42f0f4c9d93b7/img/clip-path-group@2x.png"
+                    alt="Clip path group"></div>
+            <div class="group-51-IcyzrU" data-id="4004:5411">
+                <a href="https://github.com/divyanshuverma9785/portfolio">
+                    <div class="dribbble-light-preview-ygNaeG smart-layers-pointers" data-id="2003:2321"><img class="icons-ZdxtQB" data-id="2003:2322" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/icons-1@2x.png"
+                            alt="icons"></div>
+                </a>
+                <a href="https://www.linkedin.com/in/divyanshu-verma-9a9ab9225/"><img class="group-28-ygNaeG smart-layers-pointers group-28" data-id="2003:2329" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efb532eed42f0f4c9d93b7/img/group-28@2x.png"
+                        alt="Group 28"></a>
+                <a href="https://mailto:divyanshuvemra9785@gmail.com">
+                    <div class="group-28-iB17ki smart-layers-pointers group-28" data-id="2003:2327"><img class="group-27-vBJ5Ji" data-id="2003:2326" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/group-27-1@2x.png"
+                            alt="Group 27"></div>
+                </a>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <a href="contact.html"><img class="background-xubqhQ smart-layers-pointers" data-id="1:368" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/background-1.svg"
+                alt="Background"></a>
+        <a href="x01.html">
+            <div class="group-52-xubqhQ smart-layers-pointers" data-id="4004:5414">
+                <div class="component-41false-wq7Bvh component-41false" data-id="1:413">
+                    <div class="link" data-id="I1:413;1:115">
+                        <div class="top-left-cornersvg" data-id="I1:413;1:117">
+                            <div class="top-left-cornersvg-fill" data-id="I1:413;1:118"></div>
+                        </div>
+                        <div class="x664dfcbdb7a5fe391fe9-nMcfpx x664dfcbdb7a5fe391fe9" data-id="I1:413;1:121">
+                            <div class="x664dfcbdb7a5fe391fe9-eMZyEm x664dfcbdb7a5fe391fe9" data-id="I1:413;1:122"><img class="component-1-S3a7Et component-1" data-id="I1:413;1:123" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/component-1-6@2x.png"
+                                    alt="Component 1"></div>
+                        </div>
+                        <div class="x664dfcbd77a643f1f9fb-nMcfpx x664dfcbd77a643f1f9fb" data-id="I1:413;1:125">
+                            <div class="x664dfcbd77a643f1f9fb-MiFyIw x664dfcbd77a643f1f9fb" data-id="I1:413;1:126"><img class="component-1-Zb7KlD component-1" data-id="I1:413;1:127" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/component-1-7@2x.png"
+                                    alt="Component 1"></div>
+                        </div>
+                        <div class="x664dfcbd77e6fb473e0e-nMcfpx x664dfcbd77e6fb473e0e" data-id="I1:413;1:129">
+                            <div class="x664dfcbd77e6fb473e0e-YxsSbA x664dfcbd77e6fb473e0e" data-id="I1:413;1:130"></div>
+                        </div>
+                        <div class="heading-1" data-id="I1:413;1:133">
+                            <div class="about valign-text-middle syne-extra-bold-white-11-4px" data-id="I1:413;1:134">QHAAR</div>
+                        </div>
+                        <div class="horizontal-divider-nMcfpx horizontal-divider" data-id="I1:413;1:135"></div>
+                        <div class="shattering-the-status-quo valign-text-middle sairasemicondensed-regular-normal-white-9-9px-2" data-id="I1:413;1:136"></div>
+                    </div>
+                </div>
+                <div class="qr-food-ordering-application-wq7Bvh valign-text-middle sairasemicondensed-regular-normal-white-9-9px" data-id="1:698">QR Food Ordering Application</div>
+                <div class="mac-book-pro-16-inch-space-black-front-wq7Bvh mac-book-pro-16-inch-space-black-front" data-id="1:669"><img class="main-baSIXd main" data-id="1:670" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/main-1@2x.png"
+                        alt="main"></div><img class="copy-of-qhaart-ibm-1-wq7Bvh" data-id="8:134" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/copy-of-qhaart-ibm--1-1@2x.png"
+                    alt="Copy of Qhaart IBM  1">
+                <div class="x01-wq7Bvh valign-text-middle" data-id="26:251">01</div>
+            </div>
+        </a>
+        <a href="x03.html">
+            <div class="group-57-xubqhQ smart-layers-pointers" data-id="4004:5484">
+                <div class="group-3-RxBvkY smart-layers-pointers" data-id="1:1011">
+                    <div class="component-41false-p7986Z component-41false" data-id="1:1012">
+                        <div class="link" data-id="I1:1012;1:115">
+                            <div class="x664dfcbd77a643f1f9fb-fTxtfT x664dfcbd77a643f1f9fb" data-id="I1:1012;1:125">
+                                <div class="x664dfcbd77a643f1f9fb-kLsxoA x664dfcbd77a643f1f9fb" data-id="I1:1012;1:126"></div>
+                            </div>
+                            <div class="heading-1" data-id="I1:1012;1:133">
+                                <div class="about valign-text-middle syne-extra-bold-white-11-4px" data-id="I1:1012;1:134">CAMASSIA</div>
+                            </div>
+                            <div class="horizontal-divider-fTxtfT horizontal-divider" data-id="I1:1012;1:135"></div>
+                            <div class="shattering-the-status-quo valign-text-middle sairasemicondensed-regular-normal-white-9-9px-2" data-id="I1:1012;1:136"></div>
+                        </div>
+                    </div>
+                    <div class="mac-book-pro-16-inch-space-black-front-p7986Z smart-layers-pointers mac-book-pro-16-inch-space-black-front" data-id="1:1013"><img class="main-7lXf87 main" data-id="1:1014" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/main-1@2x.png"
+                            alt="main"><img class="rectangle-1-7lXf87" data-id="8:143" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/rectangle-1-1@2x.png"
+                            alt="Rectangle 1"></div>
+                    <div class="ai-portfolio-management-website-p7986Z valign-text-middle sairasemicondensed-regular-normal-white-9-9px" data-id="1:1015">AI Portfolio Management Website</div>
+                </div>
+                <div class="x03-RxBvkY valign-text-middle" data-id="26:255">03</div>
+            </div>
+        </a>
+        <a href="x04.html">
+            <div class="group-66-xubqhQ smart-layers-pointers" data-id="4004:5514">
+                <div class="group-41-6ReXu2 smart-layers-pointers" data-id="4001:1107">
+                    <div class="group-44-QQGu4m" data-id="4001:1110">
+                        <div class="group-43-oYHxmZ" data-id="4001:1109">
+                            <div class="group-42-jWa53x" data-id="4001:1108">
+                                <a href="x04.html" onclick="window.event.stopPropagation()"><img class="group-6-mti1Yz smart-layers-pointers" data-id="4001:1076" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/group-6-1.svg"
+                                        alt="Group 6"><img class="main-mti1Yz main" data-id="3:1043" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/main-1@2x.png"
+                                        alt="main"></div>
+                        </div><img class="copy-of-qhaart-ibm-2-oYHxmZ copy-of-qhaart-ibm-2" data-id="10:157" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/copy-of-qhaart-ibm--2-2@2x.png"
+                            alt="Copy of Qhaart IBM  2"></div>
+                    </a>
+                </div>
+                <div class="group-58-6ReXu2" data-id="4004:5487">
+                    <div class="x04-xgkCZc valign-text-middle" data-id="26:257">04</div>
+                </div>
+            </div>
+        </a>
+        <a href="x05.html">
+            <div class="group-61-xubqhQ smart-layers-pointers" data-id="4004:5495">
+                <div class="group-62-0hIwrI" data-id="4004:5498">
+                    <div class="group-45-VJp8Aw" data-id="4001:1179">
+                        <a href="x05.html" onclick="window.event.stopPropagation()"><img class="group-42-zDuaiM smart-layers-pointers" data-id="4001:1111" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/group-42-1.svg"
+                                alt="Group 42"></a>
+                    </div>
+                    <div class="group-46-VJp8Aw" data-id="4001:1181">
+                        <div class="mac-book-pro-16-inch-space-black-front-zlZg99 mac-book-pro-16-inch-space-black-front" data-id="3:1277"><img class="main-78E1Yp main" data-id="3:1278" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/main-1@2x.png"
+                                alt="main">
+                            <a href="x05.html">
+                                <div class="copy-of-qhaart-ibm-2-78E1Yp copy-of-qhaart-ibm-2" data-id="10:170"></div>
+                        </div>
+                        <div class="group-9-zlZg99" data-id="10:167"><img class="nothing-phone-8-1-cPxTr0" data-id="10:162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/nothing-phone-8-1-1@2x.png"
+                                alt="Nothing Phone 8 1">
+                            <div class="group-8-cPxTr0" data-id="10:166"><img class="nothing-phone-5-2-lABxZI" data-id="10:163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/nothing-phone-5-2-1@2x.png"
+                                    alt="Nothing Phone 5 2">
+                                <div class="group-7-lABxZI" data-id="10:165"><img class="nothing-phone-5-1-3Sb1pw" data-id="10:160" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/nothing-phone-5-1-1@2x.png"
+                                        alt="Nothing Phone 5 1"><img class="x23-1-3Sb1pw" data-id="10:159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/23-1-1@2x.png"
+                                        alt="23 1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="x05-VJp8Aw valign-text-middle" data-id="4001:1185">05</div>
+                </div>
+            </div>
+            </a>
+            <a href="x02.html">
+                <div class="group-65-xubqhQ smart-layers-pointers" data-id="4004:5512">
+                    <div class="group-64-xcoTAR" data-id="4004:5511">
+                        <div class="group-56-UtlaoV smart-layers-pointers" data-id="4004:5475">
+                            <div class="group-55-tdkfop" data-id="4004:5472">
+                                <div class="group-53-0AvuAm" data-id="4004:5440">
+                                    <div class="component-41false-YmARmC component-41false" data-id="4004:5441">
+                                        <div class="link" data-id="I4004:5441;1:115">
+                                            <div class="top-left-cornersvg" data-id="I4004:5441;1:117">
+                                                <div class="top-left-cornersvg-fill" data-id="I4004:5441;1:118"></div>
+                                            </div>
+                                            <div class="x664dfcbdb7a5fe391fe9-BA6d78 x664dfcbdb7a5fe391fe9" data-id="I4004:5441;1:121">
+                                                <div class="x664dfcbdb7a5fe391fe9-dqjGSK x664dfcbdb7a5fe391fe9" data-id="I4004:5441;1:122"><img class="component-1-XdVyO7 component-1" data-id="I4004:5441;1:123" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/component-1-6@2x.png"
+                                                        alt="Component 1"></div>
+                                            </div>
+                                            <div class="x664dfcbd77a643f1f9fb-BA6d78 x664dfcbd77a643f1f9fb" data-id="I4004:5441;1:125">
+                                                <div class="x664dfcbd77a643f1f9fb-Drjl21 x664dfcbd77a643f1f9fb" data-id="I4004:5441;1:126"><img class="component-1-VOKJTV component-1" data-id="I4004:5441;1:127" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/component-1-7@2x.png"
+                                                        alt="Component 1"></div>
+                                            </div>
+                                            <div class="x664dfcbd77e6fb473e0e-BA6d78 x664dfcbd77e6fb473e0e" data-id="I4004:5441;1:129">
+                                                <div class="x664dfcbd77e6fb473e0e-iSDdF4 x664dfcbd77e6fb473e0e" data-id="I4004:5441;1:130"></div>
+                                            </div>
+                                            <div class="shattering-the-status-quo valign-text-middle sairasemicondensed-regular-normal-white-9-9px-2" data-id="I4004:5441;1:136"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mac-book-pro-16-inch-space-black-front-YmARmC mac-book-pro-16-inch-space-black-front" data-id="4004:5443">
+                                        <div class="group-63-N5Ec7e" data-id="4004:5499"><img class="main-AvnSkZ main" data-id="1:985" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/main-1@2x.png"
+                                                alt="main"><img class="copy-of-qhaart-ibm-2-AvnSkZ copy-of-qhaart-ibm-2" data-id="8:205" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67efa5982b83103efcd60df5/releases/67efc1f0b41436d7b85a8eed/img/copy-of-qhaart-ibm--2-3@2x.png"
+                                                alt="Copy of Qhaart IBM  2"></div>
+                                    </div>
+                                </div>
+                                <div class="group-54-0AvuAm" data-id="4004:5471">
+                                    <p class="iit-roorkee-conference-management-portal-k1BRQk valign-text-middle sairasemicondensed-regular-normal-white-9-9px" data-id="1:986">IIT Roorkee Conference Management Portal</p>
+                                    <div class="x02-k1BRQk valign-text-middle" data-id="26:253">02</div>
+                                    <div class="horizontal-divider-k1BRQk horizontal-divider" data-id="2010:248"></div>
+                                    <div class="emt-k1BRQk valign-text-middle syne-extra-bold-white-11-4px" data-id="2010:247">EMT</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="frame-9-xubqhQ" data-id="4004:6033"></div>
+            <div class="my-portfolio-xubqhQ valign-text-middle" data-id="4004:6035">WELCOME TO MY PORTFOLIO</div>
+    </form>
     <script>
-        function ShowOnScroll() {
-            this.toShow = [];
-            this.nextEventY = undefined;
-        }
+        // Show chatbot when image is clicked
+        document.querySelector('.vector-6Wg3YQ').addEventListener('click', function() {
+            const chatbot = document.getElementById('chatbot');
+            chatbot.style.display = 'block';
 
-        ShowOnScroll.prototype.show = function(e) {
-            e.style.display = "";
-        };
+            const conversation = document.getElementById('conversation');
 
-        ShowOnScroll.prototype.hide = function(e) {
-            e.style.display = "none";
-        };
+            // Check if the welcome message is already displayed
+            if (!conversation.querySelector('.welcome-message')) {
+                // Display the welcome message
+                const welcomeMessage = document.createElement('div');
+                welcomeMessage.className = 'message bot welcome-message';
+                welcomeMessage.textContent = "I'm Divyanshu. It's a pleasure to connect with you.";
+                conversation.appendChild(welcomeMessage);
 
-        ShowOnScroll.prototype.getTop = function(e) {
-            if (e.Top != undefined && e.Top != 0) {
-                return e.Top;
+                // Scroll to the bottom
+                conversation.scrollTop = conversation.scrollHeight;
             }
-            var top = 0;
-            var iter = e;
-            do {
-                top += iter.offsetTop || 0;
-                iter = iter.offsetParent;
-            } while (iter);
-            e.Top = top;
-            return top;
-        };
 
-        ShowOnScroll.prototype.onScroll = function() {
-            var screenBottom = window.pageYOffset + window.innerHeight;
-            if (this.nextEventY == undefined || this.nextEventY > screenBottom) {
-                return;
+            // Automatically focus on the input field
+            const userInput = document.getElementById('user-input');
+            userInput.focus();
+        });
+
+        // Hide chatbot when close button is clicked
+        document.getElementById('close-btn').addEventListener('click', function() {
+            document.getElementById('chatbot').style.display = 'none';
+        });
+        // Resume information for the LLM context
+        const resumeInfo = `
+Assuming that you are Divyanshu Verma. Please answer any questions about their work experience, skills, projects, and certifications based on this information.Keep the information short, don't try to bold anything keep evertyhing in shortpoints and attractive english.Answer everything in self referential form like you are Divyanshu.
+Below is the resume of Divyanshu Verma. Please answer any questions about their work experience, skills, projects, and certifications based on this information.
+DIVYANSHU VERMA
+UG (IV Year II Semester)
+BS-MS (Economics), IIT Roorkee
+Contact: +91 9772427180 | Email: d_verma@hs.iitr.ac.in
+Registration No.: 21322012/2025
+
+-------------------------------------------------------------------
+AREA OF INTEREST
+-------------------------------------------------------------------
+- Data Analytics
+- Machine Learning
+- Statistics
+- Leadership
+
+-------------------------------------------------------------------
+EDUCATION
+-------------------------------------------------------------------
+BS-MS Economics (4th Year) - IIT Roorkee (2024) - CGPA: 7.000
+Class XII (Intermediate) - Matrix High School, Sikar (2020) - 89.20%
+Class X (Matriculate) - Jhunjhunu Academy, Wisdom City (2018) - 82.60%
+
+-------------------------------------------------------------------
+INTERNSHIPS
+-------------------------------------------------------------------
+Business Analyst Internship | Worthy Advisors
+(June 2023 to August 2023)
+- Led market research and statistical analysis; contributed to 20+ client engagements.
+- Analyzed financial data of 350+ companies.
+- Worked closely with founders and CFOs to improve lead generation and trust.
+- Boosted client engagement by 150% and increased monthly visitors by 1.5k.
+
+Research Internship | University of London
+(November 2023 to May 2024)
+- First-author of Meta-analysis paper accepted at International Arsenic Congress 2024.
+- Worked under Prof. Vijaya Gupta (IIM Mumbai) and Prof. Louiza Campos (UCL).
+- Contributed to web scraping, literature review, data curation, and bibliometric analysis.
+
+-------------------------------------------------------------------
+PROJECTS
+-------------------------------------------------------------------
+Stock Sentiment Analysis via ML | Finance Club IITR
+(May 2024 to June 2024)
+- Built stock price prediction model using news sentiment analysis (97% accuracy).
+- Created sentiment-based trading strategy with strong simulated returns.
+
+Data-Driven Conference Management Portal | IIT Roorkee
+(December 2023)
+- Developed CMP system to manage speakers, attendees, logistics.
+- Scheduled launch for IAHS 2025 conference.
+
+TOI Analysis: India, Malaysia, Mauritius | HSS Dept., IITR
+(August 2023 to December 2023)
+- Comparative analysis of RTAs using Trade Overlap Index.
+- Conducted econometric analysis using panel regression.
+
+Inventory Management Portal | Tinkering Lab, IITR
+(December 2022 to February 2023)
+- Developed portal to manage lab inventory; improved efficiency by 30%.
+- Persuaded 3 departments to adopt the system.
+
+-------------------------------------------------------------------
+AWARDS & ACHIEVEMENTS
+-------------------------------------------------------------------
+- ENCORE Award, IIT Roorkee for all-round excellence.
+- Gold Medal in 100m race (Departmental Sports Fiesta 2024).
+- 1st Place in BRAND BLITZ competition, Delhi University.
+- All India 2nd Runner-up im BAJA SAE 2023 (Cost Evaluation).
+
+-------------------------------------------------------------------
+SKILLS
+-------------------------------------------------------------------
+Languages: Python, R, C++
+Software: SolidWorks, Excel, Stata, RStudio, SQL, Tableau
+
+Certifications:
+- IITG Winter Consulting 2023
+- Python (Basic to Advanced)
+
+-------------------------------------------------------------------
+POSITIONS OF RESPONSIBILITY & EXTRA-CURRICULARS
+-------------------------------------------------------------------
+Head Organizer | Smart India Hackathon 2024
+(December 2024)
+- Led 20+ member team in Grand Finale under Ministry of Education.
+- Managed logistics for 150+ participants across 25 teams.
+- Coordinated with NTRO, media, and government officials.
+
+Additional Secretary | Tinkering Lab, IIT Roorkee
+(April 2024 in Present)
+- Organized TinkerQuest24 (Pan-India Hackathon) with 25+ team members.
+- Mentored 1000+ first-year students on tech and innovation.
+- Hosted workshops: Metaverse, 3D Printing, and more with 500+ attendees.
+- Created and deployed lab Inventory Portal.
+- Launched "Think-Thursday" campaign 5x engagement increase.
+
+-------------------------------------------------------------------
+`;
+
+        // Handle send button click
+        document.getElementById('send-btn').addEventListener('click', function() {
+            const userInput = document.getElementById('user-input').value.trim();
+            if (!userInput) return; // Ignore empty input
+
+            const conversation = document.getElementById('conversation');
+
+            // Display user's message
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user';
+            userMessage.textContent = userInput;
+            conversation.appendChild(userMessage);
+
+            // Scroll to the bottom
+            conversation.scrollTop = conversation.scrollHeight;
+
+            // Send request to Groq LLM API
+            fetch('https://api.groq.com/openai/v1/chat/completions', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer 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'
+                    },
+                    body: JSON.stringify({
+                        model: "llama-3.3-70b-versatile",
+                        messages: [{
+                            role: "system",
+                            content: `You are a chatbot designed to answer questions about my resume. Here is the resume information: ${resumeInfo}`
+                        }, {
+                            role: "user",
+                            content: userInput
+                        }]
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const botResponse = data.choices[0].message.content;
+
+                    // Display bot's message
+                    const botMessage = document.createElement('div');
+                    botMessage.className = 'message bot';
+                    botMessage.textContent = botResponse;
+                    conversation.appendChild(botMessage);
+
+                    // Scroll to the bottom
+                    conversation.scrollTop = conversation.scrollHeight;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+
+                    // Display error message
+                    const errorMessage = document.createElement('div');
+                    errorMessage.className = 'message bot';
+                    errorMessage.textContent = 'Sorry, there was an error processing your request.';
+                    conversation.appendChild(errorMessage);
+
+                    // Scroll to the bottom
+                    conversation.scrollTop = conversation.scrollHeight;
+                });
+
+            // Clear input field
+            document.getElementById('user-input').value = '';
+        });
+        // Handle Enter key press in input field
+        document.getElementById('user-input').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent form submission
+                document.getElementById('send-btn').click(); // Trigger send button click
             }
-            this.nextEventY = undefined;
-            for (var i = 0; i < this.toShow.length; i++) {
-                var e = this.toShow[i];
-                var top = this.getTop(e);
-                if (top < screenBottom) {
-                    this.show(e);
-                    this.toShow.shift();
-                    i--;
-                } else {
-                    this.nextEventY = top;
-                    break;
-                }
+        });
+        // Hide chatbot on outside click
+        window.addEventListener('click', function(event) {
+            const chatbot = document.getElementById('chatbot');
+            if (event.target !== chatbot && !chatbot.contains(event.target) && event.target !== document.querySelector('.vector-6Wg3YQ')) {
+                chatbot.style.display = 'none';
             }
-        };
-
-        ShowOnScroll.prototype.resetScrolling = function() {
-            // Clear state
-            var screenBottom = window.pageYOffset + window.innerHeight;
-            for (var i = 0; i < this.toShow.length; i++) {
-                var e = this.toShow[i];
-                this.show(e);
-            }
-            this.toShow = [];
-            this.nextEventY == undefined;
-
-            // Collect items
-            var itemsToShowOnScroll = Array.prototype.slice.call(document.getElementsByTagName("*"));
-            itemsToShowOnScroll = itemsToShowOnScroll.filter(function(e) {
-                return e.getAttribute("show-on-scroll") != undefined
-            });
-            var getTop = this.getTop;
-            itemsToShowOnScroll.sort(function(a, b) {
-                return getTop(a) - getTop(b);
-            });
-            for (var i = 0; i < itemsToShowOnScroll.length; i++) {
-                var e = itemsToShowOnScroll[i];
-                var top = this.getTop(e);
-                if (top < screenBottom) {
-                    continue;
-                }
-                this.toShow.push(e);
-                this.hide(e);
-                this.nextEventY = this.nextEventY != undefined ? this.nextEventY : top;
-            }
-        };
-
-        ShowOnScroll.prototype.handleEvent = function(e) {
-            switch (e.type) {
-                case "scroll":
-                    this.onScroll();
-                    break;
-                case "resize":
-                    this.resetScrolling();
-                    break;
-            }
-        };
-
-        ShowOnScroll.prototype.init = function() {
-            this.resetScrolling();
-            window.addEventListener("scroll", this);
-            window.addEventListener("resize", this);
-        };
-
-        // After anima-src
-        setTimeout(function() {
-            var instShowOnScroll = new ShowOnScroll();
-            instShowOnScroll.init();
-        }, 250);
-    </script>
-    <script>
-        /* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
-
-        if (!HTMLFormElement.prototype.reportValidity) {
-            HTMLFormElement.prototype.reportValidity = function() {
-                if (this.checkValidity()) return true;
-                var btn = document.createElement('button');
-                this.appendChild(btn);
-                btn.click();
-                this.removeChild(btn);
-                return false;
-            };
-        }
-
-        function SubmitForm(form_name) {
-            var form = document.getElementsByName(form_name)[0];
-            if (form.reportValidity()) {
-                form.submit();
-                if (window.submitted) window.submitted();
-            }
-        }
+        });
     </script>
 </body>
 
