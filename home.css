@@ -2954,7 +2954,7 @@ input:focus {
     background-color: transparent;
     color: var(--wwwjonathanpattersoncomblack);
     font-family: var(--font-family-syne);
-    font-size: 41.3px;
+    font-size: 34px;
     font-style: normal;
     font-weight: 800;
     height: 57px;
@@ -2980,19 +2980,18 @@ input:focus {
 }
 
 .main-frame .component-41false {
-    align-items: center;
-    background: radial-gradient(50% 50% at 76% 50%, rgba(255, 255, 255, 1) 0%, rgba(172, 174, 176, 1) 41%, rgba(0, 4, 11, 1) 100%);
-    background-color: transparent;
-    border-radius: 12px;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    height: 100%;
+    align-items: center;
     justify-content: center;
-    left: 0px;
-    overflow-y: scroll;
     position: absolute;
-    top: 0px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    border-radius: 12px;
+    background: radial-gradient(ellipse at 48% -42%, rgba(255, 255, 255, 1) 2%, rgb(183, 183, 184) 44%, rgba(0, 4, 11, 1) 100%);
 }
 
 .main-frame .copy-of-qhaart-ibm-2 {
@@ -3130,54 +3129,113 @@ input:focus {
     }
 }
 
+
+/* Chatbot container */
+
 #chatbot {
     display: none;
     position: fixed;
-    top: 10px;
-    right: 10px;
-    width: 500px;
-    height: 400px;
-    background: linear-gradient(to bottom, #cdcfd0, #2e3137);
-    border-radius: 10px;
-    padding: 10px;
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    height: 500px;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    border-radius: 15px;
+    padding: 15px;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Inter', sans-serif;
 }
 
+
+/* Chatbot header */
+
+#chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e3137;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Close button */
+
 #close-btn {
-    position: absolute;
-    top: none;
-    right: none;
     background: none;
     border: none;
-    font-size: 16px;
+    color: white;
+    font-size: 18px;
     cursor: pointer;
 }
 
+
+/* Conversation area */
+
 #conversation {
-    height: 345px;
-    overflow-y: scroll;
-    margin-bottom: 8px;
-    padding: 5px;
+    height: 380px;
+    overflow-y: auto;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* User and bot messages */
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message.user {
+    background-color: #d1e7ff;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.message.bot {
+    background-color: #e6e9eb;
+    align-self: flex-start;
+    text-align: left;
+}
+
+
+/* Input area */
+
+#input-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 #user-input {
-    width: 80%;
-    padding: 5px;
-    border: 1px solid rgba(0, 4, 11, 1);
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 20px;
+    font-size: 14px;
 }
 
 #send-btn {
-    width: 18%;
-    padding: 5px;
-    background-color: #666;
+    padding: 10px 15px;
+    background-color: #2e3137;
     color: white;
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    font-size: 14px;
 }
 
 #send-btn:hover {
-    background-color: #555;
+    background-color: #1f2327;
 }
