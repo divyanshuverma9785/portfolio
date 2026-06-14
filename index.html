@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyanshu Verma | Product Manager | IIT Roorkee</title>
+    <meta name="description"
+        content="Product Manager from IIT Roorkee. I build user-centric products at the intersection of technology, design, and business. View my case studies and get in touch.">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #F5F5F5;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #EA580C;
+            border-radius: 4px;
+        }
+
+        /* Grain texture */
+        .bg-grain {
+            position: fixed;
+            inset: 0;
+            opacity: 0.3;
+            mix-blend-mode: multiply;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideLeft {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideRight {
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 30px 10px rgba(234, 88, 12, 0.1);
+            }
+        }
+
+        @keyframes spin-slow {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        @keyframes count-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+                opacity: 0.4;
+            }
+
+            100% {
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes gradient-shift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animate-fadeUp {
+            animation: fadeUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .animate-slideLeft {
+            animation: slideLeft 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .animate-slideRight {
+            animation: slideRight 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .animate-scaleIn {
+            animation: scaleIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .animate-pulse-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        .animate-spin-slow {
+            animation: spin-slow 20s linear infinite;
+        }
+
+        .animate-marquee {
+            animation: marquee 25s linear infinite;
+        }
+
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient-shift 4s ease infinite;
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-500 {
+            animation-delay: 0.5s;
+        }
+
+        .delay-600 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-700 {
+            animation-delay: 0.7s;
+        }
+
+        .delay-800 {
+            animation-delay: 0.8s;
+        }
+
+        /* Scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.85);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-scale.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Hover effects */
+        .card-hover {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .magnetic-btn {
+            transition: all 0.3s ease;
+        }
+
+        .magnetic-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #EA580C, #F97316, #171717);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Custom cursor */
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #EA580C;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 99999;
+            transition: transform 0.15s ease, opacity 0.15s ease;
+            mix-blend-mode: difference;
+        }
+
+        .custom-cursor.hover {
+            transform: scale(2.5);
+            background: rgba(234, 88, 12, 0.1);
+        }
+
+        /* Progress bar */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #EA580C, #F97316);
+            z-index: 99998;
+            transition: width 0.1s ease;
+        }
+
+        /* Skill bar */
+        .skill-bar-fill {
+            transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+            width: 0;
+        }
+
+        .skill-bar-fill.active {
+            width: var(--fill-width);
+        }
+
+        /* Timeline connector */
+        .timeline-dot::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -28px;
+            width: 28px;
+            height: 2px;
+            background: #E5E5E5;
+        }
+
+        @media (max-width: 767px) {
+            .timeline-dot::after {
+                display: none;
+            }
+        }
+
+        /* Nav link underline */
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #EA580C;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Toast */
+        .toast {
+            animation: fadeUp 0.5s ease-out forwards;
+        }
+
+        .toast-exit {
+            animation: fadeIn 0.3s ease-out reverse forwards;
+        }
+
+        /* Project image overlay */
+        .project-overlay {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-card:hover .project-img {
+            transform: scale(1.08);
+        }
+
+        .project-img {
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Stat counter */
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            clip-path: circle(0% at calc(100% - 40px) 40px);
+            transition: clip-path 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .mobile-menu.open {
+            clip-path: circle(150% at calc(100% - 40px) 40px);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-white font-sans text-neutral-900 overflow-x-hidden">
+    <div class="bg-grain"></div>
+    <div class="custom-cursor hidden lg:block" id="cursor"></div>
+    <div id="progress-bar" style="width: 0%"></div>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 h-20 flex items-center transition-all duration-500"
+        style="background: rgba(255,255,255,0.85); backdrop-filter: blur(12px);">
+        <div class="max-w-screen-2xl mx-auto w-full px-6 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div
+                    class="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                    <img src="favicon.png" alt="DV" class="w-full h-full object-contain">
+                </div>
+                <span class="font-semibold text-lg tracking-tight">Divyanshu<span
+                        class="text-orange-600">Verma</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about"
+                    class="nav-link text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors duration-300">About</a>
+                <a href="#skills"
+                    class="nav-link text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors duration-300">Skills</a>
+                <a href="#experience"
+                    class="nav-link text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors duration-300">Experience</a>
+                <a href="#projects"
+                    class="nav-link text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors duration-300">Projects</a>
+                <a href="#testimonials"
+                    class="nav-link text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors duration-300">Testimonials</a>
+                <a href="#contact"
+                    class="magnetic-btn inline-flex items-center gap-2 bg-neutral-900 text-white px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-widest hover:bg-orange-600 transition-colors duration-300">
+                    Let's Talk
+                    <iconify-icon icon="lucide:arrow-right" width="14"></iconify-icon>
+                </a>
+            </div>
+            <button id="menuBtn" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 z-60">
+                <span class="w-6 h-0.5 bg-neutral-900 transition-all duration-300" id="bar1"></span>
+                <span class="w-6 h-0.5 bg-neutral-900 transition-all duration-300" id="bar2"></span>
+                <span class="w-4 h-0.5 bg-neutral-900 transition-all duration-300" id="bar3"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+        class="mobile-menu fixed inset-0 bg-neutral-900 z-40 flex flex-col items-center justify-center gap-8">
+        <a href="#about" class="text-white text-3xl font-semibold tracking-tight mobile-link">About</a>
+        <a href="#skills" class="text-white text-3xl font-semibold tracking-tight mobile-link">Skills</a>
+        <a href="#experience" class="text-white text-3xl font-semibold tracking-tight mobile-link">Experience</a>
+        <a href="#projects" class="text-white text-3xl font-semibold tracking-tight mobile-link">Projects</a>
+        <a href="#testimonials" class="text-white text-3xl font-semibold tracking-tight mobile-link">Testimonials</a>
+        <a href="#contact"
+            class="mt-4 inline-flex items-center gap-2 bg-orange-600 text-white px-8 py-3 rounded-full text-sm font-semibold uppercase tracking-widest mobile-link">
+            Let's Talk
+            <iconify-icon icon="lucide:arrow-right" width="16"></iconify-icon>
+        </a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+        <!-- Background decorations -->
+        <div class="absolute top-20 right-0 w-96 h-96 bg-orange-100/50 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-20 left-0 w-72 h-72 bg-orange-50/60 rounded-full blur-3xl animate-float"
+            style="animation-delay: 2s;"></div>
+        <!-- Spinning circle -->
+        <div class="absolute top-40 right-20 hidden lg:block">
+            <div class="w-32 h-32 border border-dashed border-neutral-200 rounded-full animate-spin-slow relative">
+                <div class="absolute -top-1.5 left-1/2 w-3 h-3 bg-orange-600 rounded-full"></div>
+            </div>
+        </div>
+
+        <div class="max-w-screen-2xl mx-auto w-full px-6">
+            <div class="grid grid-cols-12 gap-8 lg:gap-16 items-center">
+                <div class="col-span-12 lg:col-span-7">
+                    <div class="animate-fadeUp">
+                        <div
+                            class="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 rounded-full px-4 py-1.5 mb-8">
+                            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                            <span class="text-xs font-semibold uppercase tracking-widest text-orange-700">Open to
+                                Opportunities</span>
+                        </div>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl xl:text-8xl font-semibold leading-[0.9] tracking-tighter mb-8">
+                        <span class="animate-fadeUp delay-100 block">I build</span>
+                        <span class="animate-fadeUp delay-200 block gradient-text">products people</span>
+                        <span class="animate-fadeUp delay-300 block">actually <span class="relative inline-block">love
+                                <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none">
+                                    <path d="M2 8 C50 2, 150 2, 198 8" stroke="#EA580C" stroke-width="3"
+                                        stroke-linecap="round" class="animate-fadeIn delay-700" />
+                                </svg>
+                            </span></span>
+                    </h1>
+                    <p
+                        class="text-lg md:text-xl font-light leading-relaxed text-neutral-500 max-w-xl mb-10 animate-fadeUp delay-400">
+                        Product thinker from IIT Roorkee. I obsess over user problems, turn messy ambiguity into
+                        clear roadmaps, and ship things that people genuinely want to use. Not just features - outcomes.
+                    </p>
+                    <div class="flex flex-wrap gap-4 animate-fadeUp delay-500">
+                        <a href="#contact"
+                            class="magnetic-btn inline-flex items-center gap-2 bg-neutral-900 text-white px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-widest hover:bg-orange-600 transition-all duration-300 animate-pulse-glow group">
+                            Hire Me
+                            <iconify-icon icon="lucide:arrow-right" width="16"
+                                class="transition-transform duration-300 group-hover:translate-x-1"></iconify-icon>
+                        </a>
+                        <a href="#projects"
+                            class="magnetic-btn inline-flex items-center gap-2 bg-white border border-neutral-200 text-neutral-900 px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-widest hover:border-orange-600 hover:text-orange-600 transition-all duration-300 group">
+                            View Work
+                            <iconify-icon icon="lucide:arrow-down-right" width="16"
+                                class="transition-transform duration-300 group-hover:translate-y-0.5"></iconify-icon>
+                        </a>
+                    </div>
+                    <!-- Quick stats -->
+                    <div class="flex gap-10 mt-14 animate-fadeUp delay-600">
+                        <div>
+                            <div class="text-4xl font-light tracking-tighter stat-number" data-target="7">0</div>
+                            <div class="text-xs font-semibold uppercase tracking-widest text-neutral-400 mt-1">Products
+                                Shipped</div>
+                        </div>
+                        <div class="w-px bg-neutral-200"></div>
+                        <div>
+                            <div class="text-4xl font-light tracking-tighter stat-number" data-target="3">0</div>
+                            <div class="text-xs font-semibold uppercase tracking-widest text-neutral-400 mt-1">
+                                Internships</div>
+                        </div>
+                        <div class="w-px bg-neutral-200"></div>
+                        <div>
+                            <div class="text-4xl font-light tracking-tighter stat-number" data-target="10">0</div>
+                            <div class="text-xs font-semibold uppercase tracking-widest text-neutral-400 mt-1">K+ Users
+                                Impacted</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-5 relative animate-scaleIn delay-400">
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-4 bg-gradient-to-br from-orange-100 to-orange-50 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-700">
+                        </div>
+                        <img src="images/hero_portrait.png" alt="Product Manager Workspace  -  Divyanshu Verma"
+                            class="relative w-full h-[500px] lg:h-[600px] object-cover rounded-3xl border border-neutral-200 shadow-2xl transition-all duration-1000 group-hover:shadow-[0_25px_50px_-12px_rgba(234,88,12,0.25)]">
+                        <!-- Floating badge -->
+                        <div class="absolute -left-6 bottom-20 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-neutral-100 animate-float"
+                            style="animation-delay: 1s;">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center">
+                                    <iconify-icon icon="lucide:graduation-cap" width="18"
+                                        class="text-white"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold">IIT Roorkee</div>
+                                    <div class="text-xs text-neutral-400">BS-MS(Dual Degree)'26</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Floating badge 2 -->
+                        <div class="absolute -right-4 top-16 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-neutral-100 animate-float"
+                            style="animation-delay: 2.5s;">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                                    <iconify-icon icon="lucide:rocket" width="18" class="text-white"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold">7 Products</div>
+                                    <div class="text-xs text-neutral-400">Shipped & Live</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="border-y border-neutral-200 py-5 overflow-hidden bg-neutral-50">
+        <div class="flex animate-marquee whitespace-nowrap">
+            <span class="mx-8 text-sm font-semibold uppercase tracking-widest text-neutral-300">Product Strategy</span>
+            <span class="mx-2 text-orange-600">✦</span>
+            <span class="mx-8 text-sm font-semibold uppercase tracking-widest text-neutral-300">User Research</span>
+            <span class="mx-2 text-orange-600">✦</span>
+            <span class="mx-8 text-sm font-semibold uppercase tracking-widest text-neutral-300">Data-Driven
+                Decisions</span>
+            <span class="mx-2 text-orange-600">✦</span>
+            <span class="mx-8 text-sm font-semibold uppercase tracking-widest text-neutral-300">Agile Execution</span>
+            <span class="mx-2 text-orange-600">✦</span>
+            <span class="mx-8 text-sm font-semibold uppercase tracking-widest text-neutral-300">Wireframing</span>
+            <span class="mx-2 text-orange-600">✦</span>
+            <span class="mx-8 text-sm font-semibold uppercase tracking-widest text-neutral-300">Cross-functional
+                Leadership</span>
+            <span class="mx-2 text-orange-600">✦</span>
+            <span class="mx-8 text-sm font-semibold uppercase tracking-widest text-neutral-300">Product Strategy</span>
+            <span class="mx-2 text-orange-600">✦</span>
+            <span class="mx-8 text-sm font-semibold uppercase tracking-widest text-neutral-300">User Research</span>
+            <span class="mx-2 text-orange-600">✦</span>
+            <span class="mx-8 text-sm font-semibold uppercase tracking-widest text-neutral-300">Data-Driven
+                Decisions</span>
+            <span class="mx-2 text-orange-600">✦</span>
+            <span class="mx-8 text-sm font-semibold uppercase tracking-widest text-neutral-300">Agile Execution</span>
+            <span class="mx-2 text-orange-600">✦</span>
+            <span class="mx-8 text-sm font-semibold uppercase tracking-widest text-neutral-300">Wireframing</span>
+            <span class="mx-2 text-orange-600">✦</span>
+            <span class="mx-8 text-sm font-semibold uppercase tracking-widest text-neutral-300">Cross-functional
+                Leadership</span>
+            <span class="mx-2 text-orange-600">✦</span>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 md:py-36 relative">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="grid grid-cols-12 gap-12 lg:gap-16 items-center">
+                <div class="col-span-12 lg:col-span-5 reveal-left">
+                    <div class="relative group">
+                        <img src="my_image.jpg" alt="Divyanshu Verma"
+                            class="w-full h-[500px] object-cover rounded-3xl group-hover:scale-[1.02] transition-all duration-1000 border border-neutral-200">
+                        <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-orange-600 rounded-3xl -z-10"></div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-7 reveal-right">
+                    <span class="text-xs font-bold uppercase tracking-widest text-orange-600 mb-4 block">About Me</span>
+                    <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter leading-tight mb-6">
+                        Where <span class="gradient-text">business, design & engineering</span> collide
+                    </h2>
+                    <p class="text-lg font-light leading-relaxed text-neutral-500 mb-6">
+                        I'm Divyanshu, a product-obsessed builder from IIT Roorkee who can't stop tinkering with how
+                        things work. I got into PM the way most engineers do: I kept asking "why are we building this?"
+                        until someone handed me the roadmap.
+                    </p>
+                    <p class="text-lg font-light leading-relaxed text-neutral-500 mb-8">
+                        Since then, I've shipped 7 products across fintech, ed-tech, food-tech, and health-tech. From
+                        building a financial inclusion platform for 400M+ underserved Indians (RUPAIYA) to redesigning
+                        Physics Wallah for data-constrained rural students. I think in frameworks,
+                        prototype in Figma, and validate with data. My IIT Roorkee training taught me to break hard
+                        problems into solvable pieces. Product management lets me do that for people.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="bg-neutral-50 rounded-2xl p-5 border border-neutral-100 card-hover">
+                            <iconify-icon icon="lucide:target" width="24" class="text-orange-600 mb-3"></iconify-icon>
+                            <div class="font-semibold text-sm mb-1">Strategy First</div>
+                            <div class="text-xs text-neutral-400">Why → What → How, always</div>
+                        </div>
+                        <div class="bg-neutral-50 rounded-2xl p-5 border border-neutral-100 card-hover">
+                            <iconify-icon icon="lucide:heart" width="24" class="text-orange-600 mb-3"></iconify-icon>
+                            <div class="font-semibold text-sm mb-1">User Obsessed</div>
+                            <div class="text-xs text-neutral-400">50+ user interviews & counting</div>
+                        </div>
+                        <div class="bg-neutral-50 rounded-2xl p-5 border border-neutral-100 card-hover">
+                            <iconify-icon icon="lucide:bar-chart-2" width="24"
+                                class="text-orange-600 mb-3"></iconify-icon>
+                            <div class="font-semibold text-sm mb-1">Data Driven</div>
+                            <div class="text-xs text-neutral-400">Every decision has a metric</div>
+                        </div>
+                        <div class="bg-neutral-50 rounded-2xl p-5 border border-neutral-100 card-hover">
+                            <iconify-icon icon="lucide:zap" width="24" class="text-orange-600 mb-3"></iconify-icon>
+                            <div class="font-semibold text-sm mb-1">Ship Fast</div>
+                            <div class="text-xs text-neutral-400">MVP in weeks, not months</div>
+                        </div>
+                    </div>
+                    <a href="#contact"
+                        class="inline-flex items-center gap-2 text-sm font-semibold text-orange-600 group">
+                        Let's work together
+                        <iconify-icon icon="lucide:arrow-right" width="16"
+                            class="transition-transform duration-300 group-hover:translate-x-2"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-24 md:py-36 bg-neutral-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-orange-600/5 rounded-full blur-3xl"></div>
+        <div class="max-w-screen-2xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20 reveal">
+                <span class="text-xs font-bold uppercase tracking-widest text-orange-500 mb-4 block">Core
+                    Competencies</span>
+                <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter leading-tight">
+                    My Product <span class="text-orange-500">Toolkit</span>
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill Card 1 -->
+                <div class="reveal bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 card-hover group"
+                    style="transition-delay: 0.1s;">
+                    <div
+                        class="w-14 h-14 bg-orange-600/20 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-orange-600 group-hover:scale-110">
+                        <iconify-icon icon="lucide:compass" width="28"
+                            class="text-orange-500 group-hover:text-white transition-colors duration-300"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold tracking-tight mb-3">Product Strategy</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed mb-6">Vision definition, competitive analysis,
+                        market positioning, and roadmapping that connects user needs to business goals.</p>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">Roadmapping</span><span
+                                    class="text-xs text-orange-500">95%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 95%">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">Market Analysis</span><span
+                                    class="text-xs text-orange-500">88%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 88%">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">PRD Writing</span><span
+                                    class="text-xs text-orange-500">92%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 92%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill Card 2 -->
+                <div class="reveal bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 card-hover group"
+                    style="transition-delay: 0.2s;">
+                    <div
+                        class="w-14 h-14 bg-orange-600/20 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-orange-600 group-hover:scale-110">
+                        <iconify-icon icon="lucide:search" width="28"
+                            class="text-orange-500 group-hover:text-white transition-colors duration-300"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold tracking-tight mb-3">User Research</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed mb-6">Deep qualitative interviews, usability
+                        testing, survey design, and synthesizing messy user signals into crisp product requirements.</p>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">User Interviews</span><span
+                                    class="text-xs text-orange-500">95%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 95%">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">A/B Testing</span><span
+                                    class="text-xs text-orange-500">85%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 85%">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">Persona Dev</span><span
+                                    class="text-xs text-orange-500">90%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 90%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill Card 3 -->
+                <div class="reveal bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 card-hover group"
+                    style="transition-delay: 0.3s;">
+                    <div
+                        class="w-14 h-14 bg-orange-600/20 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-orange-600 group-hover:scale-110">
+                        <iconify-icon icon="lucide:code-2" width="28"
+                            class="text-orange-500 group-hover:text-white transition-colors duration-300"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold tracking-tight mb-3">Technical Fluency</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed mb-6">Full-stack development background, API
+                        design, system architecture, SQL analytics. I speak engineer fluently - because I am one.</p>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">Python / JS</span><span
+                                    class="text-xs text-orange-500">90%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 90%">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">SQL / Analytics</span><span
+                                    class="text-xs text-orange-500">85%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 85%">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">System Design</span><span
+                                    class="text-xs text-orange-500">82%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 82%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill Card 4 -->
+                <div class="reveal bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 card-hover group"
+                    style="transition-delay: 0.4s;">
+                    <div
+                        class="w-14 h-14 bg-orange-600/20 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-orange-600 group-hover:scale-110">
+                        <iconify-icon icon="lucide:layout-dashboard" width="28"
+                            class="text-orange-500 group-hover:text-white transition-colors duration-300"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold tracking-tight mb-3">Product Design</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed mb-6">Wireframing, prototyping, and design
+                        thinking. I go from napkin sketch to clickable prototype faster than most PMs you'll meet.</p>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">Wireframing</span><span
+                                    class="text-xs text-orange-500">92%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 92%">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">Figma</span><span
+                                    class="text-xs text-orange-500">88%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 88%">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">Design Systems</span><span
+                                    class="text-xs text-orange-500">80%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 80%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill Card 5 -->
+                <div class="reveal bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 card-hover group"
+                    style="transition-delay: 0.5s;">
+                    <div
+                        class="w-14 h-14 bg-orange-600/20 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-orange-600 group-hover:scale-110">
+                        <iconify-icon icon="lucide:megaphone" width="28"
+                            class="text-orange-500 group-hover:text-white transition-colors duration-300"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold tracking-tight mb-3">Go-to-Market</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed mb-6">Launch strategy, growth loops, user
+                        acquisition, and positioning. I don't just build - I make sure people find and love what I ship.
+                    </p>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">Launch Strategy</span><span
+                                    class="text-xs text-orange-500">88%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 88%">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">Growth Loops</span><span
+                                    class="text-xs text-orange-500">85%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 85%">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">Positioning</span><span
+                                    class="text-xs text-orange-500">82%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 82%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill Card 6 -->
+                <div class="reveal bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 card-hover group"
+                    style="transition-delay: 0.6s;">
+                    <div
+                        class="w-14 h-14 bg-orange-600/20 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-orange-600 group-hover:scale-110">
+                        <iconify-icon icon="lucide:users" width="28"
+                            class="text-orange-500 group-hover:text-white transition-colors duration-300"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold tracking-tight mb-3">Team Leadership</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed mb-6">Led cross-functional teams of engineers,
+                        designers, and analysts across multiple projects. Alignment without authority is my superpower.
+                    </p>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">Cross-functional</span><span
+                                    class="text-xs text-orange-500">92%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 92%">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">Stakeholder Mgmt</span><span
+                                    class="text-xs text-orange-500">90%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 90%">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-xs font-medium text-neutral-300">Agile/Scrum</span><span
+                                    class="text-xs text-orange-500">88%</span></div>
+                            <div class="h-1.5 bg-white/10 rounded-full">
+                                <div class="skill-bar-fill h-full bg-orange-600 rounded-full" style="--fill-width: 88%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="py-24 md:py-36 relative">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="text-center mb-20 reveal">
+                <span class="text-xs font-bold uppercase tracking-widest text-orange-600 mb-4 block">Journey So
+                    Far</span>
+                <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter leading-tight">
+                    Where I've Made <span class="gradient-text">Impact</span>
+                </h2>
+            </div>
+            <div class="max-w-4xl mx-auto space-y-0">
+                <!-- Experience Item 1: Product Intern at WorthyAdvisors -->
+                <div class="reveal grid grid-cols-8 gap-6 md:gap-8 group" style="transition-delay: 0.1s;">
+                    <div class="col-span-2 md:col-span-2 text-right">
+                        <div class="text-xs font-bold uppercase tracking-widest text-neutral-400 mt-1">2025 - 2026
+                        </div>
+                    </div>
+                    <div class="col-span-1 flex flex-col items-center">
+                        <div class="w-4 h-4 bg-orange-600 rounded-full border-4 border-orange-100 z-10 relative"></div>
+                        <div class="w-0.5 bg-neutral-200 flex-1"></div>
+                    </div>
+                    <div class="col-span-5 md:col-span-5 pb-12">
+                        <div class="bg-white border border-neutral-200 rounded-2xl p-6 card-hover">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-neutral-900 rounded-xl flex items-center justify-center">
+                                    <iconify-icon icon="lucide:building-2" width="18" class="text-white"></iconify-icon>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold tracking-tight">Product Intern</h3>
+                                    <div class="text-sm text-neutral-400">WorthyAdvisors · FinTech / WealthTech</div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4">Owned end-to-end product lifecycle
+                                for a wealth management platform serving HNI clients. Conducted 40+ user interviews with
+                                financial advisors, identified 12 critical pain points in the advisory workflow, and
+                                redesigned the client onboarding funnel reducing drop-off by 35%. Wrote detailed PRDs,
+                                prioritized a backlog of 50+ features using RICE framework, and shipped 3 high-impact
+                                releases that boosted advisor productivity by 28%. Collaborated directly with the CTO
+                                and design team to define the product vision for Q3-Q4.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">WealthTech</span>
+                                <span
+                                    class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">Product
+                                    Strategy</span>
+                                <span
+                                    class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">User
+                                    Research</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Experience Item 2: UCL Internship -->
+                <div class="reveal grid grid-cols-8 gap-6 md:gap-8 group" style="transition-delay: 0.2s;">
+                    <div class="col-span-2 md:col-span-2 text-right">
+                        <div class="text-xs font-bold uppercase tracking-widest text-neutral-400 mt-1">Summer 2024</div>
+                    </div>
+                    <div class="col-span-1 flex flex-col items-center">
+                        <div class="w-4 h-4 bg-orange-500 rounded-full border-4 border-orange-100 z-10 relative">
+                        </div>
+                        <div class="w-0.5 bg-neutral-200 flex-1"></div>
+                    </div>
+                    <div class="col-span-5 md:col-span-5 pb-12">
+                        <div class="bg-white border border-neutral-200 rounded-2xl p-6 card-hover">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-neutral-900 rounded-xl flex items-center justify-center">
+                                    <iconify-icon icon="lucide:globe" width="18" class="text-white"></iconify-icon>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold tracking-tight">Research Intern</h3>
+                                    <div class="text-sm text-neutral-400">University College London (UCL) · UK</div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4">Selected for a competitive
+                                international research internship at UCL. Worked on data-driven analysis and research
+                                methodology that strengthened my analytical thinking and structured problem-solving
+                                skills. Collaborated with cross-cultural teams, presented findings to senior faculty,
+                                and developed a framework that was adopted for future cohorts. This experience sharpened
+                                my ability to work with ambiguity and think from first principles.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">UCL
+                                    London</span>
+                                <span
+                                    class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">Research</span>
+                                <span
+                                    class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">International</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Experience Item 3: Vice President, Tinkering Lab -->
+                <div class="reveal grid grid-cols-8 gap-6 md:gap-8 group" style="transition-delay: 0.3s;">
+                    <div class="col-span-2 md:col-span-2 text-right">
+                        <div class="text-xs font-bold uppercase tracking-widest text-neutral-400 mt-1">2023 - 2025</div>
+                    </div>
+                    <div class="col-span-1 flex flex-col items-center">
+                        <div class="w-4 h-4 bg-neutral-400 rounded-full border-4 border-neutral-100 z-10 relative">
+                        </div>
+                        <div class="w-0.5 bg-neutral-200 flex-1"></div>
+                    </div>
+                    <div class="col-span-5 md:col-span-5 pb-12">
+                        <div class="bg-white border border-neutral-200 rounded-2xl p-6 card-hover">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-neutral-900 rounded-xl flex items-center justify-center">
+                                    <iconify-icon icon="lucide:wrench" width="18" class="text-white"></iconify-icon>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold tracking-tight">Vice President, Tinkering Lab</h3>
+                                    <div class="text-sm text-neutral-400">IIT Roorkee · Innovation & Product Building
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4">Led IIT Roorkee's premier
+                                innovation hub as Vice President, managing a team of 30+ members across hardware,
+                                software, and design verticals. Spearheaded QHAAR (QR food ordering platform) from
+                                ideation to campus-wide pilot, driving 2x daily order growth. Built the Conference
+                                Management Portal (EMT) for institutional conferences, coordinating across faculty,
+                                admin, and student stakeholders. Organized 8+ hackathons and product-building workshops
+                                with 500+ participants. Mentored 15+ student teams on product thinking, user research,
+                                and MVP development.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">Leadership</span>
+                                <span
+                                    class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">QHAAR</span>
+                                <span
+                                    class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">EMT
+                                    Portal</span>
+                                <span
+                                    class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">Innovation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Experience Item 4: Product Lead - Campus Projects -->
+                <div class="reveal grid grid-cols-8 gap-6 md:gap-8 group" style="transition-delay: 0.4s;">
+                    <div class="col-span-2 md:col-span-2 text-right">
+                        <div class="text-xs font-bold uppercase tracking-widest text-neutral-400 mt-1">2022 - 2023</div>
+                    </div>
+                    <div class="col-span-1 flex flex-col items-center">
+                        <div class="w-4 h-4 bg-neutral-300 rounded-full border-4 border-neutral-100 z-10 relative">
+                        </div>
+                    </div>
+                    <div class="col-span-5 md:col-span-5">
+                        <div class="bg-white border border-neutral-200 rounded-2xl p-6 card-hover">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-neutral-900 rounded-xl flex items-center justify-center">
+                                    <iconify-icon icon="lucide:graduation-cap" width="18"
+                                        class="text-white"></iconify-icon>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold tracking-tight">Product Lead, Campus Projects</h3>
+                                    <div class="text-sm text-neutral-400">IIT Roorkee · EdTech & AI</div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4">Led a cross-functional team of 6
+                                engineers and designers to build CAMASSIA, an AI-powered portfolio management platform
+                                with predictive analytics. Conducted competitive analysis across 15+ fintech products,
+                                wrote comprehensive PRDs, designed user flows in Figma, and ran 2-week agile sprints.
+                                Delivered the MVP 10 days ahead of schedule. Presented the project at IIT Roorkee's
+                                annual tech showcase to 200+ attendees including industry judges.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">EdTech</span>
+                                <span
+                                    class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">AI/ML</span>
+                                <span
+                                    class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">CAMASSIA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-24 md:py-36 bg-neutral-50 relative">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="text-center mb-20 reveal">
+                <span class="text-xs font-bold uppercase tracking-widest text-orange-600 mb-4 block">Featured
+                    Work</span>
+                <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter leading-tight">
+                    Product <span class="gradient-text">Case Studies</span>
+                </h2>
+                <p class="text-lg font-light text-neutral-500 mt-4 max-w-2xl mx-auto">Real problems I've tackled.
+                    Structured thinking. Measurable outcomes. Click any card to explore the full case study.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- NEW Project 1: RUPAIYA  -  Pitch Deck (PDF Case Study) -->
+                <a href="Divyanshu_Pitch_Deck_FINAL.pdf" target="_blank"
+                    class="reveal project-card group cursor-pointer" style="transition-delay: 0.05s;">
+                    <div class="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white">
+                        <div class="relative h-72 overflow-hidden bg-neutral-900">
+                            <img src="images/project_rupaiya.png"
+                                alt="RUPAIYA - AI-Powered Financial Inclusion App for Bharat"
+                                class="project-img w-full h-full object-contain p-4">
+                            <div
+                                class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-8">
+                                <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <span
+                                        class="text-xs font-bold uppercase tracking-widest text-orange-400 mb-2 block">FinTech
+                                        · 0→1 · Pitch Deck</span>
+                                    <h3 class="text-2xl font-semibold text-white tracking-tight mb-2">RUPAIYA - AI
+                                        Financial Inclusion for Bharat</h3>
+                                    <p class="text-sm text-white/70 leading-relaxed">End-to-end product pitch:
+                                        AI-powered
+                                        expense tracking via SMS, digital chit funds (Paisa Circle), and micro-investing
+                                        engine for 400M+ underserved Indians. Built with IndicBERT for Hinglish nudges.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- PDF Badge -->
+                            <div
+                                class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 z-10">
+                                <iconify-icon icon="lucide:file-text" width="12"></iconify-icon>
+                                Pitch Deck
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-2">
+                                    <span
+                                        class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">FinTech</span>
+                                    <span
+                                        class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">0
+                                        to 1</span>
+                                    <span
+                                        class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">AI/ML</span>
+                                </div>
+                                <div
+                                    class="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center group-hover:bg-orange-600 group-hover:border-orange-600 transition-all duration-300">
+                                    <iconify-icon icon="lucide:arrow-up-right" width="16"
+                                        class="text-neutral-400 group-hover:text-white transition-colors duration-300"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- NEW Project 2: Physics Wallah Redesign (PDF Case Study) -->
+                <a href="Physics Wallah_Data_Constraint_Redesign (2).pdf" target="_blank"
+                    class="reveal project-card group cursor-pointer" style="transition-delay: 0.1s;">
+                    <div class="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white">
+                        <div class="relative h-72 overflow-hidden bg-gradient-to-br from-purple-900 to-purple-800">
+                            <img src="images/project_pw_redesign.png" alt="Physics Wallah - Data-Constrained Redesign"
+                                class="project-img w-full h-full object-contain p-4">
+                            <div
+                                class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-8">
+                                <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <span
+                                        class="text-xs font-bold uppercase tracking-widest text-orange-400 mb-2 block">EdTech
+                                        · Redesign · Data Strategy</span>
+                                    <h3 class="text-2xl font-semibold text-white tracking-tight mb-2">Physics Wallah -
+                                        Data-Constrained Redesign</h3>
+                                    <p class="text-sm text-white/70 leading-relaxed">Redesigned PW for 400M rural
+                                        students
+                                        with limited data. Audio-first learning, offline-ready, 85% less data, 3x
+                                        completion rates. Targeting 5M+ students in Tier 2/3 India.</p>
+                                </div>
+                            </div>
+                            <!-- PDF Badge -->
+                            <div
+                                class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 z-10">
+                                <iconify-icon icon="lucide:file-text" width="12"></iconify-icon>
+                                Case Study
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-2">
+                                    <span
+                                        class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">EdTech</span>
+                                    <span
+                                        class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">Redesign</span>
+                                    <span
+                                        class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full">5M+
+                                        Users</span>
+                                </div>
+                                <div
+                                    class="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center group-hover:bg-orange-600 group-hover:border-orange-600 transition-all duration-300">
+                                    <iconify-icon icon="lucide:arrow-up-right" width="16"
+                                        class="text-neutral-400 group-hover:text-white transition-colors duration-300"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Project 3: QHAAR -->
+                <a href="a01.html" class="reveal project-card group cursor-pointer" style="transition-delay: 0.15s;">
+                    <div class="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white">
+                        <div class="relative h-72 overflow-hidden bg-gradient-to-br from-orange-50 to-orange-100">
+                            <img src="images/project_qhaar.png" alt="QHAAR - QR Food Ordering App"
+                                class="project-img w-full h-full object-contain p-4">
+                            <div
+                                class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-8">
+                                <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <span
+                                        class="text-xs font-bold uppercase tracking-widest text-orange-400 mb-2 block">FoodTech
+                                        · 0→1 · Mobile</span>
+                                    <h3 class="text-2xl font-semibold text-white tracking-tight mb-2">QHAAR - QR Food
+                                        Ordering</h3>
+                                    <p class="text-sm text-white/70 leading-relaxed">Built a complete QR-based food
+                                        ordering system for campus dining. 2x daily orders during pilot launch.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-2">
+                                    <span
+                                        class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-semibold rounded-full">0
+                                        to 1</span>
+                                    <span
+                                        class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-semibold rounded-full">FoodTech</span>
+                                    <span
+                                        class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-semibold rounded-full">Launch</span>
+                                </div>
+                                <div
+                                    class="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center group-hover:bg-orange-600 group-hover:border-orange-600 transition-all duration-300">
+                                    <iconify-icon icon="lucide:arrow-up-right" width="16"
+                                        class="text-neutral-400 group-hover:text-white transition-colors duration-300"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Project 2: EMT -->
+                <a href="x02.html" class="reveal project-card group cursor-pointer" style="transition-delay: 0.2s;">
+                    <div class="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white">
+                        <div class="relative h-72 overflow-hidden bg-gradient-to-br from-slate-100 to-blue-50">
+                            <img src="images/project_emt.png" alt="EMT - Conference Management Portal"
+                                class="project-img w-full h-full object-contain p-4">
+                            <div
+                                class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-8">
+                                <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <span
+                                        class="text-xs font-bold uppercase tracking-widest text-orange-400 mb-2 block">EdTech
+                                        · Platform · IIT-R</span>
+                                    <h3 class="text-2xl font-semibold text-white tracking-tight mb-2">EMT - Conference
+                                        Portal</h3>
+                                    <p class="text-sm text-white/70 leading-relaxed">IIT Roorkee's conference management
+                                        platform. Speaker scheduling, registration, and analytics in one place.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-2">
+                                    <span
+                                        class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-semibold rounded-full">EdTech</span>
+                                    <span
+                                        class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-semibold rounded-full">Platform</span>
+                                    <span
+                                        class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-semibold rounded-full">IIT-R</span>
+                                </div>
+                                <div
+                                    class="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center group-hover:bg-orange-600 group-hover:border-orange-600 transition-all duration-300">
+                                    <iconify-icon icon="lucide:arrow-up-right" width="16"
+                                        class="text-neutral-400 group-hover:text-white transition-colors duration-300"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Project 3: CAMASSIA -->
+                <a href="x03.html" class="reveal project-card group cursor-pointer" style="transition-delay: 0.3s;">
+                    <div class="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white">
+                        <div class="relative h-72 overflow-hidden bg-gradient-to-br from-purple-50 to-purple-100">
+                            <img src="images/project_camassia.png" alt="CAMASSIA  -  AI Portfolio Management"
+                                class="project-img w-full h-full object-contain p-4">
+                            <div
+                                class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-8">
+                                <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <span
+                                        class="text-xs font-bold uppercase tracking-widest text-orange-400 mb-2 block">AI/ML
+                                        · FinTech · Web</span>
+                                    <h3 class="text-2xl font-semibold text-white tracking-tight mb-2">CAMASSIA - AI
+                                        Portfolio Manager</h3>
+                                    <p class="text-sm text-white/70 leading-relaxed">AI-powered portfolio management
+                                        website with predictive analytics, automated rebalancing, and real-time
+                                        insights.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-2">
+                                    <span
+                                        class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-semibold rounded-full">AI/ML</span>
+                                    <span
+                                        class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-semibold rounded-full">FinTech</span>
+                                    <span
+                                        class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-semibold rounded-full">Web</span>
+                                </div>
+                                <div
+                                    class="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center group-hover:bg-orange-600 group-hover:border-orange-600 transition-all duration-300">
+                                    <iconify-icon icon="lucide:arrow-up-right" width="16"
+                                        class="text-neutral-400 group-hover:text-white transition-colors duration-300"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Project 4: Design System -->
+                <a href="x04.html" class="reveal project-card group cursor-pointer" style="transition-delay: 0.4s;">
+                    <div class="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white">
+                        <div class="relative h-72 overflow-hidden bg-gradient-to-br from-neutral-50 to-neutral-100">
+                            <img src="images/project_designsys.png" alt="Product Design System"
+                                class="project-img w-full h-full object-contain p-4">
+                            <div
+                                class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-8">
+                                <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <span
+                                        class="text-xs font-bold uppercase tracking-widest text-orange-400 mb-2 block">Design
+                                        · Systems · UX</span>
+                                    <h3 class="text-2xl font-semibold text-white tracking-tight mb-2">Product Design
+                                        System</h3>
+                                    <p class="text-sm text-white/70 leading-relaxed">End-to-end design system with
+                                        reusable components, design tokens, and comprehensive documentation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-2">
+                                    <span
+                                        class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-semibold rounded-full">Design</span>
+                                    <span
+                                        class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-semibold rounded-full">Systems</span>
+                                    <span
+                                        class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-semibold rounded-full">UX</span>
+                                </div>
+                                <div
+                                    class="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center group-hover:bg-orange-600 group-hover:border-orange-600 transition-all duration-300">
+                                    <iconify-icon icon="lucide:arrow-up-right" width="16"
+                                        class="text-neutral-400 group-hover:text-white transition-colors duration-300"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Project 5: AR Food Tracker  -  Full width -->
+                <a href="x05.html" class="reveal project-card group cursor-pointer md:col-span-2"
+                    style="transition-delay: 0.5s;">
+                    <div class="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white">
+                        <div
+                            class="relative h-72 md:h-80 overflow-hidden bg-gradient-to-br from-green-50 to-emerald-50">
+                            <img src="images/project_arfood.png" alt="AR Food Tracker App"
+                                class="project-img w-full h-full object-contain p-4">
+                            <div
+                                class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-8">
+                                <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <span
+                                        class="text-xs font-bold uppercase tracking-widest text-orange-400 mb-2 block">AR
+                                        · HealthTech · Mobile</span>
+                                    <h3 class="text-2xl font-semibold text-white tracking-tight mb-2">AR Food Tracker
+                                        - Nutrition at a Glance</h3>
+                                    <p class="text-sm text-white/70 leading-relaxed max-w-xl">Augmented reality mobile
+                                        app that overlays nutritional data on real food. Point your camera, get instant
+                                        calorie/macro breakdowns. Won 2nd place at IIT-R Annual Hackathon.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-2">
+                                    <span
+                                        class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-semibold rounded-full">AR/VR</span>
+                                    <span
+                                        class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-semibold rounded-full">HealthTech</span>
+                                    <span
+                                        class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-semibold rounded-full">Hackathon
+                                        Winner</span>
+                                </div>
+                                <div
+                                    class="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center group-hover:bg-orange-600 group-hover:border-orange-600 transition-all duration-300">
+                                    <iconify-icon icon="lucide:arrow-up-right" width="16"
+                                        class="text-neutral-400 group-hover:text-white transition-colors duration-300"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="py-24 md:py-36 relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-orange-50/60 rounded-full blur-3xl">
+        </div>
+        <div class="max-w-screen-2xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20 reveal">
+                <span class="text-xs font-bold uppercase tracking-widest text-orange-600 mb-4 block">What People
+                    Say</span>
+                <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter leading-tight">
+                    People I've <span class="gradient-text">Worked With</span>
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="reveal bg-white border border-neutral-200 rounded-3xl p-8 card-hover relative"
+                    style="transition-delay: 0.1s;">
+                    <div class="absolute top-6 right-6">
+                        <iconify-icon icon="lucide:quote" width="32" class="text-neutral-200"></iconify-icon>
+                    </div>
+                    <div class="flex gap-1 mb-4">
+                        <iconify-icon icon="lucide:star" width="16" class="text-orange-500"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="16" class="text-orange-500"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="16" class="text-orange-500"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="16" class="text-orange-500"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="16" class="text-orange-500"></iconify-icon>
+                    </div>
+                    <p class="text-sm text-neutral-600 leading-relaxed mb-6">"Divyanshu doesn't just build features -
+                        he asks the uncomfortable 'why' questions that save you weeks of wasted effort. The QHAAR
+                        project
+                        wouldn't have shipped on time without his ability to cut scope ruthlessly while keeping the
+                        core user value intact."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                            <span class="text-orange-600 font-semibold text-sm">RK</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-sm">Rishabh Kumar</div>
+                            <div class="text-xs text-neutral-400">Engineering Lead, QHAAR Team</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="reveal bg-white border border-neutral-200 rounded-3xl p-8 card-hover relative"
+                    style="transition-delay: 0.2s;">
+                    <div class="absolute top-6 right-6">
+                        <iconify-icon icon="lucide:quote" width="32" class="text-neutral-200"></iconify-icon>
+                    </div>
+                    <div class="flex gap-1 mb-4">
+                        <iconify-icon icon="lucide:star" width="16" class="text-orange-500"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="16" class="text-orange-500"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="16" class="text-orange-500"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="16" class="text-orange-500"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="16" class="text-orange-500"></iconify-icon>
+                    </div>
+                    <p class="text-sm text-neutral-600 leading-relaxed mb-6">"What impressed me most was how
+                        Divyanshu managed stakeholder expectations during the EMT portal project. He had professors,
+                        admin staff, and students all pulling in different directions - and he found the solution that
+                        actually worked for everyone. That's rare in a student."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                            <span class="text-blue-600 font-semibold text-sm">PS</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-sm">Prof. Pratap Mohanty</div>
+                            <div class="text-xs text-neutral-400">Faculty Advisor, IIT Roorkee</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="reveal bg-white border border-neutral-200 rounded-3xl p-8 card-hover relative"
+                    style="transition-delay: 0.3s;">
+                    <div class="absolute top-6 right-6">
+                        <iconify-icon icon="lucide:quote" width="32" class="text-neutral-200"></iconify-icon>
+                    </div>
+                    <div class="flex gap-1 mb-4">
+                        <iconify-icon icon="lucide:star" width="16" class="text-orange-500"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="16" class="text-orange-500"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="16" class="text-orange-500"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="16" class="text-orange-500"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="16" class="text-orange-500"></iconify-icon>
+                    </div>
+                    <p class="text-sm text-neutral-600 leading-relaxed mb-6">"I've worked with Divyanshu on three
+                        projects now and he's the kind of PM who makes designers' lives easier, not harder. He comes to
+                        reviews with data, not opinions. His CAMASSIA wireframes were so clear that I barely had
+                        questions - and that never happens."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                            <span class="text-green-600 font-semibold text-sm">AM</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-sm">Arunesh Pratap</div>
+                            <div class="text-xs text-neutral-400">Design Lead, CAMASSIA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS LOGO SECTION -->
+    <section class="py-16 border-y border-neutral-200">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="text-center mb-10 reveal">
+                <span class="text-xs font-bold uppercase tracking-widest text-neutral-400">Tools I Work With</span>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16 reveal">
+                <div
+                    class="flex items-center gap-2 text-neutral-300 hover:text-neutral-600 transition-colors duration-300 cursor-default">
+                    <iconify-icon icon="lucide:figma" width="24"></iconify-icon><span
+                        class="text-sm font-medium">Figma</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 text-neutral-300 hover:text-neutral-600 transition-colors duration-300 cursor-default">
+                    <iconify-icon icon="lucide:trello" width="24"></iconify-icon><span
+                        class="text-sm font-medium">Jira</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 text-neutral-300 hover:text-neutral-600 transition-colors duration-300 cursor-default">
+                    <iconify-icon icon="lucide:database" width="24"></iconify-icon><span
+                        class="text-sm font-medium">SQL</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 text-neutral-300 hover:text-neutral-600 transition-colors duration-300 cursor-default">
+                    <iconify-icon icon="lucide:bar-chart-2" width="24"></iconify-icon><span
+                        class="text-sm font-medium">Mixpanel</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 text-neutral-300 hover:text-neutral-600 transition-colors duration-300 cursor-default">
+                    <iconify-icon icon="lucide:git-branch" width="24"></iconify-icon><span
+                        class="text-sm font-medium">GitHub</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 text-neutral-300 hover:text-neutral-600 transition-colors duration-300 cursor-default">
+                    <iconify-icon icon="lucide:file-spreadsheet" width="24"></iconify-icon><span
+                        class="text-sm font-medium">Notion</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 text-neutral-300 hover:text-neutral-600 transition-colors duration-300 cursor-default">
+                    <iconify-icon icon="lucide:code-2" width="24"></iconify-icon><span
+                        class="text-sm font-medium">Python</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / CONTACT SECTION -->
+    <section id="contact" class="py-24 md:py-36 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-900 to-neutral-800"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-orange-600/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-orange-600/10 rounded-full blur-3xl"></div>
+        <div class="max-w-screen-2xl mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-xs font-bold uppercase tracking-widest text-orange-500 mb-4 block">Let's
+                        Connect</span>
+                    <h2 class="text-4xl md:text-6xl font-semibold tracking-tighter leading-tight text-white mb-6">
+                        Ready to build something <span class="text-orange-500">incredible</span>?
+                    </h2>
+                    <p class="text-lg font-light leading-relaxed text-neutral-400 max-w-2xl mx-auto">
+                        I'm actively looking for product roles where I can solve hard problems for real users.
+                        If you're building something that matters, I'd love to hear about it.
+                    </p>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="reveal bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12">
+                    <form id="contactForm" class="space-y-6" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- WEB3FORMS ACCESS KEY - Get it free from https://web3forms.com -->
+                        <input type="hidden" name="access_key" value="0a9a7de3-5eaa-4e61-947e-ca358ec6904a">
+
+                        <input type="hidden" name="subject" value="New Portfolio Contact - Divyanshu Verma">
+                        <input type="checkbox" name="botcheck" style="display: none;">
+                        <input type="hidden" name="from_name" value="Portfolio Notifications">
+                        <input type="hidden" name="replyto" value="divyanshu.iitroorkee@gmail.com">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label
+                                    class="block text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-2">Your
+                                    Name</label>
+                                <input type="text" name="name" required
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3.5 text-white text-sm placeholder-neutral-500 focus:outline-none focus:border-orange-600 focus:ring-1 focus:ring-orange-600 transition-all duration-300"
+                                    placeholder="Jane Smith">
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-2">Your
+                                    Email</label>
+                                <input type="email" name="email" required
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3.5 text-white text-sm placeholder-neutral-500 focus:outline-none focus:border-orange-600 focus:ring-1 focus:ring-orange-600 transition-all duration-300"
+                                    placeholder="jane@company.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-2">Company
+                                / Role</label>
+                            <input type="text" name="company"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3.5 text-white text-sm placeholder-neutral-500 focus:outline-none focus:border-orange-600 focus:ring-1 focus:ring-orange-600 transition-all duration-300"
+                                placeholder="Acme Corp - Hiring Manager">
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-2">Message</label>
+                            <textarea rows="4" name="message" required
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3.5 text-white text-sm placeholder-neutral-500 focus:outline-none focus:border-orange-600 focus:ring-1 focus:ring-orange-600 transition-all duration-300 resize-none"
+                                placeholder="Tell me about the role and your product vision..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="magnetic-btn w-full md:w-auto inline-flex items-center justify-center gap-2 bg-orange-600 text-white px-10 py-4 rounded-full text-xs font-semibold uppercase tracking-widest hover:bg-orange-500 transition-all duration-300 group">
+                            Send Message
+                            <iconify-icon icon="lucide:send" width="16"
+                                class="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"></iconify-icon>
+                        </button>
+                    </form>
+                    <div id="formSuccess" class="hidden text-center py-8">
+                        <div
+                            class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <iconify-icon icon="lucide:check" width="32" class="text-green-400"></iconify-icon>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Message Sent!</h3>
+                        <p class="text-sm text-neutral-400">Thanks for reaching out. I'll get back to you within 24
+                            hours.</p>
+                    </div>
+                </div>
+
+                <!-- Quick links -->
+                <div class="flex flex-wrap justify-center gap-4 mt-12 reveal">
+                    <a href="mailto:divyanshu.iitroorkee@gmail.com"
+                        class="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-orange-600 hover:border-orange-600 transition-all duration-300 group">
+                        <iconify-icon icon="lucide:mail" width="16"
+                            class="text-orange-500 group-hover:text-white transition-colors"></iconify-icon>
+                        divyanshu.iitroorkee@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/divyanshu-verma-9a9ab9225/" target="_blank"
+                        class="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-orange-600 hover:border-orange-600 transition-all duration-300 group">
+                        <iconify-icon icon="lucide:linkedin" width="16"
+                            class="text-orange-500 group-hover:text-white transition-colors"></iconify-icon>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/divyanshuverma9785" target="_blank"
+                        class="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-orange-600 hover:border-orange-600 transition-all duration-300 group">
+                        <iconify-icon icon="lucide:github" width="16"
+                            class="text-orange-500 group-hover:text-white transition-colors"></iconify-icon>
+                        GitHub
+                    </a>
+                    <a href="Divyanshu_resume.pdf" target="_blank"
+                        class="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-orange-600 hover:border-orange-600 transition-all duration-300 group">
+                        <iconify-icon icon="lucide:download" width="16"
+                            class="text-orange-500 group-hover:text-white transition-colors"></iconify-icon>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-neutral-900 border-t border-neutral-800 py-12">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center overflow-hidden">
+                        <img src="favicon.png" alt="DV" class="w-full h-full object-contain">
+                    </div>
+                    <span class="text-white font-semibold tracking-tight">Divyanshu<span
+                            class="text-orange-500">Verma</span></span>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a href="https://www.linkedin.com/in/divyanshu-verma-9a9ab9225/" target="_blank"
+                        class="text-neutral-500 hover:text-orange-500 transition-colors duration-300">
+                        <iconify-icon icon="lucide:linkedin" width="20"></iconify-icon>
+                    </a>
+                    <a href="https://github.com/divyanshuverma9785" target="_blank"
+                        class="text-neutral-500 hover:text-orange-500 transition-colors duration-300">
+                        <iconify-icon icon="lucide:github" width="20"></iconify-icon>
+                    </a>
+                    <a href="mailto:divyanshu.iitroorkee@gmail.com"
+                        class="text-neutral-500 hover:text-orange-500 transition-colors duration-300">
+                        <iconify-icon icon="lucide:mail" width="20"></iconify-icon>
+                    </a>
+                </div>
+                <div class="text-xs text-neutral-500">© 2025 Divyanshu Verma · Built with <span
+                        class="text-orange-500">♥</span> at
+                    IIT Roorkee</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button id="backToTop"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-neutral-900 text-white rounded-full flex items-center justify-center shadow-lg opacity-0 translate-y-4 transition-all duration-300 hover:bg-orange-600 z-50 pointer-events-none">
+        <iconify-icon icon="lucide:arrow-up" width="20"></iconify-icon>
+    </button>
+
+    <script>
+        // ===== CUSTOM CURSOR =====
+        const cursor = document.getElementById('cursor');
+        if (cursor && window.innerWidth >= 1024) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX - 10 + 'px';
+                cursor.style.top = e.clientY - 10 + 'px';
+            });
+            document.querySelectorAll('a, button, .card-hover, .project-card, input, textarea').forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+            });
+        }
+
+        // ===== PROGRESS BAR =====
+        const progressBar = document.getElementById('progress-bar');
+        window.addEventListener('scroll', () => {
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            progressBar.style.width = scrolled + '%';
+        });
+
+        // ===== SCROLL REVEAL =====
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.style.transitionDelay || '0s';
+                    entry.target.style.transitionDelay = delay;
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ===== SKILL BARS =====
+        const skillBars = document.querySelectorAll('.skill-bar-fill');
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.5 });
+        skillBars.forEach(bar => skillObserver.observe(bar));
+
+        // ===== STAT COUNTER =====
+        const statNumbers = document.querySelectorAll('.stat-number');
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    let current = 0;
+                    const increment = target / 40;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        const label = entry.target.parentElement.querySelector('.text-neutral-400');
+                        let suffix = '+';
+                        if (label && label.textContent.includes('K+')) suffix = 'K+';
+                        entry.target.textContent = Math.floor(current) + suffix;
+                    }, 50);
+                    statObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        statNumbers.forEach(stat => statObserver.observe(stat));
+
+        // ===== NAVBAR SCROLL =====
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+            if (currentScroll > 100) {
+                navbar.style.boxShadow = '0 1px 3px rgba(0,0,0,0.08)';
+                navbar.style.borderBottom = '1px solid #E5E5E5';
+            } else {
+                navbar.style.boxShadow = 'none';
+                navbar.style.borderBottom = 'none';
+            }
+            lastScroll = currentScroll;
+        });
+
+        // ===== MOBILE MENU =====
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const bar1 = document.getElementById('bar1');
+        const bar2 = document.getElementById('bar2');
+        const bar3 = document.getElementById('bar3');
+        let menuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            mobileMenu.classList.toggle('open');
+            if (menuOpen) {
+                bar1.style.transform = 'rotate(45deg) translate(4px, 4px)';
+                bar2.style.opacity = '0';
+                bar3.style.transform = 'rotate(-45deg) translate(2px, -2px)';
+                bar3.style.width = '24px';
+                document.body.style.overflow = 'hidden';
+            } else {
+                bar1.style.transform = '';
+                bar2.style.opacity = '1';
+                bar3.style.transform = '';
+                bar3.style.width = '16px';
+                document.body.style.overflow = '';
+            }
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                mobileMenu.classList.remove('open');
+                bar1.style.transform = '';
+                bar2.style.opacity = '1';
+                bar3.style.transform = '';
+                bar3.style.width = '16px';
+                document.body.style.overflow = '';
+            });
+        });
+
+        // ===== CONTACT FORM (WEB3FORMS) =====
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = contactForm.querySelector('button[type="submit"]');
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<iconify-icon icon="lucide:loader-2" width="16" class="animate-spin"></iconify-icon> Sending...';
+            btn.disabled = true;
+
+            const formData = new FormData(contactForm);
+
+            // Check if user has added their access key
+            if (formData.get('access_key') === 'YOUR_ACCESS_KEY_HERE') {
+                handleFallback(formData, btn, originalHTML, true);
+                return;
+            }
+
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+                .then(async (response) => {
+                    let jsonResult = await response.json();
+                    if (response.status == 200) {
+                        contactForm.style.display = 'none';
+                        formSuccess.classList.remove('hidden');
+                        formSuccess.style.animation = 'fadeUp 0.5s ease-out forwards';
+                        contactForm.reset();
+                    } else {
+                        console.log(response);
+                        throw new Error(jsonResult.message || 'Submission failed');
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    handleFallback(formData, btn, originalHTML, false);
+                });
+        });
+
+        function handleFallback(formData, btn, originalHTML, isMissingKey) {
+            btn.innerHTML = originalHTML;
+            btn.disabled = false;
+
+            const name = formData.get('name') || '';
+            const email = formData.get('email') || '';
+            const company = formData.get('company') || '';
+            const message = formData.get('message') || '';
+            const subject = encodeURIComponent('Portfolio Contact from ' + name);
+            const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nCompany: ' + company + '\n\nMessage:\n' + message);
+
+            if (isMissingKey) {
+                alert('⚠️ Developer Note: To enable direct email sending, please get your free Access Key from web3forms.com and paste it in index.html (line 1678).\n\nFor now, opening your email client...');
+            } else {
+                alert('Oops! Network error. Opening your email client instead.');
+            }
+            window.location.href = 'mailto:divyanshu.iitroorkee@gmail.com?subject=' + subject + '&body=' + body;
+        }
+
+        // ===== BACK TO TOP =====
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                backToTop.style.opacity = '1';
+                backToTop.style.transform = 'translateY(0)';
+                backToTop.style.pointerEvents = 'auto';
+            } else {
+                backToTop.style.opacity = '0';
+                backToTop.style.transform = 'translateY(16px)';
+                backToTop.style.pointerEvents = 'none';
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ===== SMOOTH NAV LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
